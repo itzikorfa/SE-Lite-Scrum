@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block head_title %} {{ title }} {% endblock head_title %}
+
+{% block content %}
+<div class='col-sm-6 col-sm-offset-3'>
+    <h1>{{ object.name }}</h1>
+    {{ object.company_id }}<br>
+    {{ object.email }}<br>
+</div>
+{% endblock content %}
