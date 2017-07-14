@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 
-from .forms import CompnyForm, BacklogForm, UserForm
+from .forms import CompnyForm, BacklogForm, UserForm , GroupForm
 from .models import Backlog
 from .models import Company
 from django.contrib.auth import login
@@ -13,11 +13,10 @@ from django.contrib.auth.models import User
 def add_group(request):
     if not request.user.is_authenticated():
         return HttpResponse("<h1>not loggin</h1>")
-    form = UserForm(request.POST or None)
+    form = GroupForm(request.POST or None)
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
-        login(instance)
         messages.success(request, "record added")
         return HttpResponseRedirect("home.html")
     return render(request, "registration/add_user.html", {
