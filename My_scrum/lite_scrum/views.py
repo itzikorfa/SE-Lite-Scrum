@@ -41,9 +41,12 @@ def company_detail(request,id):
     if not request.user.is_authenticated():
         return HttpResponse("<h1>not loggin</h1>")
     instance = get_object_or_404(Company, id = id)
+    backlog = Backlog.objects.filter(company=id)
+
     return render(request, "company_details.html", {
         "title": "Company List",
-        "object": instance
+        "object": instance,
+        "backlog": backlog
     })
 
 def company_create(request):
