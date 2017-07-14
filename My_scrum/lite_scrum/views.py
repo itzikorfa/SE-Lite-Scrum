@@ -1,17 +1,22 @@
-from django.shortcuts import render,get_object_or_404, redirect
-from .models import Company
-from django.http import HttpResponse, HttpResponseRedirect
-from .forms import CompnyForm
 from django.contrib import messages
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, redirect
+
+from .forms import CompnyForm
+from .models import Backlog
+from .models import Company
+
+
 # Create your views here.
 
 def company_list(request):
     if not request.user.is_authenticated():
         return HttpResponse("<h1>not loggin</h1>")
-    queryset = Company.objects.all()
-    return render(request,"index.html ",{
+    queryset_company = Company.objects.all()
+
+    return render(request, "company_list.html ", {
         "title": "Company List",
-        "object_list": queryset
+        "object_list": queryset_company
     })
 
 def company_update(request,id=None):
@@ -64,3 +69,36 @@ def company_delete(request,id=None):
     instance.delete()
     messages.success(request, "record deleted")
     return redirect("company:company_list")
+
+
+def backlog_list(request):
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    queryset_backlog = Backlog.objects.all()
+
+    return render(request, "backlog_list.html", {
+        "title": "Backlog List",
+        "object_list": queryset_backlog
+    })
+
+
+def backlog_update(request, id=None):
+    pass
+
+
+def backlog_detail(request, id):
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    instance = get_object_or_404(Backlog, id=id)
+    return render(request, "backlog_details.html", {
+        "title": "Detail: {}".format(instance.name),
+        "object": instance
+    })
+
+
+def backlog_create(request):
+    pass
+
+
+def backlog_delete(request, id=None):
+    pass

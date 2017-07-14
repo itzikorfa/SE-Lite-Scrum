@@ -1,5 +1,6 @@
-from django.db import models
 from django.core.urlresolvers import reverse
+from django.db import models
+
 
 # Create your models here.
 class Company(models.Model):
@@ -13,3 +14,15 @@ class Company(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Backlog(models.Model):
+    company = models.ForeignKey(Company)
+    name = models.CharField(max_length=40)
+    timestamp = models.DateTimeField(auto_now=True, auto_now_add=False)
+
+    def __str__(self):
+        return "{} | {}".format(self.company, self.name)
+
+    def get_absolute_url(self):
+        return reverse("backlog:backlog_detail", kwargs={"id": self.id})

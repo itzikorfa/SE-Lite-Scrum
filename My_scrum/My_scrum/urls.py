@@ -22,4 +22,6 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^company/', include("lite_scrum.urls",namespace="company")),
+    url(r'^backlog/', include("lite_scrum.backlog_urls", namespace="backlog")),
+
 ]
