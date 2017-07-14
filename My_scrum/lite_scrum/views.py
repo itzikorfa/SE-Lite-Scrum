@@ -83,7 +83,20 @@ def backlog_list(request):
 
 
 def backlog_update(request, id=None):
-    pass
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    instance = get_object_or_404(Backlog, id=id)
+    form = BacklogForm(request.POST or None, instance=instance)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        messages.success(request, "record updated")
+        return HttpResponseRedirect(instance.get_absolute_url())
+    return render(request, "backlog_form.html", {
+        "title": "Backlog Update {}".format(instance.name),
+        "object": instance,
+        "forms": form
+    })
 
 
 def backlog_detail(request, id):
@@ -112,4 +125,9 @@ def backlog_create(request):
 
 
 def backlog_delete(request, id=None):
-    pass
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    instance = get_object_or_404(Backlog, id=id)
+    instance.delete()
+    messages.success(request, "record deleted")
+    return redirect("backlog:backlog_list")

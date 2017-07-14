@@ -17,7 +17,7 @@ class Company(models.Model):
 
 
 class Backlog(models.Model):
-    company = models.ForeignKey(Company)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
     name = models.CharField(max_length=40)
     timestamp = models.DateTimeField(auto_now=True, auto_now_add=False)
 

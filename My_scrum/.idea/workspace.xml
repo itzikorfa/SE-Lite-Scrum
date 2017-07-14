@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59aed188-bdf6-4cf0-a19c-6b28b06897e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/backlog_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lite_scrum/forms.py" afterPath="$PROJECT_DIR$/lite_scrum/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lite_scrum/models.py" afterPath="$PROJECT_DIR$/lite_scrum/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lite_scrum/views.py" afterPath="$PROJECT_DIR$/lite_scrum/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/backlog_form.html" afterPath="$PROJECT_DIR$/templates/backlog_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company_form.html" afterPath="$PROJECT_DIR$/templates/company_form.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,13 +37,26 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lite_scrum/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="101" column="17" lean-forward="false" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+            <state relative-caret-position="240">
+              <caret line="132" column="41" lean-forward="false" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#630#1223#0" expanded="false" />
-                <element signature="e#2054#2307#0" expanded="false" />
+                <element signature="e#1261#1522#0" expanded="false" />
+                <element signature="e#1557#2009#0" expanded="false" />
+                <element signature="e#2652#3230#0" expanded="false" />
+                <element signature="e#3270#3549#0" expanded="false" />
+                <element signature="e#3585#4040#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="backlog_urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lite_scrum/backlog_urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,21 +64,31 @@
       <file leaf-file-name="backlog_form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/backlog_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            <state relative-caret-position="153">
+              <caret line="9" column="70" lean-forward="false" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lite_scrum/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="223">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="company_form.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/company_form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="60" lean-forward="false" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,8 +106,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lite_scrum/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="11" />
+            <state relative-caret-position="257">
+              <caret line="19" column="65" lean-forward="false" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -131,7 +155,6 @@
         <option value="$PROJECT_DIR$/static_cdn/admin/css/base.css" />
         <option value="$PROJECT_DIR$/static/base_style.css" />
         <option value="$PROJECT_DIR$/templates/company_details.html" />
-        <option value="$PROJECT_DIR$/templates/company_form.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
@@ -141,15 +164,16 @@
         <option value="$PROJECT_DIR$/templates/nav_bar.html" />
         <option value="$PROJECT_DIR$/lite_scrum/backlog_urls.py" />
         <option value="$PROJECT_DIR$/My_scrum/urls.py" />
-        <option value="$PROJECT_DIR$/lite_scrum/models.py" />
         <option value="$PROJECT_DIR$/lite_scrum/admin.py" />
         <option value="$PROJECT_DIR$/lite_scrum/urls.py" />
         <option value="$PROJECT_DIR$/templates/company_list.html" />
         <option value="$PROJECT_DIR$/templates/backlog_list.html" />
         <option value="$PROJECT_DIR$/templates/backlog_details.html" />
-        <option value="$PROJECT_DIR$/templates/backlog_form.html" />
-        <option value="$PROJECT_DIR$/lite_scrum/views.py" />
         <option value="$PROJECT_DIR$/lite_scrum/forms.py" />
+        <option value="$PROJECT_DIR$/templates/company_form.html" />
+        <option value="$PROJECT_DIR$/templates/backlog_form.html" />
+        <option value="$PROJECT_DIR$/lite_scrum/models.py" />
+        <option value="$PROJECT_DIR$/lite_scrum/views.py" />
       </list>
     </option>
   </component>
@@ -504,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500043779814</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Backlog support create">
+      <created>1500048055490</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1500048055490</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -523,7 +554,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -572,7 +603,8 @@
     <MESSAGE value="add a menu bar" />
     <MESSAGE value="separate nav to different file&#10;add a sub menu bar" />
     <MESSAGE value="Start adding Backlog" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start adding Backlog" />
+    <MESSAGE value="Backlog support create" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backlog support create" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -616,8 +648,11 @@
           <caret line="80" column="8" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#630#1223#0" expanded="false" />
-            <element signature="e#2054#2307#0" expanded="false" />
+            <element signature="e#1261#1522#0" expanded="false" />
+            <element signature="e#1557#2009#0" expanded="false" />
+            <element signature="e#2652#3230#0" expanded="false" />
+            <element signature="e#3270#3549#0" expanded="false" />
+            <element signature="e#3585#4040#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -767,14 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/company_details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -837,14 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lite_scrum/backlog_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/My_scrum/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -897,22 +916,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lite_scrum/views.py">
+    <entry file="file://$PROJECT_DIR$/lite_scrum/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
-          <caret line="101" column="17" lean-forward="false" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#630#1223#0" expanded="false" />
-            <element signature="e#2054#2307#0" expanded="false" />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/company_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="60" lean-forward="false" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lite_scrum/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="11" />
+        <state relative-caret-position="257">
+          <caret line="19" column="65" lean-forward="false" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -921,19 +946,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/backlog_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        <state relative-caret-position="153">
+          <caret line="9" column="70" lean-forward="false" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lite_scrum/forms.py">
+    <entry file="file://$PROJECT_DIR$/lite_scrum/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="132" column="41" lean-forward="false" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#1261#1522#0" expanded="false" />
+            <element signature="e#1557#2009#0" expanded="false" />
+            <element signature="e#2652#3230#0" expanded="false" />
+            <element signature="e#3270#3549#0" expanded="false" />
+            <element signature="e#3585#4040#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lite_scrum/backlog_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
