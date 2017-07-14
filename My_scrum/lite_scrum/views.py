@@ -2,12 +2,59 @@ from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 
-from .forms import CompnyForm, BacklogForm
+from .forms import CompnyForm, BacklogForm, UserForm
 from .models import Backlog
 from .models import Company
-
+from django.contrib.auth import login
+from django.contrib.auth.models import User
 
 # Create your views here.
+
+def add_group(request):
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    form = UserForm(request.POST or None)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        login(instance)
+        messages.success(request, "record added")
+        return HttpResponseRedirect("home.html")
+    return render(request, "registration/add_user.html", {
+        "title": "Create Group",
+        "forms": form
+    })
+
+
+def add_user(request):
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    form = UserForm(request.POST or None)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        login(instance)
+        messages.success(request, "record added")
+        return HttpResponseRedirect("home.html")
+    return render(request, "registration/add_user.html", {
+        "title": "Create User",
+        "forms": form
+    })
+    # if request.method == "POST":
+    #     form = UserForm(request.POST)
+    #     if form.is_valid():
+    #         new_user = User.objects.create_user(**form.cleaned_data)
+    #         login(new_user)
+    #         # redirect, or however you want to get to the main view
+    #         return HttpResponseRedirect('main.html')
+    # else:
+    #     form = UserForm()
+    #
+    # return render(request, 'registration/add_user.html', {
+    #     'title': "Add User",
+    #     'form': form
+    # })
+
 
 def company_list(request):
     if not request.user.is_authenticated():

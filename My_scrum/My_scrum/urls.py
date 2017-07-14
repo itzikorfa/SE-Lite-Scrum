@@ -16,11 +16,14 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from lite_scrum import views as comp_view
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^adduser/$',comp_view.add_user , name='add_user'),
     url(r'^company/', include("lite_scrum.urls",namespace="company")),
     url(r'^backlog/', include("lite_scrum.backlog_urls", namespace="backlog")),
 
