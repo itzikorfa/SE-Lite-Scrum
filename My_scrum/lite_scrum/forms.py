@@ -1,5 +1,7 @@
 from django import forms
-from .models import Company
+
+from .models import Company, Backlog
+
 
 class CompnyForm(forms.ModelForm):
     class Meta:
@@ -7,3 +9,9 @@ class CompnyForm(forms.ModelForm):
         fields = [
             'name', 'company_id', 'email'
         ]
+
+
+class BacklogForm(forms.ModelForm):
+    class Meta:
+        model = Backlog
+        fields = ['name', 'company']

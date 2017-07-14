@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 
-from .forms import CompnyForm
+from .forms import CompnyForm, BacklogForm
 from .models import Backlog
 from .models import Company
 
@@ -97,7 +97,18 @@ def backlog_detail(request, id):
 
 
 def backlog_create(request):
-    pass
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    form = BacklogForm(request.POST or None)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        messages.success(request, "record added")
+        return HttpResponseRedirect(instance.get_absolute_url())
+    return render(request, "backlog_form.html", {
+        "title": "Company create",
+        "forms": form
+    })
 
 
 def backlog_delete(request, id=None):
