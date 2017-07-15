@@ -1,12 +1,12 @@
 from django.contrib import messages
+from django.contrib.auth import login
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 
-from .forms import CompnyForm, BacklogForm, UserForm , GroupForm
+from .forms import CompnyForm, BacklogForm, UserForm, GroupForm
 from .models import Backlog
 from .models import Company
-from django.contrib.auth import login
-from django.contrib.auth.models import User
+
 
 # Create your views here.
 
@@ -23,7 +23,6 @@ def add_group(request):
         "title": "Create Group",
         "forms": form
     })
-
 
 def add_user(request):
     if not request.user.is_authenticated():
