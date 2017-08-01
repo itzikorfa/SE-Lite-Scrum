@@ -3,13 +3,13 @@ from django.contrib.auth import login
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 
-from .forms import CompnyForm, BacklogForm, UserForm, GroupForm
-from .models import Backlog
-from .models import Company
+from .forms import CompnyForm, BacklogForm, UserForm, GroupForm,ProductForm
+from .models import ProductBackLog
+from .models import Company, Product
 
 
 # Create your views here.
-
+#
 def add_group(request):
     if not request.user.is_authenticated():
         return HttpResponse("<h1>not loggin</h1>")
@@ -38,20 +38,6 @@ def add_user(request):
         "title": "Create User",
         "forms": form
     })
-    # if request.method == "POST":
-    #     form = UserForm(request.POST)
-    #     if form.is_valid():
-    #         new_user = User.objects.create_user(**form.cleaned_data)
-    #         login(new_user)
-    #         # redirect, or however you want to get to the main view
-    #         return HttpResponseRedirect('main.html')
-    # else:
-    #     form = UserForm()
-    #
-    # return render(request, 'registration/add_user.html', {
-    #     'title': "Add User",
-    #     'form': form
-    # })
 
 
 def company_list(request):
@@ -86,12 +72,12 @@ def company_detail(request,id):
     if not request.user.is_authenticated():
         return HttpResponse("<h1>not loggin</h1>")
     instance = get_object_or_404(Company, id = id)
-    backlog = Backlog.objects.filter(company=id)
+    product = Product.objects.filter(company=id)
 
     return render(request, "company_details.html", {
-        "title": "Company List",
+        "title": "Company detail",
         "object": instance,
-        "backlog": backlog
+        "product": product
     })
 
 def company_create(request):
@@ -122,10 +108,10 @@ def company_delete(request,id=None):
 def backlog_list(request):
     if not request.user.is_authenticated():
         return HttpResponse("<h1>not loggin</h1>")
-    queryset_backlog = Backlog.objects.all()
+    queryset_backlog = ProductBackLog.objects.all()
 
     return render(request, "backlog_list.html", {
-        "title": "Backlog List",
+        "title": "Product Backlog List",
         "object_list": queryset_backlog
     })
 
@@ -133,7 +119,7 @@ def backlog_list(request):
 def backlog_update(request, id=None):
     if not request.user.is_authenticated():
         return HttpResponse("<h1>not loggin</h1>")
-    instance = get_object_or_404(Backlog, id=id)
+    instance = get_object_or_404(ProductBackLog, id=id)
     form = BacklogForm(request.POST or None, instance=instance)
     if form.is_valid():
         instance = form.save(commit=False)
@@ -141,7 +127,7 @@ def backlog_update(request, id=None):
         messages.success(request, "record updated")
         return HttpResponseRedirect(instance.get_absolute_url())
     return render(request, "backlog_form.html", {
-        "title": "Backlog Update {}".format(instance.name),
+        "title": "Product Backlog Update {}".format(instance.name),
         "object": instance,
         "forms": form
     })
@@ -150,8 +136,8 @@ def backlog_update(request, id=None):
 def backlog_detail(request, id):
     if not request.user.is_authenticated():
         return HttpResponse("<h1>not loggin</h1>")
-    instance = get_object_or_404(Backlog, id=id)
-    return render(request, "backlog_details.html", {
+    instance = get_object_or_404(ProductBackLog, id=id)
+    return render(request, "Product backlog_details.html", {
         "title": "Detail: {}".format(instance.name),
         "object": instance
     })
@@ -175,7 +161,67 @@ def backlog_create(request):
 def backlog_delete(request, id=None):
     if not request.user.is_authenticated():
         return HttpResponse("<h1>not loggin</h1>")
-    instance = get_object_or_404(Backlog, id=id)
+    instance = get_object_or_404(ProductBackLog, id=id)
     instance.delete()
     messages.success(request, "record deleted")
     return redirect("backlog:backlog_list")
+
+def product_list(request):
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    queryset_product = Product.objects.all()
+
+    return render(request, "backlog_list.html", {
+        "title": "Product Backlog List",
+        "object_list": queryset_product
+    })
+
+
+def product_detail(request, id):
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    instance = get_object_or_404(Product, id=id)
+    return render(request, "product_details.html", {
+        "title": "Detail: {}".format(instance.name),
+        "object": instance
+    })
+
+
+def product_create(request):
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    form = ProductForm(request.POST or None)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        messages.success(request, "record added")
+        return HttpResponseRedirect(instance.get_absolute_url())
+    return render(request, "product_form.html", {
+        "title": "Create Product",
+        "forms": form
+    })
+
+
+def product_delete(request, id=None):
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    instance = get_object_or_404(Product, id=id)
+    instance.delete()
+    messages.success(request, "record deleted")
+    return redirect("product:product_list")
+
+def product_update(request, id=None):
+    if not request.user.is_authenticated():
+        return HttpResponse("<h1>not loggin</h1>")
+    instance = get_object_or_404(Product, id=id)
+    form = ProductForm(request.POST or None, instance=instance)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        messages.success(request, "record updated")
+        return HttpResponseRedirect(instance.get_absolute_url())
+    return render(request, "backlog_form.html", {
+        "title": "Product Backlog Update {}".format(instance.name),
+        "object": instance,
+        "forms": form
+    })

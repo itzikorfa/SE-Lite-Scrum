@@ -7,10 +7,10 @@
     {{ object.company_id }}<br>
     {{ object.email }}<br>
 
-    {% if backlog %}
-        {% for back in backlog %}
-            <h3><a href='{{ back.get_absolute_url }}'>
-                <h2>Backlog: {{ back.name }}</h2></a></h3>
+    {% if product %}
+        {% for prod in product %}
+            <h3><a href='{{ prod.get_absolute_url }}'>
+                <h2>Product: {{ prod.name }}</h2></a></h3>
 
         {% endfor %}
 

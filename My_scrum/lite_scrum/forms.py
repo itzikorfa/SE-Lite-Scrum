@@ -1,5 +1,5 @@
 from django import forms
-from .models import Company, Backlog
+from .models import Company, ProductBackLog, Product
 from django.contrib.auth.models import User, Group
 
 class CompnyForm(forms.ModelForm):
@@ -12,8 +12,10 @@ class CompnyForm(forms.ModelForm):
 
 class BacklogForm(forms.ModelForm):
     class Meta:
-        model = Backlog
-        fields = ['name', 'company']
+        model = ProductBackLog
+        fields = ['name', 'company', 'product_owner']
+
+
 
 class UserForm(forms.ModelForm):
     class Meta:
@@ -21,8 +23,13 @@ class UserForm(forms.ModelForm):
         fields = ('username', 'email', 'password')
 
 
-
 class GroupForm(forms.ModelForm):
     class Meta:
         model = Group
         fields = ('name', 'permissions')
+
+
+class ProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = ('name', 'company','description')

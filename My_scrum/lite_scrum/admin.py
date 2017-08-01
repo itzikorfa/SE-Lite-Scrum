@@ -1,6 +1,6 @@
 from django.contrib import admin
-from lite_scrum.models import Backlog
 from lite_scrum.models import Company
+from lite_scrum.models import ProductBackLog
 
 
 # Register your models here.
@@ -23,9 +23,9 @@ class BacklogAdmin(admin.ModelAdmin):
     list_editable = ['name']
 
     class Meta:
-        model = Backlog
+        model = ProductBackLog
 
 
 
 admin.site.register(Company, CompanyAdmin)
-admin.site.register(Backlog, BacklogAdmin)
+admin.site.register(ProductBackLog, BacklogAdmin)

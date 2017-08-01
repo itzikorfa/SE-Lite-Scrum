@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^addgroup/$',comp_view.add_group , name='add_group'),
     url(r'^company/', include("lite_scrum.urls",namespace="company")),
     url(r'^backlog/', include("lite_scrum.backlog_urls", namespace="backlog")),
+    url(r'^product/', include("lite_scrum.product_urls", namespace="product")),
 
 ]
