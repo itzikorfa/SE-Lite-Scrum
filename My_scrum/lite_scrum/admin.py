@@ -1,6 +1,6 @@
 from django.contrib import admin
 from lite_scrum.models import Company
-from lite_scrum.models import ProductBackLog
+# from lite_scrum.models import ProductBackLog
 
 
 # Register your models here.
@@ -15,17 +15,17 @@ class CompanyAdmin(admin.ModelAdmin):
         model = Company
 
 
-class BacklogAdmin(admin.ModelAdmin):
-    list_display = ['name', 'company', 'timestamp']
-    list_display_links = ['company']
-    list_filter = ['name', 'company']
-    search_fields = ['__str__', 'company']
-    list_editable = ['name']
-
-    class Meta:
-        model = ProductBackLog
+# class ProsuctBacklogAdmin(admin.ModelAdmin):
+#     list_display = ['product', 'company', 'timestamp']
+#     list_display_links = ['company']
+#     list_filter = ['product', 'company']
+#     search_fields = ['__str__', 'company']
+#     list_editable = ['name']
+#
+#     class Meta:
+#         model = ProductBackLog
 
 
 
 admin.site.register(Company, CompanyAdmin)
-admin.site.register(ProductBackLog, BacklogAdmin)
+# admin.site.register(ProductBackLog, ProductBackLog)

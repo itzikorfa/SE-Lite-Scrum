@@ -10,10 +10,10 @@ class CompnyForm(forms.ModelForm):
         ]
 
 
-class BacklogForm(forms.ModelForm):
+class ProductBacklogForm(forms.ModelForm):
     class Meta:
         model = ProductBackLog
-        fields = ['name', 'company', 'product_owner']
+        fields = ['name', 'product', 'product_owner']
 
 
 
