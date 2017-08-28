@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block head_title %} {{ title }} {% endblock head_title %}
+
+{% block content %}
+<div class='col-sm-6 col-sm-offset-3'>
+    <h1>{{ object.name }}</h1>
+
+    {% if team_member %}
+        <h1>stam</h1>
+        {% for tm in team_member %}
+            <h3><a href='{{ tm.get_absolute_url }}'>
+                <h2>Product: {{ tm.name }}</h2></a></h3>
+
+        {% endfor %}
+
+    {% endif %}
+</div>
+{% endblock content %}
