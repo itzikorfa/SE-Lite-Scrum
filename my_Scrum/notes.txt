@@ -1,0 +1,68 @@
+from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+from django.core.urlresolvers import reverse_lazy
+from django.http import Http404
+from django.views import generic
+
+from braces.views import SelectRelatedMixin
+
+from . import forms
+from . import models
+
+from django.contrib.auth import get_user_model
+User = get_user_model()
+
+
+class ProjectsList(SelectRelatedMixin, generic.ListView):
+    model = models.Project
+    select_related = ("company", "group")
+
+class ProjectsDetail(SelectRelatedMixin, generic.DetailView):
+    model = models.Project
+    # select_related = ("user", "group")
+
+
+class CreateProjects(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
+    # form_class = forms.ProjectsForm
+    fields = ('message','group')
+    model = models.Project
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.user = self.request.user
+        self.object.save()
+        return super().form_valid(form)
+
+
+class DeleteProjects(LoginRequiredMixin, SelectRelatedMixin, generic.DeleteView):
+    model = models.Project
+    select_related = ("user", "group")
+    success_url = reverse_lazy("posts:all")
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(user_id=self.request.user.id)
+
+    def delete(self, *args, **kwargs):
+        messages.success(self.request, "Projects Deleted")
+        return super().delete(*args, **kwargs)
+from django.shortcuts import render
+
+# Create your views here.
+projects/projects_detail.html
+
+{% extends "projects/projects_detail.html" %}
+
+{% block precompany %}
+  <div class="content">
+<h1>{{projects.name}}</h1>
+  </div>
+{% endblock %}
+{% block group_content %}
+<div class="col-md-8">
+<strong>{{ projects.company }}</strong>
+<p>{{projects.description}}</p>
+<h4>{{ projects.group }}</h4>
+</div>
+{% endblock %}

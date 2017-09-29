@@ -1,0 +1,25 @@
+{% extends 'projects/projects_base.html' %}
+{% block preproject %}
+    <div class="col-md-4">
+        <div class="content">
+            <h1>Project's Page</h1>
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+{% block project_content %}
+    <div class="col-md-8">
+        <div class="list-group">
+            {% for project in object_list %}
+                <a class="list-group-item" href="{% url 'projects:single' pk=project.pk%}">
+                <h3>{{ project.pk }}:{{ project.name }}</h3></a>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}

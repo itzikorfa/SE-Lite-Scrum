@@ -1,0 +1,39 @@
+{% extends "company/company_base.html" %}
+
+{% block precompany %}
+<div class="col-md-4">
+	<div class="content">
+		{% if user.is_authenticated %}
+		<h2>
+			Welcome back
+			<a href="#">@{{user.username }}</a>
+		</h2>
+
+    {% endif %}
+			<h2>Company's</h2>
+
+			<p>Welcome to the Company Page!</p>
+	</div>
+	{% if user.is_authenticated %}
+	<a href="{% url 'company:create' %}" class="btn btn-md btn-fill btn-warning"><span class="glyphicon glyphicon-plus-sign"></span> Create New Company!</a>
+	{% endif %}
+</div>
+{% endblock %}
+
+{% block company_content %}
+<div class="col-md-8">
+	<div class="list-group">
+		{% for company in object_list %}
+		  <a class="list-group-item" href="{% url 'company:single' pk=company.pk %}">
+			     <h3 class="title list-group-item-heading">{{ company.name }}</h3>
+			<div class="list-group-item-text container-fluid">
+				{{ company.description_html|safe }}
+				<div class="row">
+
+				</div>
+			</div>
+		</a>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}
