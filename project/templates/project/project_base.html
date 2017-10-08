@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+    <nav class="navbar navbar-default navbar-static-top">
+        <ul class="nav navbar-nav">
+          <li><a class="navbar-brand" href="{% url 'company:list' %}">Lite Scrum</a></li>
+          <li><a class="navbar-link" href="{% url 'company:list' %}">company</a></li>
+          <li><a class="navbar-link" href="{% url 'project:create' %}">Create project</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="container">
+      {% block body_block %}
+
+      {% endblock %}
+    </div>
