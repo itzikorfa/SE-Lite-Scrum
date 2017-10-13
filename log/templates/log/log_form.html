@@ -1,0 +1,19 @@
+{% extends "company/company_base.html" %}
+
+{% block cont %}
+<h1>
+  {% if not form.instance.pk %}
+  Create Company
+  {% else %}
+  Update Company
+  {% endif %}
+</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class='btn btn-primary' value="Submit">
+
+  </form>
+
+
+{% endblock %}

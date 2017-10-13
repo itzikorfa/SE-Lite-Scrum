@@ -1,0 +1,8 @@
+{% extends "log/log_base.html" %}
+{% block pre %}
+    <h1>Task: {{ log.task }}</h1>
+{% endblock %}
+
+{% block cont %}
+   {% include "log/_log.html" %}
+{% endblock %}

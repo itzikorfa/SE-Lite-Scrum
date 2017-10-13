@@ -1,0 +1,20 @@
+{% extends "groups/group_base.html" %}
+
+{% block pre %}
+<h1>{{sprint_details.name}}</h1>
+<h2>{{ sprint_details.project_backlog }}</h2>
+    hi
+{% endblock %}
+
+
+{% block cont %}
+
+<div class="col-md-8">
+<div class="col-md-8">
+        <div class="list-group">
+            <p>sprint start: {{ sprint_details.start_date }}</p>
+            <p>sprint end: {{ sprint_details.start_date }}</p>
+        </div>
+</div>
+</div>
+{% endblock %}

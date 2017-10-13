@@ -1,0 +1,50 @@
+{% extends "groups/group_base.html" %}
+
+{% block pre %}
+    <h1>{{ task_details.name }}</h1>
+    <h2>{{ task_details.project_backlog }}</h2>
+{% endblock %}
+
+
+{% block cont %}
+    <div class="col-md-8">
+        <div class="list-group">
+            <p>description: {{ task_details.description }}</p>
+            <p>priority: {{ task_details.priority }}</p>
+            {% if  task_details.parent_fields %}
+                <p>parent task: {{ task_details.parent_fields }}</p>
+            {% endif %}
+            {% if  task_details.link_task %}
+                <p>parent task: {{ task_details.link_task }}</p>
+            {% endif %}
+            {% if  task_details.team %}
+                <p>parent task: {{ task_details.parent_fields }}</p>
+            {% else %}
+                Not assigned to any team yet
+            {% endif %}
+            {% if task_details.taskProperty.sprint %}
+                <p>sprint: {{ task_details.taskProperty.sprint }}</p>
+                <p>assign to : {{ task_details.taskProperty.assign_to }}</p>
+                <p>started at : {{ task_details.taskProperty.start_date }}</p>
+                {% if task_details.taskProperty.end_date %}
+                    <p>ended at : {{ task_details.taskProperty.end_date }}</p>
+                {% else %}
+                    <p>in progress</p>
+                {% endif %}
+            {% else %}
+                <a href="{% url 'task:procreate' %}" class="btn btn-md btn-fill btn-warning"><span
+                        class="glyphicon glyphicon-plus-sign"></span> assign task</a>
+            {% endif %}
+        <a href="{% url 'log:create' %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Add Log</a>
+        {% if task_details.taskProperty.log4tasks.count == 0 %}
+            <h2>No logs yet</h2>
+
+        {% else %}
+
+            {% for log in task_details.taskProperty.log4tasks.all %}
+                {% include "log/_log.html" %}
+            {% endfor %}
+        {% endif %}
+</div>
+    </div>
+{% endblock %}
