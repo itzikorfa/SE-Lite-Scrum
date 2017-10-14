@@ -1,0 +1,9 @@
+cffi==1.11.0
+Django==1.11.3
+django-bootstrap3==9.0.0
+django-braces==1.11.0
+django-crispy-forms==1.6.1
+django-smart-selects==1.5.2
+misaka==2.1.0
+pycparser==2.18
+pytz==2017.2
