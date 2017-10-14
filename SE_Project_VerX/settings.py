@@ -38,12 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap3',
-    'groups',
-    'accounts',
+    'groups.apps.GroupsConfig',
+    'accounts.apps.AccountsConfig',
     'company.apps.CompanyConfig',
     'project.apps.ProjectConfig',
     'task.apps.TaskConfig',
-    'sprint.apps.SprintConfig','log',
+    'sprint.apps.SprintConfig','log.apps.LogConfig',
+    'todo.apps.TodoConfig', 'covey.apps.CoveyConfig'
 
 ]
 
@@ -129,3 +130,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+
+LOGIN_REDIRECT_URL = "test"
+LOGOUT_REDIRECT_URL = "thanks"

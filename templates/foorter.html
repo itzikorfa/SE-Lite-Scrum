@@ -1,0 +1,27 @@
+<footer class="row footer-bottom hidden-print">
+
+            <div class="col-sm-2-and-a-half col-xs-3-and-a-half">
+                <h5>Account</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{% url "accounts:login" %}">Login</a></li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li><a href="{% url "accounts:logout" %}">Logout</a></li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li><a href="{% url "accounts:signup" %}">Signup</a></li>
+                </ul>
+            </div>
+
+                <div class="col-sm-2-and-a-half col-xs-12-and-a-half">+
+                <h5>Groups</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{% url "groups:all" %}">Groups</a></li>
+                </ul>
+
+                <ul class="list-unstyled">
+                    <li><a href="{% url "accounts:signup" %}">Signup</a></li>
+                </ul>
+            </div>
+
+</footer>
