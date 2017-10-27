@@ -28,7 +28,7 @@ class TaskCreateView(CreateView):
 
     def form_valid(self, form):
         project_pk = self.kwargs.pop('pk')
-        form.instance.task = get_object_or_404(ProjectBacklog, pk=project_pk)
+        form.instance.projectBacklog = get_object_or_404(ProjectBacklog, pk=project_pk)
         return super(TaskCreateView, self).form_valid(form)
 
 

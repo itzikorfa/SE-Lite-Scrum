@@ -15,3 +15,4 @@ class HomePage(TemplateView):
         if request.user.is_authenticated():
             return HttpResponseRedirect(reverse("test"))
         return super().get(request, *args, **kwargs)
+

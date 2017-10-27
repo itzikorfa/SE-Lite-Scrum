@@ -45,7 +45,7 @@ class JoinGroup(LoginRequiredMixin, generic.RedirectView):
 class LeaveGroup(LoginRequiredMixin, generic.RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
-        return reverse("groups:single",kwargs={"slug": self.kwargs.get("slug")})
+        return reverse("group:single",kwargs={"slug": self.kwargs.get("slug")})
 
     def get(self, request, *args, **kwargs):
 

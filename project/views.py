@@ -51,6 +51,11 @@ class ProjectBacklogUpdateView(UpdateView):
     fields = ("ETA", "project_owner", 'scrum_master')
     model = models.ProjectBacklog
 
+    def form_valid(self, form):
+        project = self.kwargs.pop('pk')
+        form.instance.company = get_object_or_404(models.Project, pk=project)
+        return super(ProjectBacklogUpdateView, self).form_valid(form)
+
 
 class ProjectBacklogDetailView(DetailView):
     fields = ('project',"ETA", "project_owner", 'scrum_master')
@@ -58,13 +63,14 @@ class ProjectBacklogDetailView(DetailView):
 
 
 class ProjectBacklogCreateView(CreateView):
-    fields = ('project',"ETA", "project_owner", 'scrum_master')
+    fields = ("ETA", "project_owner", 'scrum_master')
     model = models.ProjectBacklog
 
-    def get_form(self, form_class=None):
-        form = super(ProjectBacklogCreateView, self).get_form(form_class)
-        form.fields['ETA'].widget.attrs.update({'class': 'datepicker'})
-        return form
+    def form_valid(self, form):
+        project = self.kwargs.pop('pk')
+        print("project pk: ", project)
+        form.instance.project = get_object_or_404(models.Project, pk=project)
+        return super(ProjectBacklogCreateView, self).form_valid(form)
 
 
 class ProjectBacklogSettingUpdateView(UpdateView):

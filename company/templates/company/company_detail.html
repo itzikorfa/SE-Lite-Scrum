@@ -1,21 +1,21 @@
 {% extends "company/company_base.html" %}
 {% block pre %}
-    <h1>Company: {{ company_details.name }}</h1>
+    {% include 'section_start.html' %}
+    <h4 class = 'card-title'>Company: {{ company_details.name }}</h4>
+
+    <a class='btn btn-primary' href="{% url 'company:update' pk=company_details.pk %}">Update</a>
+    <a class='btn btn-primary' href="{% url 'project:create' pk=company_details.pk %}">Create Project</a>
+    {% include 'section_end.html' %}
+
+
 {% endblock %}
 
 {% block cont %}
-    <div class="col-md-8">
+    {% include 'section_start.html' %}
         <div class="list-group">
-
-            {% for project in company_details.projects.all %}
+        {% for project in company_details.projects.all %}
                 {% include "project/_project.html" %}
             {% endfor %}
-
-            <div class="container">
-                <p><a class='btn btn-warning' href="{% url 'company:update' pk=company_details.pk %}">Update</a></p>
-                <p><a class='btn btn-warning' href="{% url 'project:create' pk=company_details.pk %}">Create Project</a></p>
-
-            </div>
         </div>
-    </div>
+    {% include 'section_end.html' %}
 {% endblock %}

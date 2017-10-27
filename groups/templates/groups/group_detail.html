@@ -1,6 +1,6 @@
 {% extends "groups/group_base.html" %}
 
-{% block pregroup %}
+{% block pre %}
 
 
 <h1>{{group.name}}</h1>
@@ -22,18 +22,8 @@
 {% endblock %}
 
 
-{% block group_content %}
+{% block cont %}
 
 <div class="col-md-8">
-{#	{% if group.posts.count == 0 %}#}
-{#	<h2>No posts in this group yet!</h2>#}
-{##}
-{#	{% else %}#}
-{##}
-{#		{% for post in group.posts.all %}#}
-{#			{% include "posts/_post.html" %}#}
-{#		{% endfor %}#}
-{##}
-{#	{% endif %}#}
 </div>
 {% endblock %}

@@ -1,13 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-  <h1>You are now logged in!</h1>
-  <h2><a href="{% url 'groups:all'%}">Go to Groups</a></h2>
+  <h1>Hi <a href="{% url 'accounts:login' %}">@{{user.username }}</a></h1>
+  <h2><a href="<Company></Company></a></h2>
+
+
+<ul>
+    {% for task in user.assignTo.all %}
+    <li>
+        {{ task }}
+    </li>
+{% endfor %}
+</ul>
 
 
 </div>
 
+{% endblock %}
 
 
+{% block sidebar %}
 
 {% endblock %}

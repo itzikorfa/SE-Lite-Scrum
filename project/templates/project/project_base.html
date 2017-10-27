@@ -1,16 +1,20 @@
 {% extends "base.html" %}
-    <nav class="navbar navbar-default navbar-static-top">
-        <ul class="nav navbar-nav">
-          <li><a class="navbar-brand" href="{% url 'company:list' %}">Lite Scrum</a></li>
-          <li><a class="navbar-link" href="{% url 'company:list' %}">company</a></li>
-          <li><a class="navbar-link" href="{% url 'project:create' %}">Create project</a></li>
-        </ul>
-    </nav>
+{% block content %}
 
+<div class="container">
+  <div class="row">
+  {% if user.is_authenticated %}
+    {% block pre %}{% endblock %}
+    {% block cont %}{% endblock %}
+    {% block post %}{% endblock %}
+  {% else %}
+  <h1>You need to login to see this information</h1>
+        <a href="{% url 'accounts:login' %}" class="btn btn-lg btn-fill btn-warning"><span
+                class="glyphicon glyphicon-ok-circle"></span> Login</a>
+        <a href="{% url 'accounts:signup' %}" class="btn btn-lg btn-fill btn-warning"><span
+                class="glyphicon glyphicon-ok-circle"></span> Sign Up</a>
+  {% endif %}
+  </div>
+</div>
 
-
-    <div class="container">
-      {% block body_block %}
-
-      {% endblock %}
-    </div>
+{% endblock %}

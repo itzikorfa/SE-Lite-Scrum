@@ -12,6 +12,11 @@ body {
   margin: 0;
 }
 
+.scrollable {
+                height: 100%;
+                overflow: auto;
+            }
+
 
 #note {
   position: absolute;
