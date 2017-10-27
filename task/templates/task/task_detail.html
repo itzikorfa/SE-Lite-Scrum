@@ -35,7 +35,7 @@
                 <a href="{% url 'task:procreate' %}" class="btn btn-md btn-fill btn-warning"><span
                         class="glyphicon glyphicon-plus-sign"></span> assign task</a>
             {% endif %}
-        <a href="{% url 'log:create' %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Add Log</a>
+        <a href="{% url 'log:create' pk=task_details.pk %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Add Log</a>
         {% if task_details.taskProperty.log4tasks.count == 0 %}
             <h2>No logs yet</h2>
 

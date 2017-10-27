@@ -5,6 +5,8 @@ from django.views.generic import (View,TemplateView,
                                 ListView,DetailView,
                                 CreateView,DeleteView,
                                 UpdateView)
+from django.shortcuts import get_object_or_404
+from project.models import ProjectBacklog
 from . import models
 
 
@@ -19,10 +21,15 @@ class TaskDetailView(DetailView):
 
 
 class TaskCreateView(CreateView):
-    fields = ('projectBacklog','name','description',
+    fields = ('name','description',
               'priority','task_type','is_sub_task','parent_task','link_task'
               ,'team','estimated_time','task_completed')
     model = models.Task
+
+    def form_valid(self, form):
+        project_pk = self.kwargs.pop('pk')
+        form.instance.task = get_object_or_404(ProjectBacklog, pk=project_pk)
+        return super(TaskCreateView, self).form_valid(form)
 
 
 class TaskUpdateView(UpdateView):

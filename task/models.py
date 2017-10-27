@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.validators import MaxValueValidator,MinValueValidator
-from project.models import ProjectBacklog
+from project.models import ProjectBacklog,ProjeckBacklogStages
 from sprint.models import Sprint
 from groups.models import Group
 from covey.models import CoveyMatrix
@@ -8,6 +8,7 @@ from django.contrib.auth import get_user_model
 # Create your models here.
 from django.core.urlresolvers import reverse
 User = get_user_model()
+
 
 class Task(models.Model):
     projectBacklog = models.ForeignKey(ProjectBacklog, related_name="tasksInBacklogs")
@@ -41,6 +42,8 @@ class TaskProperty(models.Model):
     assign_to = models.ForeignKey(User, related_name="assignTo")
     start_date = models.DateField(auto_now=True)
     end_date = models.DateField(blank=True, null= True)
+    task_stage = models.ForeignKey(ProjeckBacklogStages, related_name="taskStage"
+                                   ,default=0)
 
 
     def __str__(self):
