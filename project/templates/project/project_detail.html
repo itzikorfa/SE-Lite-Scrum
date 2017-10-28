@@ -29,3 +29,13 @@
     </div>
 
 {% endblock %}
+{% block post %}
+    {% if project_details.projectBacklog %}
+        {% if project_details.projectBacklog.tasksInBacklogs.all %}
+            {% for task in  project_details.projectBacklog.tasksInBacklogs.all%}
+                {% include 'task/_task.html' %}
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+
+{% endblock %}

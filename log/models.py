@@ -13,4 +13,4 @@ class Log(models.Model):
         return "log for task "
 
     def get_absolute_url(self):
-        return reverse("task:detail", kwargs={"pk": self.task.pk})
+        return reverse("task:detail", kwargs={"pk": self.task.task.pk})

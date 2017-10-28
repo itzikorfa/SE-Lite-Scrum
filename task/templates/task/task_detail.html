@@ -32,10 +32,11 @@
                     <p>in progress</p>
                 {% endif %}
             {% else %}
-                <a href="{% url 'task:procreate' %}" class="btn btn-md btn-fill btn-warning"><span
+                <a href="{% url 'task:procreate' pk=task_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
                         class="glyphicon glyphicon-plus-sign"></span> assign task</a>
             {% endif %}
-        <a href="{% url 'log:create' pk=task_details.pk %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Add Log</a>
+
+        <a href="{% url 'log:create' pk=task_details.taskProperty.pk %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Add Log</a>
         {% if task_details.taskProperty.log4tasks.count == 0 %}
             <h2>No logs yet</h2>
 

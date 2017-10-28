@@ -11,9 +11,6 @@
     {% endif %}
 			<h2>Tasks Lists</h2>
 
-	{% if user.is_authenticated %}
-	<a href="{% url 'task:create' %}" class="btn btn-md btn-fill btn-warning"><span class="glyphicon glyphicon-plus-sign"></span> Create New Task</a>
-	{% endif %}
 </div>
 {% endblock %}
 {#TODO: create custome colors for tasks#}

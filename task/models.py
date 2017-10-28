@@ -54,4 +54,4 @@ class TaskProperty(models.Model):
 
 
     def get_absolute_url(self):
-        return reverse("task:list")
+        return reverse("task:detail" ,kwargs={'pk':self.task.pk})

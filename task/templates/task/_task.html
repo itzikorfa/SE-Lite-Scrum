@@ -1,0 +1,19 @@
+<a class="list-group-item" href="{% url 'task:detail'  pk=task.pk %}">
+    <h3 class="title list-group-item-heading">
+        {{  task.name}}</h3>
+
+    <div class="list-group-item-text container-fluid">
+
+
+</div></a>
+<div class="list-group-item-text container-fluid">
+				{{ task.description|safe }}
+				<div class="row">
+					<div class="col-md-4">
+						<span class="badge">task type: {{ task.task_type }} priority: {{ task.priority }} </span>
+					</div>
+{#					<div class="col-md-4">#}
+{#						<span class="badge">{{ group.posts.count }}</span> post{{ group.posts.count|pluralize }}#}
+{#					</div>#}
+				</div>
+			</div>

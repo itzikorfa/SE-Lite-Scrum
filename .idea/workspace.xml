@@ -5,118 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a66ad5da-49dc-42d6-9810-b7771136a9b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE-scrum-plus" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/SE_Project_VerX/background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/SE_Project_VerX/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/SE_Project_VerX.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE_Project_VerX/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE_Project_VerX/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE_Project_VerX/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE_Project_VerX/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE_Project_VerX/wsgi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/templates/accounts/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/templates/accounts/signup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/templates/company/company_base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/templates/company/company_confirm_delete.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/templates/company/company_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/templates/company/company_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/templates/company/company_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/templates/groups/group_base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/templates/groups/group_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/templates/groups/group_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/templates/groups/group_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/templates/log/_log.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meeting/templates/meeting/meeting_base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meeting/templates/meeting/meeting_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meeting/templates/meeting/meeting_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/templates/project/_project.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/templates/project/project_base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/templates/project/project_confirm_delete.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/templates/project/project_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/templates/project/project_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/templates/project/project_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/templates/project/projectbacklog_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/templates/project/projectbacklog_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/templates/project/projectbacklogsettings_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprint/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprint/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprint/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprint/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprint/templates/sprint/sprint_base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprint/templates/sprint/sprint_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprint/templates/sprint/sprint_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprint/templates/sprint/sprint_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprint/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprint/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprint/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/SE_Project_VerX/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/SE_Project_VerX/css/master.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/SE_Project_VerX/js/master.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/SE_Project_VerX/js/sidebar-js.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/master.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/templates/task/task_base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/templates/task/task_confirm_delete.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/templates/task/task_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/templates/task/task_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/templates/task/task_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/templates/task/taskproperty_confirm_delete.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/section_end.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/section_start.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sidebar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/thanks.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/todo/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/templates/task/_task.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/models.py" afterPath="$PROJECT_DIR$/log/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/views.py" afterPath="$PROJECT_DIR$/log/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/templates/project/project_detail.html" afterPath="$PROJECT_DIR$/project/templates/project/project_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/models.py" afterPath="$PROJECT_DIR$/task/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/templates/task/task_detail.html" afterPath="$PROJECT_DIR$/task/templates/task/task_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/templates/task/task_list.html" afterPath="$PROJECT_DIR$/task/templates/task/task_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/urls.py" afterPath="$PROJECT_DIR$/task/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/views.py" afterPath="$PROJECT_DIR$/task/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -130,53 +30,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="56" column="45" lean-forward="false" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="project_detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/templates/project/project_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+            <state relative-caret-position="329">
+              <caret line="40" column="14" lean-forward="false" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_task.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task/templates/task/_task.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -185,9 +53,11 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="69" lean-forward="false" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="69" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -195,28 +65,76 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="325">
+              <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task/models.py">
+        <entry file="file://$PROJECT_DIR$/log/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+            <state relative-caret-position="255">
+              <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="85" lean-forward="false" selection-start-line="14" selection-start-column="85" selection-end-line="14" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/admin.py">
+      <file leaf-file-name="task_detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task/templates/task/task_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+            <state relative-caret-position="170">
+              <caret line="38" column="55" lean-forward="true" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -235,7 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>basic_app</find>
       <find>Sch</find>
       <find>acc</find>
       <find>#</find>
@@ -265,6 +182,7 @@
       <find>back</find>
       <find>project pk</find>
       <find>get_absolute_url</find>
+      <find>task:td</find>
     </findStrings>
     <replaceStrings>
       <replace>Project</replace>
@@ -288,10 +206,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/log/templates/log/log_detail.html" />
-        <option value="$PROJECT_DIR$/log/templates/log/log_list.html" />
         <option value="$PROJECT_DIR$/log/templates/log/_log.html" />
-        <option value="$PROJECT_DIR$/log/models.py" />
         <option value="$PROJECT_DIR$/templates/foorter.html" />
         <option value="$PROJECT_DIR$/todo/urls.py" />
         <option value="$PROJECT_DIR$/todo/templates/todo/todo_confirm_delete.html" />
@@ -305,14 +220,11 @@
         <option value="$PROJECT_DIR$/todo/templates/todo/todo_detail.html" />
         <option value="$PROJECT_DIR$/todo/views.py" />
         <option value="$PROJECT_DIR$/log/urls.py" />
-        <option value="$PROJECT_DIR$/task/templates/task/task_detail.html" />
-        <option value="$PROJECT_DIR$/log/views.py" />
         <option value="$PROJECT_DIR$/templates/sidebar.html" />
         <option value="$PROJECT_DIR$/meeting/templates/meeting/meeting_base.html" />
         <option value="$PROJECT_DIR$/meeting/templates/meeting/meeting_list.html" />
         <option value="$PROJECT_DIR$/meeting/views.py" />
         <option value="$PROJECT_DIR$/meeting/models.py" />
-        <option value="$PROJECT_DIR$/task/urls.py" />
         <option value="$PROJECT_DIR$/static/SE_Project_VerX/js/sidebar-js.js" />
         <option value="$PROJECT_DIR$/templates/indexl.html" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
@@ -333,12 +245,18 @@
         <option value="$PROJECT_DIR$/company/templates/company/company_detail.html" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/static/SE_Project_VerX/css/master.css" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/project/admin.py" />
         <option value="$PROJECT_DIR$/project/views.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/project/templates/project/project_detail.html" />
+        <option value="$PROJECT_DIR$/task/templates/task/_task.html" />
+        <option value="$PROJECT_DIR$/task/urls.py" />
         <option value="$PROJECT_DIR$/task/views.py" />
+        <option value="$PROJECT_DIR$/task/templates/task/task_list.html" />
         <option value="$PROJECT_DIR$/task/models.py" />
+        <option value="$PROJECT_DIR$/log/views.py" />
+        <option value="$PROJECT_DIR$/task/templates/task/task_detail.html" />
+        <option value="$PROJECT_DIR$/log/models.py" />
       </list>
     </option>
   </component>
@@ -348,16 +266,16 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="width" value="1378" />
-    <option name="height" value="744" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -371,138 +289,52 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
+              <item name="SE-scrum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SE-scrum" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-              <item name="sprint" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
+              <item name="SE-scrum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SE-scrum" type="462c0819:PsiDirectoryNode" />
               <item name="task" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
             <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SE_Project_VerX" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="SE-scrum" type="cbb8eebc:String" user="SE-scrum" />
             </path>
             <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="SE-scrum" type="cbb8eebc:String" user="SE-scrum" />
+              <item name="log" type="cbb8eebc:String" user="log" />
             </path>
             <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 (C:\projects\SE\SE_env\python.exe) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="SE-scrum" type="cbb8eebc:String" user="SE-scrum" />
+              <item name="task" type="cbb8eebc:String" user="task" />
             </path>
             <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 (C:\projects\SE\SE_env\python.exe) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="SE_env" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="SE-scrum" type="cbb8eebc:String" user="SE-scrum" />
+              <item name="task" type="cbb8eebc:String" user="task" />
+              <item name="templates" type="cbb8eebc:String" user="templates" />
             </path>
             <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 (C:\projects\SE\SE_env\python.exe) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 (C:\projects\SE\SE_env\python.exe) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 (C:\projects\SE\SE_env\python.exe) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 (C:\projects\SE\SE_env\python.exe) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 (C:\projects\SE\SE_env\python.exe) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="handlers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 (C:\projects\SE\SE_env\python.exe) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SE_Project_VerX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 (C:\projects\SE\SE_env\python.exe) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="generic" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="SE-scrum" type="cbb8eebc:String" user="SE-scrum" />
+              <item name="task" type="cbb8eebc:String" user="task" />
+              <item name="templates" type="cbb8eebc:String" user="templates" />
+              <item name="task" type="cbb8eebc:String" user="task" />
             </path>
           </expand>
           <select />
@@ -511,24 +343,24 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../new_version/SE-scrum-plus" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="SearchEverywhereHistoryKey" value="profile&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\projects\SE\SE_Project_VerX\templates" />
-      <recent name="C:\projects\SE\SE_Project_VerX\static\SE_Project_VerX" />
-      <recent name="C:\projects\SE\SE_Project_VerX\meeting\templates\meeting" />
-      <recent name="C:\projects\SE\SE_Project_VerX\static\SE_Project_VerX\css" />
-      <recent name="C:\projects\SE\SE_Project_VerX\todo" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\SE\SE_Project_VerX\meeting" />
       <recent name="C:\projects\SE\SE_Project_VerX\log\templates" />
       <recent name="C:\projects\SE\SE_Project_VerX\company" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\SE\SE-scrum\task\templates\task" />
+      <recent name="C:\projects\SE\SE_Project_VerX\templates" />
+      <recent name="C:\projects\SE\SE_Project_VerX\static\SE_Project_VerX" />
+      <recent name="C:\projects\SE\SE_Project_VerX\meeting\templates\meeting" />
+      <recent name="C:\projects\SE\SE_Project_VerX\static\SE_Project_VerX\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -594,21 +426,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5030211" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32899022" sideWeight="0.49697885" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32899022" sideWeight="0.49697885" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2128788" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2152568" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39739415" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -645,6 +477,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="after fix task" />
+    <option name="LAST_COMMIT_MESSAGE" value="after fix task" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -656,11 +492,6 @@
           <url>file://$PROJECT_DIR$/log/forms.py</url>
           <line>8</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/log/views.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/project/views.py</url>
@@ -681,50 +512,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/all.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meeting/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SE_Project_VerX/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/SE_Project_VerX/js/sidebar-js.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -737,18 +524,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commands.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-202">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/commands.log" />
     <entry file="file://$PROJECT_DIR$/../SE_env/Lib/site-packages/django/contrib/auth/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -831,9 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -857,7 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -873,9 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -907,7 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -939,9 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="63" lean-forward="true" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -962,11 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -974,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -991,16 +752,8 @@
         <state relative-caret-position="170">
           <caret line="10" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,7 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="186" column="28" lean-forward="false" selection-start-line="186" selection-start-column="28" selection-end-line="186" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,51 +806,117 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="0">
           <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="72" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
+        <state relative-caret-position="782">
           <caret line="56" column="45" lean-forward="false" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="69" lean-forward="false" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="69" />
+        <state relative-caret-position="238">
+          <caret line="14" column="85" lean-forward="false" selection-start-line="14" selection-start-column="85" selection-end-line="14" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/templates/project/project_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+        <state relative-caret-position="329">
+          <caret line="40" column="14" lean-forward="false" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task/templates/task/_task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task/templates/task/task_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task/templates/task/task_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="38" column="55" lean-forward="true" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="121">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

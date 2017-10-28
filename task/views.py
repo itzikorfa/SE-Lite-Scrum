@@ -47,10 +47,14 @@ class TaskPropertyListView(ListView):
 
 
 class TaskPropertyCreateView(CreateView):
-    fields = ('task', 'sprint','assign_to','end_date')
+    fields = ( 'sprint','assign_to','end_date','task_stage')
     model = models.TaskProperty
     template_name = 'task/task_form.html'
 
+    def form_valid(self, form):
+        task_pk = self.kwargs.pop('pk')
+        form.instance.task = get_object_or_404(models.Task, pk=task_pk)
+        return super(TaskPropertyCreateView, self).form_valid(form)
 
 class TaskPropertyUpdateView(UpdateView):
     fields = ('sprint','assign_to','end_date')
