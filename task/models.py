@@ -33,7 +33,7 @@ class Task(models.Model):
         return "Task {}".format(self.name)
 
     def get_absolute_url(self):
-        return reverse("task:detail" ,kwargs={'pk':self.pk})
+        return reverse("task:detail" ,kwargs={'pk':self.projectBacklog.project.pk})
 
 
 class TaskProperty(models.Model):
