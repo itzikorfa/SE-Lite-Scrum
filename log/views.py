@@ -30,6 +30,7 @@ class LogCreateView(CreateView):
     model = models.Log
     # form_class = forms.LogCreateViewForm4MProject
     fields = ('log',)
+
     def form_valid(self, form):
         test = self.kwargs.pop('pk')
         form.instance.task = get_object_or_404(TaskProperty, pk=test)# success_url = reverse_lazy("project:blcreate")

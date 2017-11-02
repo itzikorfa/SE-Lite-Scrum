@@ -9,7 +9,6 @@
                 </h2>
 
             {% endif %}
-            <h2>Groups</h2>
 
             <p>Welcome to the Company Page!</p>
         </div>
@@ -22,7 +21,7 @@
 {% block cont %}
 
     {#    <div class="col-md-4">#}
-
+    {% if object_list %}
     <h1>Companies</h1>
     {% if user.is_authenticated %}
         <div class="col-md-8">
@@ -40,6 +39,9 @@
                 class="glyphicon glyphicon-ok-circle"></span> Login</a>
         <a href="{% url 'accounts:signup' %}" class="btn btn-lg btn-fill btn-warning"><span
                 class="glyphicon glyphicon-ok-circle"></span> Sign Up</a>
+    {% endif %}
+    {% else %}
+    <h4>Create new company</h4>
     {% endif %}
 
 </div>

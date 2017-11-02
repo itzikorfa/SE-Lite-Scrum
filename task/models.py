@@ -26,14 +26,12 @@ class Task(models.Model):
     estimated_time =models.IntegerField(validators=[MinValueValidator(0)])
     acutal_time = models.IntegerField(blank=True,null=True ,validators=[MinValueValidator(0)])
 
-
-
-
     def __str__(self):
         return "Task {}".format(self.name)
 
     def get_absolute_url(self):
-        return reverse("task:detail" ,kwargs={'pk':self.projectBacklog.project.pk})
+        return reverse("task:detail", kwargs={"pk": self.pk})
+
 
 
 class TaskProperty(models.Model):
