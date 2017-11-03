@@ -27,7 +27,6 @@ class TaskCreateView(CreateView):
     model = models.Task
 
     def form_valid(self, form):
-        print("itzik pk:"+form.instance.pk)
         project_pk = self.kwargs.pop('pk')
         form.instance.projectBacklog = get_object_or_404(ProjectBacklog, pk=project_pk)
         return super(TaskCreateView, self).form_valid(form)

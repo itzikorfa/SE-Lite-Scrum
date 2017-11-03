@@ -22,7 +22,7 @@
             {% else %}
                 Not assigned to any team yet
             {% endif %}
-            {% if task_details.taskProperty.sprint %}
+            {% if task_details.taskProperty %}
                 <p>sprint: {{ task_details.taskProperty.sprint }}</p>
                 <p>assign to : {{ task_details.taskProperty.assign_to }}</p>
                 <p>started at : {{ task_details.taskProperty.start_date }}</p>
@@ -36,16 +36,17 @@
                         class="glyphicon glyphicon-plus-sign"></span> assign task</a>
             {% endif %}
 
-        <a href="{% url 'log:create' pk=task_details.taskProperty.pk %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Add Log</a>
-        {% if task_details.taskProperty.log4tasks.count == 0 %}
-            <h2>No logs yet</h2>
-
-        {% else %}
-
-            {% for log in task_details.taskProperty.log4tasks.all %}
-                {% include "log/_log.html" %}
-            {% endfor %}
-        {% endif %}
 </div>
     </div>
+{% endblock %}
+
+
+{% block post %}
+    {% if task_details.taskProperty %}
+        {% if task_details.taskProperty.log4tasks.count %}
+            {% for task in  task_details.taskProperty.log4tasks%}
+                {% include "task/_task.html" %}
+            {% endfor %}
+        {% endif %}
+    {% endif %}
 {% endblock %}
