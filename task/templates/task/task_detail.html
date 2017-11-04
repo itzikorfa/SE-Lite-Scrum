@@ -1,14 +1,9 @@
 {% extends "task/task_base.html" %}
 
 {% block pre %}
-    <h1>{{ task_details.name }}</h1>
-    <h2>{{ task_details.project_backlog }}</h2>
-{% endblock %}
-
-
-{% block cont %}
-    <div class="col-md-8">
-        <div class="list-group">
+    <div class="card">
+  <h4 class="card-header">{{ task_details.name }}</h4>
+     <div class="card-body">
             <p>description: {{ task_details.description }}</p>
             <p>priority: {{ task_details.priority }}</p>
             {% if  task_details.parent_fields %}
@@ -31,22 +26,31 @@
                 {% else %}
                     <p>in progress</p>
                 {% endif %}
+                    <a href="{% url 'log:create' pk=task_details.taskProperty.pk %}" class="btn btn-md btn-fill btn-warning"><span
+                        class="glyphicon glyphicon-plus-sign"></span> Add log</a>
+
             {% else %}
                 <a href="{% url 'task:procreate' pk=task_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
-                        class="glyphicon glyphicon-plus-sign"></span> assign task</a>
+                        class="glyphicon glyphicon-plus-sign"></span> Assign task</a>
             {% endif %}
-
 </div>
-    </div>
+</div>
 {% endblock %}
 
 
 {% block post %}
+
     {% if task_details.taskProperty %}
         {% if task_details.taskProperty.log4tasks.count %}
-            {% for task in  task_details.taskProperty.log4tasks%}
-                {% include "task/_task.html" %}
+            <div class="row"><div class="list-group">
+            {% for log in  task_details.taskProperty.log4tasks.all%}
+
+
+                {% include "log/_log.html" %}
+
+
             {% endfor %}
+            </div></div>
         {% endif %}
     {% endif %}
 {% endblock %}

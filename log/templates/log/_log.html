@@ -1,18 +1,15 @@
-<a class="list-group-item" href="{% url 'log:update'  pk=log.pk %}">
-    <h3 class="title list-group-item-heading">
-        {{log.task.name}}</h3>
-<div class="list-group-item-text container-fluid">
-{{ log.log }}
+<div class="card bg-light col-sm-6">
+      <div class="card-body">
+<p class="card-text">
+          {{ log.log }}
+</p>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">created: {{ log.timestamp }}</li>
+              <li class="list-group-item">update: {{ log.update }} </li>
+          </ul>
 
-</div></a>
-<div class="list-group-item-text container-fluid">
-				{{ task.description|safe }}
-				<div class="row">
-					<div class="col-md-4">
-						<span class="badge">updated: {{ log.update }} created: {{ log.timestamp }} </span>
-					</div>
-{#					<div class="col-md-4">#}
-{#						<span class="badge">{{ group.posts.count }}</span> post{{ group.posts.count|pluralize }}#}
-{#					</div>#}
-				</div>
-			</div>
+          <a href="{% url 'log:update'  pk=log.pk %}" class="btn btn-primary"> Update </a>
+
+      </div>
+
+</div>
