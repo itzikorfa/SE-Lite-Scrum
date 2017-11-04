@@ -8,7 +8,7 @@ from django.views.generic import (View,TemplateView,
 from django.shortcuts import get_object_or_404
 from project.models import ProjectBacklog
 from . import models
-
+from sprint.models import Sprint
 
 class TaskListView(ListView):
     model = models.Task
@@ -50,6 +50,12 @@ class TaskPropertyCreateView(CreateView):
     fields = ( 'sprint','assign_to','end_date','task_stage')
     model = models.TaskProperty
     template_name = 'task/task_form.html'
+
+    def get_form(self, form_class=None):
+        form = super(TaskPropertyCreateView, self).get_form(form_class)
+        sprints = self.kwargs.pop('pk')
+        form.fields["sprint"].queryset= Sprint.objects.filter(project_backlog = sprints)
+        return form
 
     def form_valid(self, form):
         task_pk = self.kwargs.pop('pk')
