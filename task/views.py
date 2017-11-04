@@ -53,12 +53,13 @@ class TaskPropertyCreateView(CreateView):
 
     def get_form(self, form_class=None):
         form = super(TaskPropertyCreateView, self).get_form(form_class)
-        sprints = self.kwargs.pop('pk')
+        sprints = self.kwargs['pk']
         form.fields["sprint"].queryset= Sprint.objects.filter(project_backlog = sprints)
         return form
 
     def form_valid(self, form):
         task_pk = self.kwargs.pop('pk')
+
         form.instance.task = get_object_or_404(models.Task, pk=task_pk)
         return super(TaskPropertyCreateView, self).form_valid(form)
 

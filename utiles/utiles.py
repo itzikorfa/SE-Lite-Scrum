@@ -18,3 +18,8 @@ def genrate_sprint(pbs, sprint_length, end_date):
         start_date = s1.end_date+timedelta(1)
 
 
+
+
+def addd_stages_to_project():
+    # TODO: fix this
+    pass

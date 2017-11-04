@@ -78,3 +78,4 @@ class ProjeckBacklogStages(models.Model):
 
     class Meta:
         unique_together = ('project_backlog','stage')
+        ordering = ('stage',)
