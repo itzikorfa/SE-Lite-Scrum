@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^backlog/create/(?P<pk>\d+)/$', views.ProjectBacklogCreateView.as_view(), name='blcreate'),
     url(r'^backlog/(?P<pk>\d+)/$',views.ProjectBacklogDetailView.as_view(),name='bldetail'),
     url(r'^backlog/update/(?P<pk>\d+)/$',views.ProjectBacklogUpdateView.as_view(),name='blupdate'),
-    url(r'^setting/create/$', views.ProjectBacklogSettingCreateView.as_view(), name='createsetting'),
+    url(r'^setting/create/(?P<pk>\d+)/$', views.ProjectBacklogSettingCreateView.as_view(), name='createsetting'),
     url(r'^setting/(?P<pk>\d+)/$',views.ProjectBacklogSettingDetailView.as_view(),name='detailsetting'),
     url(r'^setting/update/(?P<pk>\d+)/$',views.ProjectBacklogSettingUpdateView.as_view(),name='updatesetting'),
 ]

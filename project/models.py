@@ -5,7 +5,7 @@ from groups.models import Group
 from django.contrib.auth.models import User
 from datetime import timedelta, datetime
 from django.core.validators import MinValueValidator,MaxValueValidator,MaxLengthValidator,MinLengthValidator
-
+from django.utils import timezone
 
 class Project(models.Model):
     company = models.ForeignKey(Company, related_name='projects')
@@ -31,7 +31,7 @@ class ProjectBacklog(models.Model):
     ETA = models.DateField()
     project_owner = models.ForeignKey(User, related_name="projectBacklogOwner")
     scrum_master = models.ForeignKey(User, related_name="projectBacklogSM")
-
+    start_date = models.DateField(verbose_name='start date', default=timezone.now)
     def __str__(self):
         return "{} ETA: {} (owner: {})".format(self.project,self.ETA,self.project_owner)
 

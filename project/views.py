@@ -10,7 +10,7 @@ from . import models
 from company.models import Company
 from django.shortcuts import get_object_or_404
 # Create your views here.
-
+from utiles import utiles
 
 class ProjectListView(SelectRelatedMixin, ListView):
     model = models.Project
@@ -48,7 +48,7 @@ class ProjectDeleteView(DeleteView):
     success_url = reverse_lazy("project:list")
 
 class ProjectBacklogUpdateView(UpdateView):
-    fields = ("ETA", "project_owner", 'scrum_master')
+    fields = ("ETA", 'start_date',"project_owner", 'scrum_master')
     model = models.ProjectBacklog
 
     def form_valid(self, form):
@@ -63,12 +63,12 @@ class ProjectBacklogDetailView(DetailView):
 
 
 class ProjectBacklogCreateView(CreateView):
-    fields = ("ETA", "project_owner", 'scrum_master')
+    fields = ("ETA", 'start_date',"project_owner", 'scrum_master')
     model = models.ProjectBacklog
 
     def form_valid(self, form):
         project = self.kwargs.pop('pk')
-        print("project pk: ", project)
+        # print("project pk: ", project)
         form.instance.project = get_object_or_404(models.Project, pk=project)
         return super(ProjectBacklogCreateView, self).form_valid(form)
 
@@ -84,6 +84,12 @@ class ProjectBacklogSettingDetailView(DetailView):
 
 
 class ProjectBacklogSettingCreateView(CreateView):
-    fields = ('project_backlog',"sprint_length", "sprint_template")
+    fields = ("sprint_length", "sprint_template")
     model = models.ProjectBacklogSettings
 
+    def form_valid(self, form):
+        project = self.kwargs.pop('pk')
+        form.instance.project_backlog = get_object_or_404(models.ProjectBacklog, pk=project)
+        utiles.genrate_sprint(form.instance.project_backlog, form.instance.sprint_length,
+                              form.instance.project_backlog.ETA)
+        return super(ProjectBacklogSettingCreateView, self).form_valid(form)
