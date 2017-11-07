@@ -11,8 +11,10 @@
 
 				{% if user in group.members.all %}
 					<a href="{% url 'groups:leave' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-remove-circle"></span> Leave</a>
+                    <a href="{% url 'groups:add' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Add User</a>
 				{% else %}
 					<a href="{% url 'groups:join' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Join</a>
+
 				{% endif %}
 
 
@@ -25,5 +27,9 @@
 {% block cont %}
 
 <div class="col-md-8">
+
+    {% for account in group.member.all %}
+        <a href="{% url 'accounts:detail' pk=account.pk %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Join</a>
+    {% endfor %}
 </div>
 {% endblock %}

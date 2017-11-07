@@ -9,6 +9,7 @@ from django.db import IntegrityError
 from django.shortcuts import get_object_or_404
 from django.views import generic
 from groups.models import Group,GroupMember
+from accounts.models import User
 from . import models
 
 class CreateGroup(LoginRequiredMixin, generic.CreateView):
@@ -68,3 +69,19 @@ class LeaveGroup(LoginRequiredMixin, generic.RedirectView):
                 "You have successfully left this group."
             )
         return super().get(request, *args, **kwargs)
+
+class CreateGroupMember(generic.CreateView):
+    models = GroupMember
+    fields = ('user',)
+    template_name = 'groups/groupmember_form.html'
+
+    def get_queryset(self):
+        users = User.objects.all()
+        return models.GroupMember.objects.all()
+
+    def form_valid(self, form):
+        group = get_object_or_404(Group, slug=self.kwargs.get("slug"))
+        form.instance.group = group
+
+        return super(CreateGroupMember, self).form_valid(form)
+

@@ -7,6 +7,7 @@ from django.views.generic import (View,TemplateView,
                                 UpdateView)
 from django.shortcuts import get_object_or_404
 from project.models import ProjectBacklog
+from accounts.models import User
 from . import models
 from sprint.models import Sprint
 
@@ -22,8 +23,8 @@ class TaskDetailView(DetailView):
 
 class TaskCreateView(CreateView):
     fields = ('name','description',
-              'priority','task_type','is_sub_task','parent_task','link_task'
-              ,'team','estimated_time','task_completed')
+              'priority','task_type'
+              ,'team','estimated_time',)
     model = models.Task
 
     def form_valid(self, form):
@@ -35,7 +36,7 @@ class TaskCreateView(CreateView):
 class TaskUpdateView(UpdateView):
     fields = ('name', 'description','estimated_time',
               'priority', 'task_type','is_sub_task', 'parent_task', 'link_task'
-              , 'team','estimated_time', 'task_completed')
+              , 'team','estimated_time')
     model = models.Task
 
 class TaskDeleteView(DeleteView):
@@ -47,14 +48,16 @@ class TaskPropertyListView(ListView):
 
 
 class TaskPropertyCreateView(CreateView):
-    fields = ( 'sprint','assign_to','end_date','task_stage')
+    fields = ( 'sprint','assign_to','task_stage')
     model = models.TaskProperty
     template_name = 'task/task_form.html'
 
     def get_form(self, form_class=None):
         form = super(TaskPropertyCreateView, self).get_form(form_class)
-        sprints = self.kwargs['pk']
-        form.fields["sprint"].queryset= Sprint.objects.filter(project_backlog = sprints)
+        task_id = self.kwargs['pk']
+        task = get_object_or_404(models.Task, pk=task_id)
+        form.fields["assign_to"].queryset = User.objects.filter(groups__name=task.team.name)
+        form.fields["sprint"].queryset= Sprint.objects.filter(project_backlog = task.projectBacklog)
         return form
 
     def form_valid(self, form):
@@ -72,3 +75,8 @@ class TaskPropertyDeleteView(DeleteView):
     model = models.TaskProperty
     success_url = reverse_lazy("task:list")
 #     TODO: add logs to task detail
+
+
+class TaskFinished(UpdateView):
+    model = models.Task
+    fields = ('task_completed',)

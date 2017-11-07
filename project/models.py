@@ -33,7 +33,7 @@ class ProjectBacklog(models.Model):
     scrum_master = models.ForeignKey(User, related_name="projectBacklogSM")
     start_date = models.DateField(verbose_name='start date', default=timezone.now)
     def __str__(self):
-        return "{} ETA: {} (owner: {})".format(self.project,self.ETA,self.project_owner)
+        return "{} project: {} (owner: {})".format(self.pk,self.project,self.project_owner)
 
     def get_absolute_url(self):
         return reverse("project:detail",kwargs={'pk':self.project.pk})
@@ -46,7 +46,7 @@ class ProjectBacklogSettings(models.Model):
     sprint_template = models.CharField(max_length=15, default='sprint_', blank=True)
 
     def __str__(self):
-        return "{} length {}".format(self.project_backlog.project.name , self.sprint_length)
+        return "{}: {} length {}".format(self.pk ,self.project_backlog.project.name , self.sprint_length)
 
     def get_absolute_url(self):
         return reverse("project:detail",kwargs={'pk':self.project_backlog.project.pk})

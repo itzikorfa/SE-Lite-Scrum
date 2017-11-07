@@ -1,11 +1,14 @@
 from django.db import models
 from task.models import TaskProperty
 from django.core.urlresolvers import reverse
+from django.core.validators import MinValueValidator,MaxValueValidator
 # Create your models here.
 
 class Log(models.Model):
     task = models.ForeignKey(TaskProperty, related_name="log4tasks")
     log = models.TextField()
+    presentage_complete = models.IntegerField(
+        validators=[MaxValueValidator(100), MinValueValidator(0)], verbose_name="%completed", default=0)
     update = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 

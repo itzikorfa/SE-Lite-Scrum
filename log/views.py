@@ -5,8 +5,9 @@ from django.views.generic import (View,TemplateView,
                                 ListView,DetailView,
                                 CreateView,DeleteView,
                                 UpdateView)
+from datetime import datetime
 from . import models
-from task.models import TaskProperty
+from task.models import TaskProperty, Task
 from django.shortcuts import get_object_or_404
 from . import forms
 # Create your views here.
@@ -29,10 +30,38 @@ class LogDetailView(DetailView):
 class LogCreateView(CreateView):
     model = models.Log
     # form_class = forms.LogCreateViewForm4MProject
-    fields = ('log',)
+    fields = ('log','presentage_complete')
+
+    def get_initial(self):
+        task_id = self.kwargs['pk']
+        task = get_object_or_404(Task, pk=task_id)
+        return {
+            'presentage_complete':task.presentage_complete,
+        }
+
+    # def get_form(self, form_class=None):
+    #     form = super(LogCreateView, self).get_form(form_class)
+    #     task_id = self.kwargs['pk']
+    #     task = get_object_or_404(models.Task, pk=task_id)
+    #     form.fields["presentage_complete"]=10
+    #     return form
+
 
     def form_valid(self, form):
         test = self.kwargs.pop('pk')
+        task = get_object_or_404(Task, pk=test)
+        task.presentage_complete = form.instance.presentage_complete
+        if task.presentage_complete == 100:
+            task.task_completed = True
+            tp = get_object_or_404(TaskProperty, pk=test)
+            tp.end_date = datetime.now()
+            tp.save()
+        else:
+            task.task_completed = False
+            tp = get_object_or_404(TaskProperty, pk=test)
+            tp.end_date = None
+            tp.save()
+        task.save()
         form.instance.task = get_object_or_404(TaskProperty, pk=test)# success_url = reverse_lazy("project:blcreate")
 
         return super(LogCreateView, self).form_valid(form)

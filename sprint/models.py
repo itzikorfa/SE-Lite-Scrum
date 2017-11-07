@@ -13,8 +13,8 @@ class Sprint(models.Model):
     project_backlog = models.ForeignKey(ProjectBacklog, related_name="sprint_project")
 
     def __str__(self):
-        return "[{}] Sprint: {} {}-{}".format(
-            self.project_backlog,self.name, self.start_date,self.end_date
+        return "{} {} -> {}".format(
+            self.name, self.start_date,self.end_date
             )
 
     def get_absolute_url(self):

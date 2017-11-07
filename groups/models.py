@@ -48,3 +48,6 @@ class GroupMember(models.Model):
 
     class Meta:
         unique_together = ("group", "user")
+
+    def get_absolute_url(self):
+        return reverse("groups:single", kwargs={"slug": self.group.slug})
