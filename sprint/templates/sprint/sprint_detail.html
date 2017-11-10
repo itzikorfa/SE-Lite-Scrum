@@ -3,7 +3,6 @@
 {% block pre %}
 <h1>{{sprint_details.name}}</h1>
 <h2>{{ sprint_details.project_backlog }}</h2>
-    hi
 {% endblock %}
 
 
@@ -17,4 +16,13 @@
         </div>
 </div>
 </div>
+{% endblock %}
+
+{% block post %}
+
+    {% for task in sprint_details.taskSprint.all %}
+        {% include 'task/_task.html' %}
+    {% endfor %}
+
+
 {% endblock %}

@@ -16,8 +16,6 @@ body {
                 height: 100%;
                 overflow: auto;
             }
-
-
 #note {
   position: absolute;
   color: rgba(249,241,204,1);
@@ -29,3 +27,4 @@ body {
   user-select: none;
   font-family: Arial;
 }
+

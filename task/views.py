@@ -56,7 +56,7 @@ class TaskPropertyCreateView(CreateView):
         form = super(TaskPropertyCreateView, self).get_form(form_class)
         task_id = self.kwargs['pk']
         task = get_object_or_404(models.Task, pk=task_id)
-        form.fields["assign_to"].queryset = User.objects.filter(groups__name=task.team.name)
+        form.fields["assign_to"].queryset = task.team.members.all()
         form.fields["sprint"].queryset= Sprint.objects.filter(project_backlog = task.projectBacklog)
         return form
 

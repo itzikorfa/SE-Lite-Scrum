@@ -28,8 +28,9 @@
 
 <div class="col-md-8">
 
-    {% for account in group.member.all %}
-        <a href="{% url 'accounts:detail' pk=account.pk %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Join</a>
+    {% for account in group.members.all %}
+        <a href="{% url 'accounts:detail' pk=account.pk %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span>
+        {{ account.username }}</a>
     {% endfor %}
 </div>
 {% endblock %}
