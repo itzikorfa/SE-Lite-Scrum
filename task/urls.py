@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^delete/(?P<pk>\d+)/$',views.TaskDeleteView.as_view(),name='delete'),
     url(r'^setting/create/(?P<pk>\d+)/$',views.TaskPropertyCreateView.as_view(),name='procreate'),
     url(r'^setting/update/(?P<pk>\d+)/$',views.TaskPropertyUpdateView.as_view(),name='proupdate'),
-    url(r'^setting/delete/(?P<pk>\d+)/$',views.TaskPropertyDeleteView.as_view(),name='prodelete')
+    url(r'^setting/delete/(?P<pk>\d+)/$',views.TaskPropertyDeleteView.as_view(),name='prodelete'),
+    # url(r'tasks/(?P<username>[-\w]+)/$', views.TaskUserDetail.as_view(), name='user_list'),
 
 ]

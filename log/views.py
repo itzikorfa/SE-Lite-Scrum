@@ -23,10 +23,6 @@ class LogDetailView(DetailView):
     template_name = 'log/log_detail.html'
 
 
-# class LogCreateView(CreateView):
-#     fields = ("task",'log')
-#     model = models.Log
-
 class LogCreateView(CreateView):
     model = models.Log
     # form_class = forms.LogCreateViewForm4MProject
@@ -38,14 +34,6 @@ class LogCreateView(CreateView):
         return {
             'presentage_complete':task.presentage_complete,
         }
-
-    # def get_form(self, form_class=None):
-    #     form = super(LogCreateView, self).get_form(form_class)
-    #     task_id = self.kwargs['pk']
-    #     task = get_object_or_404(models.Task, pk=task_id)
-    #     form.fields["presentage_complete"]=10
-    #     return form
-
 
     def form_valid(self, form):
         test = self.kwargs.pop('pk')

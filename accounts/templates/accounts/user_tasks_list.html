@@ -1,0 +1,20 @@
+{% extends 'accounts/accounts_base.html' %}
+{% block pre %}
+
+<h1>@{{ username }}</h1>
+
+{% endblock %}
+
+{% block cont %}
+<h2>Tasks</h2>
+    {% for task in tasks %}
+        {% include 'task/_taskP.html' %}
+
+    {% endfor %}
+
+    <h2>Todo:</h2>
+    {% for todo in todos %}
+        {% include 'todo/_todo.html' %}
+
+    {% endfor %}
+{% endblock %}

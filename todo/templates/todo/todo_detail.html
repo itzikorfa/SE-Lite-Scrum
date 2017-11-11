@@ -18,8 +18,20 @@
             {% if  todo_details.ETA %}
                 <p>ETA: {{ todo_details.ETA }}</p>
             {% endif %}
-
+            {% if todo_details.task_completed %}
+                <h3>DONE</h3>
+            {% endif %}
+        <a href="{% url 'todo:update' pk=todo_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
+                        class="glyphicon glyphicon-ok"></span> update</a>
+        <a href="{% url 'todo:logcreate' pk=todo_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
+                        class="glyphicon glyphicon-ok"></span> Add log</a>
 
 </div>
     </div>
+{% endblock %}
+
+{% block post %}
+    {% for log in todo_details.todolog.all %}
+        {% include 'todo/_log.html' %}
+    {% endfor %}
 {% endblock %}

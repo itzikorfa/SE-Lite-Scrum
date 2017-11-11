@@ -80,3 +80,20 @@ class TaskPropertyDeleteView(DeleteView):
 class TaskFinished(UpdateView):
     model = models.Task
     fields = ('task_completed',)
+
+
+class TaskUserDetail(TemplateView):
+    template_name = "task/tasks_by_username.html"
+    context_object_name = "objects"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tasks'] = models.Task.objects.filter(taskProperty__assign_to__username = self.kwargs['username'])
+
+        return context
+    # def get_queryset(self):
+    #     queryset = super().get_queryset()
+    #
+    #     return queryset.filter(
+    #         taskProperty__assign_to__username=self.kwargs.get("username")
+    #     )
