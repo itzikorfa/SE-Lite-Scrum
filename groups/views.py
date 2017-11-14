@@ -16,6 +16,10 @@ class CreateGroup(LoginRequiredMixin, generic.CreateView):
     fields = ("name", "description")
     model = Group
 
+    def form_valid(self, form):
+        user = self.request.user.username
+
+
 class SingleGroup(generic.DetailView):
     model = Group
 

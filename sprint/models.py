@@ -20,9 +20,18 @@ class Sprint(models.Model):
     def get_absolute_url(self):
         return reverse("sprint:list")
 
+    def is_current_sprint(self):
+        if datetime.today().date() >= self.start_date and \
+            datetime.today().date() <= self.end_date:
+            return True
+        return False
+
+
+
 
     class Meta:
         unique_together = ('name','project_backlog')
+
 
 
 

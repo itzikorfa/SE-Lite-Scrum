@@ -1,0 +1,3 @@
+Sprint.objects.filter(start_date__lte = dt.today().date(),end_date__gte = dt.today().date() )
+ y = Sprint.objects.filter(project_backlog__project__company__pk =3)
+y = Sprint.objects.filter(project_backlog__project__company__pk =3, start_date__lte = dt.today().date(),end_date__gte = dt.today().date())

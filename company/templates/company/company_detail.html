@@ -19,3 +19,12 @@
         </div>
     {% include 'section_end.html' %}
 {% endblock %}
+
+
+{% block post %}
+    <div class="list-group">
+    {% for sprint in  sprints%}
+        {% include "sprint/_sprint.html" %}
+    {% endfor %}
+    </div>
+{% endblock %}

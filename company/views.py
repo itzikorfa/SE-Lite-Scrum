@@ -6,7 +6,8 @@ from django.views.generic import (View,TemplateView,
                                 CreateView,DeleteView,
                                 UpdateView)
 from . import models
-
+from sprint.models import Sprint
+from datetime import datetime as dt
 # Create your views here.
 
 
@@ -18,6 +19,13 @@ class CompanyDetailView(DetailView):
     context_object_name = 'company_details'
     model = models.Company
     template_name = 'company/company_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(CompanyDetailView, self).get_context_data(**kwargs)
+        context['sprints'] = Sprint.objects.filter(project_backlog__project__company__pk = self.kwargs['pk'],
+                                                   start_date__lte = dt.today().date(),
+                                                   end_date__gte = dt.today().date())
+        return context
 
 
 class CompanyCreateView(CreateView):

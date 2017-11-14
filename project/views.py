@@ -76,6 +76,7 @@ class ProjectBacklogCreateView(CreateView):
 class ProjectBacklogSettingUpdateView(UpdateView):
     fields = ("sprint_length", "sprint_template")
     model = models.ProjectBacklogSettings
+    template_name = "project/projectbacklogsettings_form.html"
 
 
 class ProjectBacklogSettingDetailView(DetailView):

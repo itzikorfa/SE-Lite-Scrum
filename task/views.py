@@ -62,7 +62,6 @@ class TaskPropertyCreateView(CreateView):
 
     def form_valid(self, form):
         task_pk = self.kwargs.pop('pk')
-
         form.instance.task = get_object_or_404(models.Task, pk=task_pk)
         return super(TaskPropertyCreateView, self).form_valid(form)
 

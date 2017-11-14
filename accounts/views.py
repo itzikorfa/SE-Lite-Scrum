@@ -18,9 +18,13 @@ class UserInfo(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['tasks'] = Task.objects.filter(taskProperty__assign_to__username = self.kwargs['username'])
-        context['todos'] = Todo.objects.filter(user__username = self.kwargs['username'])
-
+        user = self.request.user.username
+        if 'username' in self.kwargs:
+            user = self.kwargs['username']
+        else:
+            context['username']=user
+        context['tasks'] = Task.objects.filter(taskProperty__assign_to__username = user)
+        context['todos'] = Todo.objects.filter(user__username = user)
         return context
 
 

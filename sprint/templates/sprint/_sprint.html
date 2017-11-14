@@ -1,6 +1,8 @@
 <div class="row col-md-4">
-    <h4>{{ sprint.name }}</h4>
-    <h3>from: {{ sprint.start_date }} to: {{ sprint.end_date }}</h3>
-
+    <a href="{% url 'sprint:detail' pk=sprint.pk %}">
+    <h2>{{ sprint.name }}</h2>
+        <h3>Project: {{ sprint.project_backlog.project.name }}</h3>
+    <h5>from: {{ sprint.start_date }} to: {{ sprint.end_date }}</h5>
+    </a>
 
 </div>
