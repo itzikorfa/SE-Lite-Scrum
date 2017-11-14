@@ -21,8 +21,7 @@
 {% block post %}
 
     {% for task in sprint_details.taskSprint.all %}
-        {{ task.name }}
-
+        {% include 'task/_taskPLink.html' %}
     {% endfor %}
 
 
