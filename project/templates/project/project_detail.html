@@ -1,8 +1,9 @@
 {% extends "project/project_base.html" %}
 {% block cont %}
-    <h1>Project {{ project_details.name }} at {{ project_details.company }}</h1>
+    <h1>Project {{ project_details.name }} at
+        <a href="{% url 'company:detail' pk=project_details.company.pk %}"> {{ project_details.company }}</a></h1>
     <h2>Project Details:</h2>
-    <p>Id_num: {{ project_details.id }}</p>
+
     <p>Description: {{ project_details.description }}</p>
     {#    <p>ETA: {{project_details.projectBacklog.ETA}}</p>#}
     <p>updated: {{ project_details.timestamp }}</p>

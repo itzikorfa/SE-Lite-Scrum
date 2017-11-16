@@ -10,6 +10,9 @@ from django.views.generic import (View,TemplateView,
 from . import models
 from django.shortcuts import get_object_or_404
 from groups.models import Group
+from sprint.models import Sprint
+from datetime import datetime as dt
+
 # Create your views here.
 class MeetingListView(ListView):
     model = models.Meeting
@@ -29,11 +32,23 @@ class MeetingCreateView(CreateView):
 
     def form_valid(self, form):
         group = self.kwargs.pop('group')
-        # print(test)
-
-        form.instance.team = get_object_or_404(Group, pk=group)
+        form.instance.team = get_object_or_404(Group, slug=group)
         return super(MeetingCreateView, self).form_valid(form)
 
+class MeetingCreateDailyView(CreateView):
+    model = models.Meeting
+    fields = ('date','log')
+
+    def get_form(self, form_class=None):
+        form = super(MeetingCreateDailyView, self).get_form(form_class)
+        group_slug = self.kwargs['slug']
+        sprints = Sprint.objects.filter(start_date__lte = dt.today().date(),end_date__gte = dt.today().date())
+
+
+    def form_valid(self, form):
+        group = self.kwargs.pop('group')
+        form.instance.team = get_object_or_404(Group, slug=group)
+        return super(MeetingCreateDailyView, self).form_valid(form)
 
 class MeetingUpdateView(UpdateView):
     fields = ("log",)

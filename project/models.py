@@ -62,10 +62,10 @@ class TaskStages(models.Model):
                                   unique=True)
 
     def __str__(self):
-        return "[{}] {}".format(self.stage, self.stage_name)
+        return self.stage_name
 
     class Meta:
-        ordering=('stage',)
+        ordering=('pk',)
 
 
 class ProjeckBacklogStages(models.Model):

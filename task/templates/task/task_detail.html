@@ -4,6 +4,7 @@
     <div class="card">
   <h4 class="card-header">{{ task_details.name }}</h4>
      <div class="card-body">
+            <a href="{% url 'project:detail' pk=task_details.projectBacklog.project.pk %}">project {{ task_details.projectBacklog.project.name }} </a>
             <p>description: {{ task_details.description }}</p>
             <p>priority: {{ task_details.priority }}</p>
             <p>task type: {{ task_details.task_type }}</p>

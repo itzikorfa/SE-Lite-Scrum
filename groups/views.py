@@ -16,8 +16,6 @@ class CreateGroup(LoginRequiredMixin, generic.CreateView):
     fields = ("name", "description")
     model = Group
 
-    def form_valid(self, form):
-        user = self.request.user.username
 
 
 class SingleGroup(generic.DetailView):
@@ -86,6 +84,5 @@ class CreateGroupMember(generic.CreateView):
     def form_valid(self, form):
         group = get_object_or_404(Group, slug=self.kwargs.get("slug"))
         form.instance.group = group
-
         return super(CreateGroupMember, self).form_valid(form)
 

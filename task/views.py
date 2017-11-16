@@ -50,7 +50,7 @@ class TaskPropertyListView(ListView):
 class TaskPropertyCreateView(CreateView):
     fields = ( 'sprint','assign_to','task_stage')
     model = models.TaskProperty
-    template_name = 'task/task_form.html'
+    template_name = 'task/task_form_prop.html'
 
     def get_form(self, form_class=None):
         form = super(TaskPropertyCreateView, self).get_form(form_class)
@@ -73,7 +73,6 @@ class TaskPropertyUpdateView(UpdateView):
 class TaskPropertyDeleteView(DeleteView):
     model = models.TaskProperty
     success_url = reverse_lazy("task:list")
-#     TODO: add logs to task detail
 
 
 class TaskFinished(UpdateView):

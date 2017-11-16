@@ -16,6 +16,8 @@ urlpatterns = [
     url(r'^task/', include('task.urls',namespace='task')),
     url(r'^log/', include('log.urls',namespace='log')),
     url(r'^todo/', include('todo.urls',namespace='todo')),
+    url(r'^meeting/', include('meeting.urls',namespace='meeting')),
+
 
 
 ]

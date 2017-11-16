@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'project.apps.ProjectConfig',
     'task.apps.TaskConfig',
     'sprint.apps.SprintConfig','log.apps.LogConfig',
-    'todo.apps.TodoConfig', 'covey.apps.CoveyConfig'
+    'todo.apps.TodoConfig', 'covey.apps.CoveyConfig',
+    'meeting.apps.MeetingConfig'
 
 ]
 
