@@ -5,12 +5,15 @@ from django.core.urlresolvers import reverse
 
 
 # Create your models here.
+PROJECT = "sprint_project"
+
+
 class Sprint(models.Model):
     name = models.CharField(max_length=150)
     start_date = models.DateField(verbose_name="from")
     # TODO: set end date automaticly
     end_date = models.DateField(verbose_name= "to", blank=True, null=True)
-    project_backlog = models.ForeignKey(ProjectBacklog, related_name="sprint_project")
+    project_backlog = models.ForeignKey(ProjectBacklog, related_name=("%s" % PROJECT))
 
     def __str__(self):
         return "{} {} -> {}".format(

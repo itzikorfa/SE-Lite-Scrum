@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DjangoModelDependency</ID>
+  <OriginalElement>#SE_Project_VerX</OriginalElement>
+  <nodes>
+    <node x="429.00000000000006" y="240.0">project.models.TaskStages</node>
+    <node x="959.0" y="240.0">meeting.models.MeetingType</node>
+    <node x="701.875" y="410.0">log.models.Log</node>
+    <node x="601.7837301587301" y="160.0">project.models.ProjectBacklog</node>
+    <node x="165.0" y="240.0">project.models.ProjectBacklogSettings</node>
+    <node x="701.3333333333334" y="80.0">django.contrib.auth.models.User</node>
+    <node x="496.35515873015896" y="0.0">django.contrib.auth.models.Permission</node>
+    <node x="760.355158730159" y="0.0">django.contrib.auth.models.Group</node>
+    <node x="1226.75" y="160.0">groups.models.Group</node>
+    <node x="797.0" y="240.0">sprint.models.Sprint</node>
+    <node x="0.0" y="330.0">todo.models.TodoLog</node>
+    <node x="307.85515873015896" y="80.0">project.models.Project</node>
+    <node x="1176.0" y="240.0">groups.models.GroupMember</node>
+    <node x="672.875" y="330.0">task.models.TaskProperty</node>
+    <node x="297.35515873015896" y="0.0">company.models.Company</node>
+    <node x="997.855158730159" y="330.0">meeting.models.Meeting</node>
+    <node x="286.98015873015896" y="330.0">project.models.ProjeckBacklogStages</node>
+    <node x="650.0" y="240.0">task.models.Task</node>
+    <node x="33.25" y="160.0">covey.models.CoveyMatrix</node>
+    <node x="10.0" y="240.0">todo.models.Todo</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="project.models.ProjeckBacklogStages" target="project.models.ProjectBacklogSettings">
+      <point x="-59.25" y="-15.0" />
+      <point x="346.23015873015896" y="310.0" />
+      <point x="287.0" y="310.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="log.models.Log" target="task.models.TaskProperty">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Permission">
+      <point x="-53.0" y="-15.0" />
+      <point x="754.3333333333334" y="55.0" />
+      <point x="618.355158730159" y="55.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="task.models.Task" target="task.models.Task">
+      <point x="-31.75" y="15.0" />
+      <point x="681.75" y="290.0" />
+      <point x="630.0" y="290.0" />
+      <point x="630.0" y="255.0" />
+      <point x="-63.5" y="-0.0" />
+    </edge>
+    <edge source="project.models.Project" target="company.models.Company">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="meeting.models.Meeting" target="sprint.models.Sprint">
+      <point x="-56.33333333333326" y="-15.0" />
+      <point x="1026.0218253968258" y="310.0" />
+      <point x="903.5" y="310.0" />
+      <point x="35.5" y="15.0" />
+    </edge>
+    <edge source="meeting.models.Meeting" target="meeting.models.MeetingType">
+      <point x="0.0" y="-15.0" />
+      <point x="1082.355158730159" y="310.0" />
+      <point x="1057.5" y="310.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="sprint.models.Sprint" target="project.models.ProjectBacklog">
+      <point x="0.0" y="-15.0" />
+      <point x="868.0" y="210.0" />
+      <point x="767.6170634920636" y="210.0" />
+      <point x="66.33333333333337" y="15.0" />
+    </edge>
+    <edge source="project.models.ProjectBacklogSettings" target="project.models.ProjectBacklog">
+      <point x="0.0" y="-15.0" />
+      <point x="287.0" y="220.0" />
+      <point x="634.9503968253969" y="220.0" />
+      <point x="-66.33333333333337" y="15.0" />
+    </edge>
+    <edge source="task.models.TaskProperty" target="task.models.Task">
+      <point x="0.0" y="-15.0" />
+      <point x="759.875" y="310.0" />
+      <point x="745.25" y="310.0" />
+      <point x="31.75" y="15.0" />
+    </edge>
+    <edge source="task.models.TaskProperty" target="sprint.models.Sprint">
+      <point x="58.0" y="-15.0" />
+      <point x="817.875" y="310.0" />
+      <point x="832.5" y="310.0" />
+      <point x="-35.5" y="15.0" />
+    </edge>
+    <edge source="task.models.Task" target="project.models.ProjectBacklog">
+      <point x="0.0" y="-15.0" />
+      <point x="713.5" y="220.0" />
+      <point x="701.2837301587301" y="220.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="project.models.ProjectBacklog" target="project.models.Project">
+      <point x="-49.75" y="-15.0" />
+      <point x="651.5337301587301" y="135.0" />
+      <point x="386.85515873015896" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="task.models.TaskProperty" target="project.models.TaskStages">
+      <point x="-58.0" y="-15.0" />
+      <point x="701.875" y="310.0" />
+      <point x="564.75" y="310.0" />
+      <point x="45.25" y="15.0" />
+    </edge>
+    <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Group">
+      <point x="53.0" y="-15.0" />
+      <point x="860.3333333333334" y="55.0" />
+      <point x="870.855158730159" y="55.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="project.models.ProjectBacklog" target="django.contrib.auth.models.User">
+      <point x="49.75" y="-15.0" />
+      <point x="751.0337301587301" y="135.0" />
+      <point x="807.3333333333334" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="groups.models.GroupMember" target="groups.models.Group">
+      <point x="0.0" y="-15.0" />
+      <point x="1273.0" y="220.0" />
+      <point x="1301.75" y="220.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="task.models.Task" target="covey.models.CoveyMatrix">
+      <point x="-42.33333333333337" y="-15.0" />
+      <point x="671.1666666666667" y="210.0" />
+      <point x="166.0" y="210.0" />
+      <point x="44.25" y="15.0" />
+    </edge>
+    <edge source="meeting.models.Meeting" target="groups.models.Group">
+      <point x="56.33333333333326" y="-15.0" />
+      <point x="1138.6884920634923" y="310.0" />
+      <point x="1380.5" y="310.0" />
+      <point x="1380.5" y="220.0" />
+      <point x="1351.75" y="220.0" />
+      <point x="50.0" y="15.0" />
+    </edge>
+    <edge source="project.models.ProjeckBacklogStages" target="project.models.TaskStages">
+      <point x="59.25" y="-15.0" />
+      <point x="464.73015873015896" y="310.0" />
+      <point x="474.25000000000006" y="310.0" />
+      <point x="-45.25" y="15.0" />
+    </edge>
+    <edge source="task.models.Task" target="groups.models.Group">
+      <point x="42.33333333333337" y="-15.0" />
+      <point x="755.8333333333335" y="220.0" />
+      <point x="1251.75" y="220.0" />
+      <point x="-50.0" y="15.0" />
+    </edge>
+    <edge source="todo.models.Todo" target="covey.models.CoveyMatrix">
+      <point x="0.0" y="-15.0" />
+      <point x="-44.25" y="15.0" />
+    </edge>
+    <edge source="todo.models.TodoLog" target="todo.models.Todo">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7273376159885796" x="690.5" y="140.79048086359174" />
+  <SelectedNodes>
+    <node>todo.models.Todo</node>
+  </SelectedNodes>
+  <Categories />
+</Diagram>
+

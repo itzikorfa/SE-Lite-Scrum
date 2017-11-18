@@ -34,3 +34,14 @@
     {% endfor %}
 </div>
 {% endblock %}
+
+{% block post %}
+    {% if user in group.members.all %}
+        <p><a href="{% url 'meeting:createDaily' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning">Add daily</a> </p>
+        {% if group.teammeeting.count %}
+                {% for meeting in group.teammeeting.all %}
+                    {% include 'meeting/_meeting.html' %}
+                {% endfor %}
+        {% endif %}
+    {% endif %}
+{% endblock %}
