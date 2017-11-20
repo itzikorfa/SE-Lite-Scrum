@@ -18,9 +18,25 @@ class MeetingListView(ListView):
     model = models.Meeting
 
     def get_queryset(self):
-        teampk = self.kwargs.pop('team')
-        teamobj = Group.objects.get(pk = teampk)
+        teampk = self.kwargs.pop('slug')
+        teamobj = get_object_or_404(Group, slug=teampk)
         return models.Meeting.objects.all().filter(team = teamobj)
+
+
+class MeetingStoryListView(ListView):
+    model = models.Meeting
+    template_name = 'meeting/meeting_story_list.html'
+
+    # def get_queryset(self):
+    #     teampk = self.kwargs['slug']
+    #     teamobj = Group.objects.get(pk = teampk)
+    #     return models.Meeting.objects.all().filter(team = teamobj)
+
+    def get_context_data(self, **kwargs):
+        contex = super(MeetingStoryListView,self).get_context_data(**kwargs)
+        contex['group'] = get_object_or_404(Group, slug=self.kwargs['slug'])
+        contex['meeting'] = models.Meeting.objects.all().filter(team=contex['group'])
+        return contex
 
 class MeetingDetailView(DetailView):
     context_object_name = 'meet'
@@ -31,7 +47,7 @@ class MeetingCreateView(CreateView):
     fields = ('type','date','log')
 
     def form_valid(self, form):
-        group = self.kwargs.pop('group')
+        group = self.kwargs.pop('slug')
         form.instance.team = get_object_or_404(Group, slug=group)
         return super(MeetingCreateView, self).form_valid(form)
 

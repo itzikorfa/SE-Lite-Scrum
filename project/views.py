@@ -45,6 +45,7 @@ class ProjectUpdateView(UpdateView):
 
 class ProjectDeleteView(DeleteView):
     model = models.Project
+    context_object_name = "project"
     success_url = reverse_lazy("project:list")
 
 class ProjectBacklogUpdateView(UpdateView):

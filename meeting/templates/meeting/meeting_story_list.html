@@ -1,0 +1,12 @@
+{% extends 'meeting/meeting_base.html' %}
+
+{% block pre %}
+    {{ group }}
+
+    {% for meet in meeting %}
+        <h3>{{ meet.date }}</h3>
+        <p>{{ meet.log | linebreaksbr }}</p>
+    {% endfor %}
+
+{% endblock %}
+

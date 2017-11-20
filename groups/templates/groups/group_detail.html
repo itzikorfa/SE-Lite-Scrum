@@ -6,20 +6,6 @@
 <h1>{{group.name}}</h1>
 <h2> Member Count: {{group.members.count}}</h2>
 
-  <div class="content">
-
-
-				{% if user in group.members.all %}
-					<a href="{% url 'groups:leave' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-remove-circle"></span> Leave</a>
-                    <a href="{% url 'groups:add' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Add User</a>
-				{% else %}
-					<a href="{% url 'groups:join' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Join</a>
-
-				{% endif %}
-
-
-
-</div>
 
 {% endblock %}
 
@@ -33,10 +19,7 @@
         {{ account.username }}</a>
     {% endfor %}
 </div>
-{% endblock %}
-
-{% block post %}
-    {% if user in group.members.all %}
+        {% if user in group.members.all %}
         <p><a href="{% url 'meeting:createDaily' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning">Add daily</a> </p>
         {% if group.teammeeting.count %}
                 {% for meeting in group.teammeeting.all %}
@@ -44,4 +27,24 @@
                 {% endfor %}
         {% endif %}
     {% endif %}
+{% endblock %}
+
+{% block post %}
+
+{% endblock %}
+
+{%block sidebar %}
+    <div class="content">
+
+    {% if user in group.members.all %}
+					<a href="{% url 'groups:leave' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-remove-circle"></span> Leave</a>
+                    <a href="{% url 'groups:add' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Add User</a>
+                    <a href="{% url 'meeting:story' slug=group.slug %}"class="btn btn-lg btn-fill btn-warning">Meeting Story</a>
+                     <a href="{% url 'meeting:create' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning">Create Meeting</a>
+				{% else %}
+					<a href="{% url 'groups:join' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Join</a>
+
+				{% endif %}
+
+</div>
 {% endblock %}
