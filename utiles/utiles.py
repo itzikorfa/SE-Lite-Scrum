@@ -13,7 +13,7 @@ import os
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-
+import logging
 
 def genrate_sprint(pbs, sprint_length, end_date):
     start_date = pbs.start_date
@@ -93,12 +93,15 @@ def create_covey_graph(team=-1, user=1):
     value = list()
 
     for key in data:
-        keys.append(key)
-        value.append(data[key])
-
-    plt.pie([float(v) for v in value], labels=[k for k in keys],
-               autopct=None)
-
+        keys.append(key.name)
+        value.append(float(data[key]))
+    print("group key =" ,team)
+    print("keys= ",keys)
+    print("value= ", value)
+    # plt.pie(value, keys,autopct=None)
+    pie = plt.pie([float(v) for v in value],
+                   autopct=None)
+    plt.legend(pie[0], keys, loc="best")
     if team>0:
         team_name = get_object_or_404(Group, pk=team).name
         file_name = str(user)+"_group"+".png"
