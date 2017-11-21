@@ -1,4 +1,5 @@
 {% extends 'accounts/accounts_base.html' %}
+{% load staticfiles %}
 {% block pre %}
 
 <h1>@{{ username }}</h1>
@@ -17,4 +18,5 @@
         {% include 'todo/_todo.html' %}
 
     {% endfor %}
+    <img src="{{ MEDIA_URL }}{{ covey_graph }}" alt="covey task graph" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
 {% endblock %}

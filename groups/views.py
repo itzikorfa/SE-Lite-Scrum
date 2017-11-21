@@ -11,6 +11,8 @@ from django.views import generic
 from groups.models import Group,GroupMember
 from accounts.models import User
 from . import models
+import utiles.utiles as uriles
+
 
 class CreateGroup(LoginRequiredMixin, generic.CreateView):
     fields = ("name", "description")
@@ -20,6 +22,15 @@ class CreateGroup(LoginRequiredMixin, generic.CreateView):
 
 class SingleGroup(generic.DetailView):
     model = Group
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.request.user.username
+        group =get_object_or_404(Group, slug=self.kwargs['slug'])
+        ans, graph = uriles.create_covey_graph(group.pk)
+        context['covey_graph'] = graph
+
+        return context
 
 class ListGroups(generic.ListView):
     model = Group

@@ -6,6 +6,8 @@ from . import forms
 from .models import User
 from task.models import Task
 from todo.models import Todo
+import utiles.utiles as util
+
 class SignUp(LoginRequiredMixin,CreateView):
     form_class = forms.UserCreateForm
     success_url = reverse_lazy("accounts:login")
@@ -25,6 +27,8 @@ class UserInfo(LoginRequiredMixin, TemplateView):
             context['username']=user
         context['tasks'] = Task.objects.filter(taskProperty__assign_to__username = user)
         context['todos'] = Todo.objects.filter(user__username = user)
+        ans, graph =util.create_covey_graph(user= self.request.user.pk)
+        context['covey_graph']=graph
         return context
 
 
