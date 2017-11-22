@@ -1,6 +1,7 @@
 {% extends "task/task_base.html" %}
 {% load bootstrap3 %}
 {% block cont %}
+    {% include 'section_start.html' %}
 <h1>
   {% if not form.instance.pk %}
   Task property
@@ -14,6 +15,6 @@
     <input type="submit" class='btn btn-primary' value="Submit">
 
   </form>
-
+{% include 'section_end.html' %}
 
 {% endblock %}

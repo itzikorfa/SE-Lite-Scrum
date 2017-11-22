@@ -2,6 +2,7 @@
 {% load bootstrap3 %}
 {% block cont %}
 <h1>
+{% include 'section_start.html' %}
   {% if not form.instance.pk %}
   Create Project
   {% else %}
@@ -14,6 +15,6 @@
     <input type="submit" class='btn btn-primary' value="Submit">
 
   </form>
-
+{% include 'section_end.html' %}
 
 {% endblock %}

@@ -51,3 +51,4 @@ class GroupMember(models.Model):
 
     def get_absolute_url(self):
         return reverse("groups:single", kwargs={"slug": self.group.slug})
+

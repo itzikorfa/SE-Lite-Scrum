@@ -3,48 +3,49 @@
 {% block pre %}
 
 
-<h1>{{group.name}}</h1>
+<h1>Group: {{group.name}}</h1>
 <h2> Member Count: {{group.members.count}}</h2>
 
-
-{% endblock %}
-
-
-{% block cont %}
-
 <div class="col-md-8">
-
+    <h3>User list</h3>
     {% for account in group.members.all %}
-        <a href="{% url 'accounts:tasks' username=account.username%}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span>
+        <a href="{% url 'accounts:tasks' username=account.username%}"><span class="glyphicon glyphicon-ok-circle"></span>
         {{ account.username }}</a>
     {% endfor %}
 </div>
+
+{% endblock %}
+{% block cont %}
+        <div class="container">
         {% if user in group.members.all %}
-        <p><a href="{% url 'meeting:createDaily' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning">Add daily</a> </p>
         {% if group.teammeeting.count %}
                 {% for meeting in group.teammeeting.all %}
                     {% include 'meeting/_meeting.html' %}
                 {% endfor %}
         {% endif %}
     {% endif %}
-{% endblock %}
-
-{% block post %}
-    <img src="{{ MEDIA_URL }}{{ covey_graph }}" alt="covey task graph" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=yes">
-{% endblock %}
-
-{%block sidebar %}
-    <div class="content">
+        </div>
+     <div class="content">
 
     {% if user in group.members.all %}
-					<a href="{% url 'groups:leave' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-remove-circle"></span> Leave</a>
-                    <a href="{% url 'groups:add' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Add User</a>
-                    <a href="{% url 'meeting:story' slug=group.slug %}"class="btn btn-lg btn-fill btn-warning">Meeting Story</a>
-                     <a href="{% url 'meeting:create' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning">Create Meeting</a>
+					<a href="{% url 'groups:leave' slug=group.slug %}" class="btn btn-fill btn-warning"><span class="glyphicon glyphicon-remove-circle"></span> Leave</a>
+                    <a href="{% url 'groups:add' slug=group.slug %}" class="btn btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Add User</a>
+                    <a href="{% url 'meeting:createDaily' slug=group.slug %}" class="btn btn-fill btn-warning">Add daily</a>
+                    <a href="{% url 'meeting:story' slug=group.slug %}"class="btn btn-fill btn-warning">Meeting Story</a>
+                     <a href="{% url 'meeting:create' slug=group.slug %}" class="btn btn-fill btn-warning">Create Meeting</a>
 				{% else %}
-					<a href="{% url 'groups:join' slug=group.slug %}" class="btn btn-lg btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Join</a>
+					<a href="{% url 'groups:join' slug=group.slug %}" class="btn btn-fill btn-warning"><span class="glyphicon glyphicon-ok-circle"></span> Join</a>
 
 				{% endif %}
 
 </div>
+{% endblock %}
+
+{% block post %}
+    {% if covey_graph %}
+    <img src="{{ MEDIA_URL }}{{ covey_graph }}" alt="covey task graph"  class="img-responsive">
+    {% endif %}
+{% endblock %}
+{%block sidebar %}
+
 {% endblock %}

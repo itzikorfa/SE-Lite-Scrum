@@ -1,6 +1,7 @@
 {% extends "sprint/sprint_base.html" %}
 {% load bootstrap3 %}
 {% block cont %}
+    {% include 'section_start.html' %}
 <h1>
   {% if not form.instance.pk %}
   Create Sprint
@@ -15,5 +16,5 @@
 
   </form>
 
-
+{% include 'section_end.html' %}
 {% endblock %}

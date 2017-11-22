@@ -1,7 +1,8 @@
 {% extends "meeting/meeting_base.html" %}
 
 {% block cont %}
-<h1>
+{% include 'section_start.html' %}
+    <h1>
   {% if not form.instance.pk %}
   Daily Log
   {% else %}
@@ -14,6 +15,6 @@
     <input type="submit" class='btn btn-primary' value="Submit">
 
   </form>
-
+{% include 'section_end.html' %}
 
 {% endblock %}

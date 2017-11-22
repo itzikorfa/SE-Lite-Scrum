@@ -1,6 +1,10 @@
 {% extends "project/project_base.html" %}
 {% load bootstrap3 %}
 {% block cont %}
+
+<div class="container-fluid">
+
+{% include 'section_start.html' %}
 <h1>
   {% if not form.instance.pk %}
   Create Project Backlog
@@ -14,6 +18,5 @@
     <input type="submit" class='btn btn-primary' value="Submit">
 
   </form>
-
-
+{% include 'section_end.html' %}
 {% endblock %}

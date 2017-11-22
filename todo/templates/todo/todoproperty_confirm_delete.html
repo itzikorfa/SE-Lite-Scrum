@@ -1,12 +1,12 @@
-{% extends "task/task_base.html" %}
+{% extends "todo/todo_base.html" %}
 
 {% block cont %}
-<h1>Delete {{task.name }}?</h1>
+<h1>Delete {{todo.name }}?</h1>
 
 <form method="post">
   {% csrf_token %}
   <input type="submit" class="btn btn-danger" value="Delete">
-  <a href="{% url 'task:list'%} ">Cancel</a>
+  <a href="{% url 'todo:list'%} ">Cancel</a>
 
 </form>
 
