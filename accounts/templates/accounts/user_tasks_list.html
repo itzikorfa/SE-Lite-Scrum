@@ -8,15 +8,18 @@
 
 {% block cont %}
 <h2>Tasks</h2>
+    <div class="container"><div class="row">
     {% for task in tasks %}
         {% include 'task/_taskP.html' %}
 
     {% endfor %}
-
+    </div></div>
     <h2>Todo:</h2>
+    <div class="container"><div class="row">
     {% for todo in todos %}
         {% include 'todo/_todo.html' %}
 
-    {% endfor %}
+        {% endfor %}
+    </div></div>
     <img src="{{ MEDIA_URL }}{{ covey_graph }}" alt="covey task graph" class="img-responsive"">
 {% endblock %}

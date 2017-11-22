@@ -41,7 +41,7 @@ class LogCreateView(CreateView):
         task.presentage_complete = form.instance.presentage_complete
         if task.presentage_complete == 100:
             task.task_completed = True
-            tp = get_object_or_404(TaskProperty, pk=test)
+            tp = get_object_or_404(TaskProperty, pk=task.taskProperty.pk)
             tp.end_date = datetime.now()
             tp.save()
         else:
@@ -50,7 +50,7 @@ class LogCreateView(CreateView):
             tp.end_date = None
             tp.save()
         task.save()
-        form.instance.task = get_object_or_404(TaskProperty, pk=test)# success_url = reverse_lazy("project:blcreate")
+        form.instance.task = get_object_or_404(TaskProperty, pk=task.taskProperty.pk)# success_url = reverse_lazy("project:blcreate")
 
         return super(LogCreateView, self).form_valid(form)
 
