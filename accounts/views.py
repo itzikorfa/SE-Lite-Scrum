@@ -27,8 +27,9 @@ class UserInfo(LoginRequiredMixin, TemplateView):
             context['username']=user
         context['tasks'] = Task.objects.filter(taskProperty__assign_to__username = user)
         context['todos'] = Todo.objects.filter(user__username = user)
-        ans, graph =util.create_covey_graph(user= self.request.user.pk)
+        ans, graph, analyse =util.create_covey_graph(user= self.request.user.pk)
         context['covey_graph']=graph
+        context['covey_analyse'] = analyse
         return context
 
 

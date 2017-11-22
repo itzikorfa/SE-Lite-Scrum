@@ -46,7 +46,7 @@ class LogCreateView(CreateView):
             tp.save()
         else:
             task.task_completed = False
-            tp = get_object_or_404(TaskProperty, pk=test)
+            tp = get_object_or_404(TaskProperty, pk=task.taskProperty.pk)
             tp.end_date = None
             tp.save()
         task.save()

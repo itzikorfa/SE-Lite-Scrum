@@ -5,7 +5,7 @@ from covey.models import CoveyMatrix
 from project.models import TaskStages
 from meeting.models import MeetingType
 from task.models import Task, TaskProperty
-from accounts.models import User
+from todo.models import Todo
 from groups.models import Group
 from django.shortcuts import get_object_or_404
 from django.conf import settings
@@ -13,7 +13,8 @@ import os
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-import logging
+import operator
+
 
 def genrate_sprint(pbs, sprint_length, end_date):
     start_date = pbs.start_date
@@ -79,22 +80,39 @@ def add_data_to_project():
 def create_covey_graph(team=-1, user=1):
     if team>=0:
         query = Task.objects.filter(team=team)
+        data = dict()
+        for i in query:
+            if i.task_type in data:
+                data[i.task_type] += 1
+            else:
+                data[i.task_type] = 1
     else:
         query = Task.objects.filter(taskProperty__assign_to=user)
-    data = dict()
-    for i in query:
-        if i.task_type in data:
-            data[i.task_type]+=1
-        else:
-            data[i.task_type]=1
+        data = dict()
+        for i in query:
+            if not i.task_completed:
+                if i.task_type in data:
+                    data[i.task_type] += 1
+                else:
+                    data[i.task_type] = 1
+
+        query = Todo.objects.filter(user=user)
+        for i in query:
+            if not i.task_completed:
+                if i.task_type in data:
+                    data[i.task_type] += 1
+                else:
+                    data[i.task_type] = 1
 
 
     keys = list()
     value = list()
-
+    tdata = list()
     for key in data:
         keys.append(key.name)
         value.append(float(data[key]))
+        tdata.append((key.name, data[key]))
+
     print("group key =" ,team)
     print("keys= ",keys)
     print("value= ", value)
@@ -111,9 +129,17 @@ def create_covey_graph(team=-1, user=1):
 
         file_name = str(user)+"_user"+".png"
     plt.savefig(os.path.join(settings.MEDIA_ROOT,file_name))
-    return data, file_name
+    return data, file_name, analayes_covey_data(tdata)
+
 
 
 def analayes_covey_data(data):
-    if ('important , urgent' in  data):
-        pass
+    ans = "start handling tasks"
+    data.sort( key=lambda x: x[1])
+    if (data[-1][0] == 'important , urgent'):
+        ans= "you need to organize your task priorities,\n" \
+             "its look like you're always at full speed filling holes.\n" \
+             "add a task to your task list name 'organize tasks'"
+    if(data[-1][1] == 'not important , not urgent'):
+        ans = "You need to start working and prioritize your task and handle them."
+    return ans

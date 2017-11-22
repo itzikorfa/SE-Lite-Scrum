@@ -43,7 +43,10 @@
 
 {% block post %}
     {% if covey_graph %}
+        {% include 'section_start.html' %}
     <img src="{{ MEDIA_URL }}{{ covey_graph }}" alt="covey task graph"  class="img-responsive">
+       <div class="alert alert-success">{{ covey_analyse | linebreaksbr }}</div>
+        {% include 'section_end.html' %}
     {% endif %}
 {% endblock %}
 {%block sidebar %}

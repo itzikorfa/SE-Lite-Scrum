@@ -10,8 +10,10 @@ from django.shortcuts import get_object_or_404
 from django.views import generic
 from groups.models import Group,GroupMember
 from accounts.models import User
+from django.contrib.auth.models import User as account
 from . import models
 import utiles.utiles as uriles
+from .forms import GroupMemberForm
 
 
 class CreateGroup(LoginRequiredMixin, generic.CreateView):
@@ -27,9 +29,9 @@ class SingleGroup(generic.DetailView):
         context = super().get_context_data(**kwargs)
         user = self.request.user.username
         group =get_object_or_404(Group, slug=self.kwargs['slug'])
-        ans, graph = uriles.create_covey_graph(group.pk)
+        ans, graph, analyse = uriles.create_covey_graph(group.pk)
+        context['covey_analyse'] = analyse
         context['covey_graph'] = graph
-
         return context
 
 class ListGroups(generic.ListView):
@@ -84,17 +86,20 @@ class LeaveGroup(LoginRequiredMixin, generic.RedirectView):
         return super().get(request, *args, **kwargs)
 
 class CreateGroupMember(generic.CreateView):
-    models = GroupMember
-    fields = ('user',)
     template_name = 'groups/groupmember_form.html'
+    model = GroupMember
+    fields = ('user',)
 
-    def get_queryset(self):
-        users = User.objects.all()
-        return models.GroupMember.objects.all()
+    def get_form(self, form_class=None):
+        form = super(CreateGroupMember, self).get_form(form_class)
+        group = get_object_or_404(Group, slug=self.kwargs['slug'])
+        form.fields["user"].queryset = account.objects.exclude(id__in=group.members.all())
+        return form
 
     def form_valid(self, form):
         group = get_object_or_404(Group, slug=self.kwargs.get("slug"))
         form.instance.group = group
+
         user = form.instance.user
         return super(CreateGroupMember, self).form_valid(form)
 

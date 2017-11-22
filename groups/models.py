@@ -2,6 +2,7 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.text import slugify
+from django.core.validators import ValidationError
 # from accounts.models import User
 
 import misaka
@@ -45,6 +46,14 @@ class GroupMember(models.Model):
 
     def __str__(self):
         return self.user.username
+
+    # def validate_unique(self, *args, **kwargs):
+    #     super(GroupMember, self).validate_unique(*args, **kwargs)
+    #     tmp =GroupMember.objects.filter(group=self.group, user=self.user)
+    #     if len(tmp)>0:
+    #         raise ValidationError({'user': ['user must be unique per group', ]})
+
+
 
     class Meta:
         unique_together = ("group", "user")
