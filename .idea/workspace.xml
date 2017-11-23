@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a66ad5da-49dc-42d6-9810-b7771136a9b1" name="Default" comment="after fix task">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/media/1_group.png" afterPath="$PROJECT_DIR$/static/media/1_group.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/media/1_user.png" afterPath="$PROJECT_DIR$/static/media/1_user.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/accounts/user_tasks_list.html" afterPath="$PROJECT_DIR$/accounts/templates/accounts/user_tasks_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/views.py" afterPath="$PROJECT_DIR$/accounts/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groups/models.py" afterPath="$PROJECT_DIR$/groups/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groups/templates/groups/group_detail.html" afterPath="$PROJECT_DIR$/groups/templates/groups/group_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groups/views.py" afterPath="$PROJECT_DIR$/groups/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/views.py" afterPath="$PROJECT_DIR$/log/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utiles/utiles.py" afterPath="$PROJECT_DIR$/utiles/utiles.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/task/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="55" column="71" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="71" />
+              <caret line="55" column="71" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -59,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/accounts/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="31" column="42" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="31" selection-end-column="42" />
+              <caret line="31" column="42" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="31" selection-end-column="42" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -71,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/groups/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -83,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/groups/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="26" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="9" selection-end-column="26" />
+              <caret line="9" column="26" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="9" selection-end-column="26" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -105,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/groups/templates/groups/group_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -534,13 +523,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4939577" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.497545" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="283" y="499" width="742" height="202" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.497545" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="283" y="499" width="742" height="202" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27039275" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39443535" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39443535" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -939,7 +928,7 @@
     <entry file="file://$PROJECT_DIR$/accounts/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="31" column="42" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="31" selection-end-column="42" />
+          <caret line="31" column="42" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="31" selection-end-column="42" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -949,7 +938,7 @@
     <entry file="file://$PROJECT_DIR$/groups/templates/groups/group_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -983,7 +972,7 @@
     <entry file="file://$PROJECT_DIR$/groups/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="9" selection-end-column="26" />
+          <caret line="9" column="26" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="9" selection-end-column="26" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
@@ -993,7 +982,7 @@
     <entry file="file://$PROJECT_DIR$/task/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="55" column="71" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="71" />
+          <caret line="55" column="71" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -1001,7 +990,7 @@
     <entry file="file://$PROJECT_DIR$/groups/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
