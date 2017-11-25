@@ -4,7 +4,9 @@
     <h4 class = 'card-title'>Company: {{ company_details.name }}</h4>
 
     <a class='btn btn-primary' href="{% url 'company:update' pk=company_details.pk %}">Update</a>
+    <a class='btn btn-primary' href="{% url 'groups:create' pk=company_details.pk %}">Create Group</a>
     <a class='btn btn-primary' href="{% url 'project:create' pk=company_details.pk %}">Create Project</a>
+
     {% include 'section_end.html' %}
 
 
@@ -12,12 +14,21 @@
 
 {% block cont %}
     {% include 'section_start.html' %}
+    {% for group in company_details.groupcompany.all %}
+        {% include 'groups/_group.html' %}
+    {% endfor %}
+
+
+
+    {% if company_details.projects.count %}
+    {% include 'section_start.html' %}
         <div class="list-group">
         {% for project in company_details.projects.all %}
                 {% include "project/_project.html" %}
             {% endfor %}
         </div>
     {% include 'section_end.html' %}
+    {% endif %}
 {% endblock %}
 
 

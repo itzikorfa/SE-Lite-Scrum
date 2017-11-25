@@ -3,14 +3,16 @@
 {% block pre %}
 
 
-<h1>Group: {{group.name}}</h1>
+<h1>Group: {{group.name}} at <a href="{% url 'company:detail' pk=group.company.pk %}">{{ group.company.name }}</a> </h1>
 <h2> Member Count: {{group.members.count}}</h2>
 
 <div class="col-md-8">
     <h3>User list</h3>
     {% for account in group.members.all %}
-        <a href="{% url 'accounts:tasks' username=account.username%}"><span class="glyphicon glyphicon-ok-circle"></span>
-        {{ account.username }}</a>
+        <a href="{% url 'accounts:tasks' username=account.username%}"><span class="glyphicon glyphicon-user">
+
+        </span>
+            {{ account.username }}</a>
     {% endfor %}
 </div>
 

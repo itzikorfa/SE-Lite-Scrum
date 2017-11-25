@@ -117,7 +117,7 @@ def create_covey_graph(team=-1, user=1):
     print("keys= ",keys)
     print("value= ", value)
     if len(keys)==0:
-        return data, None
+        return data, None, ""
     # plt.pie(value, keys,autopct=None)
     pie = plt.pie([float(v) for v in value],
                    autopct=None)

@@ -8,7 +8,7 @@ from task.models import Task
 from todo.models import Todo
 import utiles.utiles as util
 
-class SignUp(LoginRequiredMixin,CreateView):
+class SignUp(CreateView):
     form_class = forms.UserCreateForm
     success_url = reverse_lazy("accounts:login")
     template_name = "accounts/signup.html"

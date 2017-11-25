@@ -1,5 +1,4 @@
 
-python manage.py makemigrations account
 python manage.py makemigrations accounts
 python manage.py makemigrations company
 python manage.py makemigrations covey

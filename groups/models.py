@@ -2,6 +2,7 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.text import slugify
+from company.models import Company
 from django.core.validators import ValidationError
 # from accounts.models import User
 
@@ -23,6 +24,11 @@ class Group(models.Model):
     description = models.TextField(blank=True, default='')
     description_html = models.TextField(editable=False, default='', blank=True)
     members = models.ManyToManyField(User,through="GroupMember")
+    company = models.ForeignKey(Company, related_name="groupcompany")
+
+    class Meta:
+        unique_together= ('name', 'company')
+        ordering = ('name')
 
     def __str__(self):
         return self.name

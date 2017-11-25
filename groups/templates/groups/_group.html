@@ -1,0 +1,19 @@
+ <div class="col-xs-6 col-sm-3">
+<div class="card text-white bg-success">
+  <div class="card-header"></div>
+  <div class="card-body text-primary">
+      <a class="list-group-item" href="{% url 'groups:single' slug=group.slug%}">
+    <h4 class="card-title">{{ group.name }}</h4>
+      </a>
+
+  <hr>
+  </div>
+
+<p class="card-text">
+<div class="list-group-item-text container-fluid">
+				{{ group.description|safe }}
+
+</div>
+</p>
+</div>
+</div>

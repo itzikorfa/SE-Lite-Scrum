@@ -20,6 +20,12 @@ class CreateGroup(LoginRequiredMixin, generic.CreateView):
     fields = ("name", "description")
     model = Group
 
+    def form_valid(self, form):
+        from company.models import Company
+        company = get_object_or_404(Company, pk=self.kwargs.pop('pk'))
+        form.instance.company = company
+        return super(CreateGroup, self).form_valid(form)
+
 
 
 class SingleGroup(generic.DetailView):

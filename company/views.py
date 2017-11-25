@@ -32,6 +32,11 @@ class CompanyCreateView(CreateView):
     fields = ("name",)
     model = models.Company
 
+    def form_valid(self, form):
+        object = form.save(commit = False)
+        object.owner = self.request.user
+        object.save()
+        return super(CompanyCreateView, self).form_valid(form)
 
 class CompanyUpdateView(UpdateView):
     fields = ("name",)

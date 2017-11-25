@@ -4,7 +4,7 @@
 {% block cont %}
     {% include 'section_start.html' %}
 <h4>Create A New Group</h4>
-  <form method="POST" action="{% url 'groups:create' %}" id="groupForm">
+  <form method="POST"  id="groupForm">
   	{% csrf_token %}
   	{% bootstrap_form form %}
   	<input type="submit" value="Create" class="btn btn-primary btn-large">
