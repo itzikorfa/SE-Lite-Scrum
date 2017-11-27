@@ -1,8 +1,6 @@
 {% extends "groups/group_base.html" %}
 
 {% block pre %}
-
-
 <h1>Group: {{group.name}} at <a href="{% url 'company:detail' pk=group.company.pk %}">{{ group.company.name }}</a> </h1>
 <h2> Member Count: {{group.members.count}}</h2>
 

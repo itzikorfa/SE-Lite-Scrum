@@ -11,6 +11,7 @@ from company.models import Company
 from django.shortcuts import get_object_or_404
 # Create your views here.
 from utiles import utiles
+# from project.forms import ProjectBacklogForm
 
 class ProjectListView(SelectRelatedMixin, ListView):
     model = models.Project
@@ -58,14 +59,39 @@ class ProjectBacklogUpdateView(UpdateView):
         return super(ProjectBacklogUpdateView, self).form_valid(form)
 
 
+    def get_form(self, form_class=None):
+        form = super(ProjectBacklogUpdateView, self).get_form(form_class)
+        from groups.models import GroupMember,Group
+        projectbacklogpk = self.kwargs['pk']
+        pb = get_object_or_404(models.ProjectBacklog, pk=projectbacklogpk)
+        # project = get_object_or_404(models.Project, pk=pb.project.company)
+        # company = get_object_or_404(Company, pk=project.company.pk)
+        group = get_object_or_404(Group, name = pb.project.company.name)
+        form.fields["project_owner"].queryset= group.members.all()
+        form.fields["scrum_master"].queryset= group.members.all()
+        return form
+
+
 class ProjectBacklogDetailView(DetailView):
     fields = ('project',"ETA", "project_owner", 'scrum_master')
     model = models.ProjectBacklog
 
 
 class ProjectBacklogCreateView(CreateView):
-    fields = ("ETA", 'start_date',"project_owner", 'scrum_master')
     model = models.ProjectBacklog
+    # form_class = ProjectBacklogForm
+    fields = ("ETA", 'start_date', "project_owner", 'scrum_master')
+
+    def get_form(self, form_class=None):
+        form = super(ProjectBacklogCreateView, self).get_form(form_class)
+        from groups.models import GroupMember,Group
+        projectpk = self.kwargs['pk']
+        project = get_object_or_404(models.Project, pk=projectpk)
+        company = get_object_or_404(Company, pk=project.company.pk)
+        group = get_object_or_404(Group, name = company.name)
+        form.fields["project_owner"].queryset= group.members.all()
+        form.fields["scrum_master"].queryset= group.members.all()
+        return form
 
     def form_valid(self, form):
         project = self.kwargs.pop('pk')

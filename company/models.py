@@ -12,14 +12,6 @@ class Company(models.Model):
     def get_absolute_url(self):
         return reverse("company:detail",kwargs={'pk':self.pk})
 
-    # def save(self, *args, **kwargs):
-    #     from groups.models import Group, GroupMember
-    #     obj = super(MyModelForm, self).save(*args, **kwargs)
-    #     if self.request:
-    #         user = self.request.user
-    #         group , create = Group.objects.get_or_create(name=self.name, company= self)
-    #         gm , create = GroupMember.objects.get_or_create(group=group, )
-
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):
@@ -32,3 +24,4 @@ class Company(models.Model):
 
     class Meta:
         ordering = ['name']
+        unique_together = ('name',)

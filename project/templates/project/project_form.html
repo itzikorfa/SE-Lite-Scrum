@@ -1,8 +1,9 @@
 {% extends "project/project_base.html" %}
 {% load bootstrap3 %}
 {% block cont %}
-<h1>
 {% include 'section_start.html' %}
+    <h1>
+
   {% if not form.instance.pk %}
   Create Project
   {% else %}

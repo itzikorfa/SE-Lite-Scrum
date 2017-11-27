@@ -42,15 +42,15 @@ def load_data_covey():
     c1.save()
 
 def load_data_taskstage():
-    t1 = TaskStages(stage=1,stage_name="Learn")
+    t1 = TaskStages(stage=1,stage_name="Not started")
     t1.save()
-    t1 = TaskStages(stage=2, stage_name="plan")
+    t1 = TaskStages(stage=2,stage_name="Learn/plan")
     t1.save()
-    t1 = TaskStages(stage=3 ,stage_name="Design")
+    t1 = TaskStages(stage=3 ,stage_name="develop")
     t1.save()
-    t1 = TaskStages(stage=4, stage_name="solve")
+    t1 = TaskStages(stage=4, stage_name="review")
     t1.save()
-    t1 = TaskStages(stage=5,stage_name="review")
+    t1 = TaskStages(stage=5,stage_name="DONE")
     t1.save()
 
 def load_data_MeetingType():

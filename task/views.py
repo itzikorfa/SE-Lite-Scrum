@@ -27,6 +27,16 @@ class TaskCreateView(CreateView):
               ,'team','estimated_time',)
     model = models.Task
 
+    def get_form(self, form_class=None):
+        form = super(TaskCreateView, self).get_form(form_class)
+        from groups.models import GroupMember,Group
+        projecktpk = self.kwargs['pk']
+        projectbl = get_object_or_404(models.ProjectBacklog, pk=projecktpk)
+        # company = get_object_or_404(Company, pk=project.company.pk)
+        # group = get_object_or_404(Group, name = company.name)
+        form.fields["team"].queryset= Group.objects.filter(company = projectbl.project.company)
+        return form
+
     def form_valid(self, form):
         project_pk = self.kwargs.pop('pk')
         form.instance.projectBacklog = get_object_or_404(ProjectBacklog, pk=project_pk)
