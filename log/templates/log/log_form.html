@@ -4,9 +4,9 @@
     {% include 'section_start.html' %}
 <h1>
   {% if not form.instance.pk %}
-  Create Log
+  Create Log for "{{ task }}" task
   {% else %}
-  Update Log
+  Update Log for "{{ task }}" task
   {% endif %}
 </h1>
   <form method="POST">

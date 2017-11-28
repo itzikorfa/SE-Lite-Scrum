@@ -115,11 +115,11 @@ class ProjectBacklogSettingCreateView(CreateView):
     fields = ("sprint_length", "sprint_template")
     model = models.ProjectBacklogSettings
 
-    def get_form(self, form_class=None):
-        form = super(ProjectBacklogSettingCreateView, self).get_form()
-        projectbl = get_object_or_404(models.ProjectBacklog, pk=self.kwargs['pk'])
-        # form.data['project']=projectbl.project.name
-        return form
+    # def get_form(self, form_class=None):
+    #     form = super(ProjectBacklogSettingCreateView, self).get_form()
+    #     projectbl = get_object_or_404(models.ProjectBacklog, pk=self.kwargs['pk'])
+    #     # form.data['project']=projectbl.project.name
+    #     return form
 
     def form_valid(self, form):
         project = self.kwargs.pop('pk')
@@ -131,6 +131,6 @@ class ProjectBacklogSettingCreateView(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         projectPK = self.kwargs['pk']
-        project = get_object_or_404(models.Project, pk=projectPK)
-        context['project_name']=project.name
+        project = get_object_or_404(models.ProjectBacklog, pk=projectPK)
+        context['project_name']=project.project.name
         return context

@@ -70,6 +70,12 @@ class TaskPropertyCreateView(CreateView):
         form.fields["sprint"].queryset= Sprint.objects.filter(project_backlog = task.projectBacklog)
         return form
 
+    def get_context_data(self, **kwargs):
+        contex = super(TaskPropertyCreateView,self).get_context_data()
+        tp = get_object_or_404(models.Task, pk=self.kwargs['pk'])
+        contex['task'] = tp.name
+        return contex
+
     def form_valid(self, form):
         task_pk = self.kwargs.pop('pk')
         form.instance.task = get_object_or_404(models.Task, pk=task_pk)
@@ -84,6 +90,16 @@ class TaskPropertyChangeStageView(UpdateView):
     fields = ('task_stage', )
     model = models.TaskProperty
     template_name = 'task/task_change_stage_form.html'
+
+    def form_valid(self, form):
+        from log.models import Log
+        pk = self.kwargs['pk']
+        taskp = models.TaskProperty.objects.get(pk=pk)
+        stage = form.instance.task_stage
+        log = Log.objects.create(task=taskp,
+                                 log="Stage changed to "+stage.stage_name)
+        return super(TaskPropertyChangeStageView, self).form_valid(form)
+
 
 
 

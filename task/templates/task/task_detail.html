@@ -17,6 +17,11 @@
         <div class="card-body">
             <a href="{% url 'project:detail' pk=task_details.projectBacklog.project.pk %}">project {{ task_details.projectBacklog.project.name }} </a>
             <p>description: {{ task_details.description }}</p>
+            {% if task_details.acutal_time %}
+                <p>{{ task_details.acutal_time }}/{{ task_details.estimated_time }} hours</p>
+            {% else %}
+                <p>0/{{ task_details.estimated_time }} hours</p>
+            {% endif %}
             <p>priority: {{ task_details.priority }}</p>
             <p>task type: {{ task_details.task_type }}</p>
             {% if  task_details.parent_fields %}s
@@ -42,7 +47,7 @@
                     <p>in progress</p>
                 {% endif %}
                 <p> Task stage: {{ task_details.taskProperty.task_stage }}
-                <a href="{% url 'task:stage_change' pk=task_details.pk %}">change stage</a>
+                <a href="{% url 'task:stage_change' pk=task_details.taskProperty.pk %}">change stage</a>
                 </p>
                 {% if task_details.task_completed is false %}
                     <a href="{% url 'task:finished' pk=task_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
@@ -61,6 +66,8 @@
 
             <a href="{% url 'task:update' pk=task_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
                     class="glyphicon glyphicon-plus-sign"></span> Edit task</a>
+
+
 
         </div>
     </div>

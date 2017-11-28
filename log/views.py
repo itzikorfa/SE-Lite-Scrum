@@ -35,6 +35,12 @@ class LogCreateView(CreateView):
             'presentage_complete':task.presentage_complete,
         }
 
+    def get_context_data(self, **kwargs):
+        contex = super(LogCreateView, self).get_context_data(**kwargs)
+        contex['task']=get_object_or_404(Task, pk=self.kwargs['pk']).name
+        return contex
+
+
     def form_valid(self, form):
         test = self.kwargs.pop('pk')
         task = get_object_or_404(Task, pk=test)
@@ -49,6 +55,10 @@ class LogCreateView(CreateView):
             tp = get_object_or_404(TaskProperty, pk=task.taskProperty.pk)
             tp.end_date = None
             tp.save()
+        if task.acutal_time:
+            task.acutal_time = task.acutal_time+form.instance.time_spent
+        else:
+            task.acutal_time = form.instance.time_spent
         task.save()
         form.instance.task = get_object_or_404(TaskProperty, pk=task.taskProperty.pk)# success_url = reverse_lazy("project:blcreate")
 

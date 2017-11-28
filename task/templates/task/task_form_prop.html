@@ -4,9 +4,9 @@
     {% include 'section_start.html' %}
 <h1>
   {% if not form.instance.pk %}
-  Task property
+  Task property for "{{ task }}"
   {% else %}
-  Update Task property
+  Update Task property for "{{ task }}"
   {% endif %}
 </h1>
   <form method="POST">

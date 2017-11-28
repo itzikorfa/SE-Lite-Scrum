@@ -1,8 +1,9 @@
 <a class="list-group-item" href="{% url 'task:detail'  pk=task.pk %}">
-    <h3>{{task.pk}}:{{task.name}}</h3>
+    <h3>[{{task.pk}}] {{task.name}}</h3>
 {% if task.presentage_complete > 0 %}
     <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{ task_details.presentage_complete}}%;">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+       style="width: {{ task_details.presentage_complete}}%;">
     {{ task.presentage_complete }}
   </div>
 </div>

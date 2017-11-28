@@ -42,6 +42,12 @@ class CompanyUpdateView(UpdateView):
     fields = ("name",)
     model = models.Company
 
+    def form_valid(self, form):
+        object = form.save(commit = False)
+        object.owner = self.request.user
+        object.save()
+        return super(CompanyUpdateView, self).form_valid(form)
+
 class ComapnyDeleteView(DeleteView):
     model = models.Company
     success_url = reverse_lazy("company:list")
