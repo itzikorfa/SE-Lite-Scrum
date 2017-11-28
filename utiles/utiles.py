@@ -143,3 +143,7 @@ def analayes_covey_data(data):
     if(data[-1][1] == 'not important , not urgent'):
         ans = "You need to start working and prioritize your task and handle them."
     return ans
+
+
+
+

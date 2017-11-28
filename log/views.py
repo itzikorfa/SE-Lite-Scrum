@@ -26,7 +26,7 @@ class LogDetailView(DetailView):
 class LogCreateView(CreateView):
     model = models.Log
     # form_class = forms.LogCreateViewForm4MProject
-    fields = ('log','presentage_complete')
+    fields = ('log','presentage_complete','time_spent')
 
     def get_initial(self):
         task_id = self.kwargs['pk']

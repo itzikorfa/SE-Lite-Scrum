@@ -105,7 +105,9 @@ class CreateGroupMember(generic.CreateView):
     def form_valid(self, form):
         group = get_object_or_404(Group, slug=self.kwargs.get("slug"))
         form.instance.group = group
-
+        # TODO: add user to company group
         user = form.instance.user
+        group = Group.objects.get(name = group.company.name)
+        gm, created = GroupMember.objects.get_or_create(user=user, group=group)
         return super(CreateGroupMember, self).form_valid(form)
 

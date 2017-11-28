@@ -41,6 +41,9 @@
                 {% else %}
                     <p>in progress</p>
                 {% endif %}
+                <p> Task stage: {{ task_details.taskProperty.task_stage }}
+                <a href="{% url 'task:stage_change' pk=task_details.pk %}">change stage</a>
+                </p>
                 {% if task_details.task_completed is false %}
                     <a href="{% url 'task:finished' pk=task_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
                             class="glyphicon glyphicon-ok"></span> Mark as finished</a>

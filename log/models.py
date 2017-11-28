@@ -9,6 +9,8 @@ class Log(models.Model):
     log = models.TextField()
     presentage_complete = models.IntegerField(
         validators=[MaxValueValidator(100), MinValueValidator(0)], verbose_name="%completed", default=0)
+    time_spent = models.IntegerField(
+        validators=[ MinValueValidator(0)], default=0, verbose_name="number of hours")
     update = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 

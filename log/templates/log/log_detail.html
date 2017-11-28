@@ -5,4 +5,8 @@
 
 {% block cont %}
    {% include "log/_log.html" %}
+    <ul class="list-group list-group-flush">
+              <li class="list-group-item">created: {{ log.timestamp }}</li>
+              <li class="list-group-item">update: {{ log.update }} </li>
+          </ul>
 {% endblock %}

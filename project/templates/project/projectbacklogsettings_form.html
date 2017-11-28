@@ -4,9 +4,9 @@
 {% include 'section_start.html' %}
                         <h1>
                             {% if not form.instance.pk %}
-                                Create Project Backlog Setting
+                                Create Project Backlog Setting at {{ project_name }}
                             {% else %}
-                                Update Project Backlog Setting
+                                Update Project Backlog Setting at {{ project_name }}
                             {% endif %}
                         </h1>
                         <form method="POST">

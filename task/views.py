@@ -76,9 +76,16 @@ class TaskPropertyCreateView(CreateView):
         return super(TaskPropertyCreateView, self).form_valid(form)
 
 class TaskPropertyUpdateView(UpdateView):
-    fields = ('sprint','assign_to','end_date')
+    fields = ('sprint','assign_to','end_date','task_stage')
     model = models.TaskProperty
     template_name = 'task/task_form.html'
+
+class TaskPropertyChangeStageView(UpdateView):
+    fields = ('task_stage', )
+    model = models.TaskProperty
+    template_name = 'task/task_change_stage_form.html'
+
+
 
 class TaskPropertyDeleteView(DeleteView):
     model = models.TaskProperty
@@ -99,9 +106,6 @@ class TaskUserDetail(TemplateView):
         context['tasks'] = models.Task.objects.filter(taskProperty__assign_to__username = self.kwargs['username'])
 
         return context
-    # def get_queryset(self):
-    #     queryset = super().get_queryset()
-    #
-    #     return queryset.filter(
-    #         taskProperty__assign_to__username=self.kwargs.get("username")
-    #     )
+
+
+
