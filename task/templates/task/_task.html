@@ -1,5 +1,6 @@
 <a class="list-group-item" href="{% url 'task:detail'  pk=task.pk %}">
-    <h3>[{{task.pk}}] {{task.name}}</h3>
+    <h3>[{{task.pk}}] {{task.name}}</h3> </a>
+{% include 'section_start.html' %}
 {% if task.presentage_complete > 0 %}
     <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
@@ -7,10 +8,12 @@
     {{ task.presentage_complete }}
   </div>
 </div>
+
     {% else %}
         <h4>Not started</h4>
     {% endif %}
-				{{ task.description|safe }}
+{% include 'section_end.html' %}
+<a href="{% url 'groups:single' slug=task.team.slug %}">Team: {{ task.team }}</a><br/>
+{#				{{ task.description|safe }}#}
 <span class="badge">task type: {{ task.task_type }} priority: {{ task.priority }} </span>
 <hr>
-    </a>

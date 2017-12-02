@@ -39,6 +39,14 @@
 				{% endif %}
 
 </div>
+
+    {% if group.group.count %}
+        {% for task in group.group.all %}
+            {% include 'task/_taskP.html' %}
+        {% endfor %}
+    {% endif %}
+
+
 {% endblock %}
 
 {% block post %}
