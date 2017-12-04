@@ -35,6 +35,8 @@ class TaskCreateView(CreateView):
         # company = get_object_or_404(Company, pk=project.company.pk)
         # group = get_object_or_404(Group, name = company.name)
         form.fields["team"].queryset= Group.objects.filter(company = projectbl.project.company)
+        user_story_template = "As a [...ROLE...]\nI want to [...GOAL...]\nso I can [...REASON...]"
+        form.initial = {'description':user_story_template}
         return form
 
     def form_valid(self, form):
