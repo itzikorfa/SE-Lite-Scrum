@@ -13,7 +13,7 @@ User = get_user_model()
 class Task(models.Model):
     projectBacklog = models.ForeignKey(ProjectBacklog, related_name="tasksInBacklogs")
     name = models.CharField(max_length=200)
-    description = models.TextField(blank=True, default='')
+    description = models.TextField(blank=True, default='',verbose_name="User Story")
     priority = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(0)],default=5)
     task_type = models.ForeignKey(CoveyMatrix, default=2, related_name="taskcovmat" )
     is_sub_task = models.BooleanField(default=False)
