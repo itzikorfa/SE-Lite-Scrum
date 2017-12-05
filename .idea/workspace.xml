@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a66ad5da-49dc-42d6-9810-b7771136a9b1" name="Default" comment="after fix task">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/media/1_group.png" afterPath="$PROJECT_DIR$/static/media/1_group.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/media/2060_user.png" afterPath="$PROJECT_DIR$/static/media/2060_user.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/models.py" afterPath="$PROJECT_DIR$/task/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/templates/task/_task.html" afterPath="$PROJECT_DIR$/task/templates/task/_task.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/views.py" afterPath="$PROJECT_DIR$/task/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/#SE_Project_VerX.png" afterPath="$PROJECT_DIR$/#SE_Project_VerX.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/#SE_Project_VerX.uml" afterPath="$PROJECT_DIR$/#SE_Project_VerX.uml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,89 +26,184 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meeting/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-              <folding />
+      <file leaf-file-name="DjangoModelDependency/#SE_Project_VerX" pinned="false" current-in-tab="false">
+        <entry file="uml://DjangoModelDependency/#SE_Project_VerX">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DjangoModelDependency</ID>
+              <OriginalElement>#SE_Project_VerX</OriginalElement>
+              <nodes>
+                <node x="264.0" y="400.0">project.models.TaskStages</node>
+                <node x="1191.7608695652175" y="320.0">meeting.models.MeetingType</node>
+                <node x="535.0615942028985" y="580.0">log.models.Log</node>
+                <node x="428.6358695652174" y="320.0">project.models.ProjectBacklog</node>
+                <node x="0.0" y="400.0">project.models.ProjectBacklogSettings</node>
+                <node x="271.6358695652174" y="240.0">django.contrib.auth.models.User</node>
+                <node x="247.63586956521738" y="80.0">django.contrib.auth.models.Permission</node>
+                <node x="971.5108695652174" y="320.0">groups.models.Group</node>
+                <node x="320.1358695652174" y="160.0">django.contrib.auth.models.Group</node>
+                <node x="214.63586956521738" y="0.0">django.contrib.contenttypes.models.ContentType</node>
+                <node x="465.0" y="400.0">sprint.models.Sprint</node>
+                <node x="503.6358695652174" y="240.0">project.models.Project</node>
+                <node x="784.5108695652174" y="500.0">todo.models.TodoLog</node>
+                <node x="949.5108695652174" y="400.0">groups.models.GroupMember</node>
+                <node x="506.06159420289856" y="500.0">task.models.TaskProperty</node>
+                <node x="1163.5108695652175" y="400.0">meeting.models.Meeting</node>
+                <node x="794.0108695652174" y="160.0">company.models.Company</node>
+                <node x="647.0" y="400.0">task.models.Task</node>
+                <node x="128.38586956521738" y="500.0">project.models.ProjeckBacklogStages</node>
+                <node x="729.2608695652174" y="320.0">covey.models.CoveyMatrix</node>
+                <node x="794.5108695652174" y="400.0">todo.models.Todo</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="groups.models.Group" target="company.models.Company">
+                  <point x="0.0" y="-15.0" />
+                  <point x="1046.5108695652175" y="215.0" />
+                  <point x="928.2608695652174" y="215.0" />
+                  <point x="44.75" y="15.0" />
+                </edge>
+                <edge source="log.models.Log" target="task.models.TaskProperty">
+                  <point x="0.0" y="-15.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="sprint.models.Sprint" target="project.models.ProjectBacklog">
+                  <point x="0.0" y="-15.0" />
+                  <point x="536.0" y="380.0" />
+                  <point x="528.1358695652174" y="380.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="task.models.TaskProperty" target="task.models.Task">
+                  <point x="58.0" y="-15.0" />
+                  <point x="651.0615942028985" y="480.0" />
+                  <point x="742.25" y="480.0" />
+                  <point x="31.75" y="15.0" />
+                </edge>
+                <edge source="django.contrib.auth.models.Permission" target="django.contrib.contenttypes.models.ContentType">
+                  <point x="0.0" y="-15.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="task.models.TaskProperty" target="sprint.models.Sprint">
+                  <point x="0.0" y="-15.0" />
+                  <point x="593.0615942028985" y="470.0" />
+                  <point x="536.0" y="470.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="task.models.Task" target="project.models.ProjectBacklog">
+                  <point x="-42.33333333333337" y="-15.0" />
+                  <point x="668.1666666666666" y="380.0" />
+                  <point x="594.4692028985507" y="380.0" />
+                  <point x="66.33333333333337" y="15.0" />
+                </edge>
+                <edge source="task.models.TaskProperty" target="project.models.TaskStages">
+                  <point x="-58.0" y="-15.0" />
+                  <point x="535.0615942028985" y="480.0" />
+                  <point x="399.75" y="480.0" />
+                  <point x="45.25" y="15.0" />
+                </edge>
+                <edge source="task.models.Task" target="covey.models.CoveyMatrix">
+                  <point x="0.0" y="-15.0" />
+                  <point x="710.5" y="370.0" />
+                  <point x="773.5108695652174" y="370.0" />
+                  <point x="-44.25" y="15.0" />
+                </edge>
+                <edge source="meeting.models.Meeting" target="groups.models.Group">
+                  <point x="-42.25" y="-15.0" />
+                  <point x="1205.7608695652175" y="380.0" />
+                  <point x="1096.5108695652175" y="380.0" />
+                  <point x="50.0" y="15.0" />
+                </edge>
+                <edge source="todo.models.TodoLog" target="todo.models.Todo">
+                  <point x="0.0" y="-15.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="project.models.ProjeckBacklogStages" target="project.models.ProjectBacklogSettings">
+                  <point x="-59.25" y="-15.0" />
+                  <point x="187.63586956521738" y="480.0" />
+                  <point x="122.0" y="480.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="task.models.Task" target="task.models.Task">
+                  <point x="-31.75" y="15.0" />
+                  <point x="678.75" y="450.0" />
+                  <point x="627.0" y="450.0" />
+                  <point x="627.0" y="415.0" />
+                  <point x="-63.5" y="-0.0" />
+                </edge>
+                <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Permission">
+                  <point x="-53.0" y="-15.0" />
+                  <point x="324.6358695652174" y="215.0" />
+                  <point x="309.6358695652174" y="215.0" />
+                  <point x="-61.0" y="15.0" />
+                </edge>
+                <edge source="project.models.Project" target="company.models.Company">
+                  <point x="0.0" y="-15.0" />
+                  <point x="582.6358695652174" y="215.0" />
+                  <point x="838.7608695652174" y="215.0" />
+                  <point x="-44.75" y="15.0" />
+                </edge>
+                <edge source="meeting.models.Meeting" target="meeting.models.MeetingType">
+                  <point x="42.25" y="-15.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="project.models.ProjectBacklogSettings" target="project.models.ProjectBacklog">
+                  <point x="0.0" y="-15.0" />
+                  <point x="122.0" y="380.0" />
+                  <point x="461.80253623188406" y="380.0" />
+                  <point x="-66.33333333333331" y="15.0" />
+                </edge>
+                <edge source="project.models.ProjectBacklog" target="project.models.Project">
+                  <point x="49.75" y="-15.0" />
+                  <point x="577.8858695652174" y="295.0" />
+                  <point x="582.6358695652174" y="295.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="project.models.ProjectBacklog" target="django.contrib.auth.models.User">
+                  <point x="-49.75" y="-15.0" />
+                  <point x="478.3858695652174" y="295.0" />
+                  <point x="377.6358695652174" y="295.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Group">
+                  <point x="53.0" y="-15.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="groups.models.GroupMember" target="groups.models.Group">
+                  <point x="0.0" y="-15.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="django.contrib.auth.models.Group" target="django.contrib.auth.models.Permission">
+                  <point x="-5.6843418860808015E-14" y="-15.0" />
+                  <point x="61.0" y="15.0" />
+                </edge>
+                <edge source="project.models.ProjeckBacklogStages" target="project.models.TaskStages">
+                  <point x="59.25" y="-15.0" />
+                  <point x="306.1358695652174" y="480.0" />
+                  <point x="309.25" y="480.0" />
+                  <point x="-45.25" y="15.0" />
+                </edge>
+                <edge source="task.models.Task" target="groups.models.Group">
+                  <point x="42.33333333333337" y="-15.0" />
+                  <point x="752.8333333333334" y="380.0" />
+                  <point x="996.5108695652174" y="380.0" />
+                  <point x="-50.0" y="15.0" />
+                </edge>
+                <edge source="todo.models.Todo" target="covey.models.CoveyMatrix">
+                  <point x="0.0" y="-15.0" />
+                  <point x="44.25" y="15.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.8803858520900321" x="348.6077428780132" y="305.6077428780132" />
+              <SelectedNodes />
+              <Categories />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="group_detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/groups/templates/groups/group_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="42" column="3" lean-forward="false" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
-              <folding>
-                <element signature="e#856#1801#0#HTML" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_tasks_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/user_tasks_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/groups/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="64" column="42" lean-forward="false" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_task.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task/templates/task/_task.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project_detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/templates/project/project_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="44" column="38" lean-forward="false" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meeting/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="class_diagram.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/class_diagram.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -461,7 +552,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="SearchEverywhereHistoryKey" value="Meet&#9;null&#9;null&#10;Task&#9;null&#9;null&#10;project_de&#9;FILE&#9;file://C:/projects/SE/SE_verVI/SE-scrum-plus/project/templates/project/project_detail.html&#10;_task&#9;FILE&#9;file://C:/projects/SE/SE_verVI/SE-scrum-plus/task/templates/task/_task.html&#10;pro&#9;null&#9;null&#10;Group&#9;FILE&#9;file://C:/projects/SE/SE_verVI/SE-scrum-plus/groups/templates/groups/group_detail.html&#10;start&#9;FILE&#9;file://C:/projects/SE/SE_verVI/SE-scrum-plus/templates/section_start.html&#10;task_deta&#9;FILE&#9;file://C:/projects/SE/SE_verVI/SE-scrum-plus/task/templates/task/task_detail.html&#10;lo&#9;FILE&#9;file://C:/projects/SE/SE_verVI/SE-scrum-plus/log/templates/log/log_form.html&#10;uti&#9;FILE&#9;file://C:/projects/SE/SE_verVI/SE-scrum-plus/utiles/utiles.py&#10;cove&#9;null&#9;null&#10;acc&#9;FILE&#9;file://C:/projects/SE/SE_verVI/SE-scrum-plus/accounts/templates/accounts/accounts_detail.html&#10;project_deta&#9;FILE&#9;file://C:/projects/SE/SE_verVI/SE-scrum-plus/project/templates/project/project_detail.html&#10;ProjectSett&#9;null&#9;null&#10;TODO&#9;ACTION&#9;ActivateTODOToolWindow&#10;sec&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/templates/section_start.html&#10;_taskp&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/task/templates/task/_taskP.html&#10;_group&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/groups/templates/groups/_group.html&#10;pop&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/populate.py&#10;Util&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/utiles/utiles.py&#10;Log&#9;null&#9;null&#10;Compan&#9;null&#9;null&#10;Company&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/company/templates/company/company_detail.html&#10;ProjectBacklo&#9;null&#9;null&#10;TaskCr&#9;null&#9;null&#10;base.&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/templates/base.html&#10;project&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/project/templates/project/project_detail.html&#10;base.html&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/templates/base.html&#10;forms&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/groups/forms.py&#10;foot&#9;null&#9;null&#10;_gr&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/groups/templates/groups/_group.html&#10;group_&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/groups/templates/groups/group_detail.html&#10;accou&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/accounts/templates/accounts/accounts_detail.html&#10;company_de&#9;FILE&#9;file://C:/projects/verV/SE-scrum-plus/company/templates/company/company_detail.html&#10;sign&#9;null&#9;null&#10;task_&#9;FILE&#9;file://C:/projects/SE/SE_verV/SE-scrum-plus/task/templates/task/task_detail.html&#10;Covey&#9;null&#9;null&#10;Todo&#9;null&#9;null&#10;task_de&#9;FILE&#9;file://C:/projects/SE/SE_verV/SE-scrum-plus/task/templates/task/task_detail.html&#10;meet&#9;FILE&#9;file://C:/projects/SE/SE_verV/SE-scrum-plus/meeting/templates/meeting/meeting_story_list.html&#10;_tas&#9;FILE&#9;file://C:/projects/SE/SE_verV/SE-scrum-plus/task/templates/task/_task.html&#10;task&#9;FILE&#9;file://C:/projects/SE/SE_verV/SE-scrum-plus/task/templates/task/task_detail.html&#10;log_d&#9;FILE&#9;file://C:/projects/SE/SE_verV/SE-scrum-plus/project/templates/project/projectbacklog_detail.html&#10;sect&#9;FILE&#9;file://C:/projects/SE/SE_verV/SE-scrum-plus/templates/section_start.html&#10;login&#9;FILE&#9;file://C:/projects/SE/SE_verV/SE-scrum-plus/accounts/templates/accounts/login.html&#10;base&#9;FILE&#9;file://C:/projects/SE/SE_verV/SE-scrum-plus/templates/base.html&#10;sett&#9;FILE&#9;file://C:/projects/SE/SE_verV/SE-scrum-plus/SE_Project_VerX/settings.py&#10;gr&#9;null&#9;null&#10;get_form&#9;null&#9;null&#10;Tas&#9;null&#9;null" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -580,12 +671,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5120846" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.4879154" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.4879154" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42553192" sideWeight="0.49244714" order="3" side_tool="false" content_ui="tabs" x="283" y="499" width="742" height="202" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26510575" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959481" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24924472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3371522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -601,12 +692,12 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.509375" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5120846" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.490625" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42553192" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="283" y="499" width="742" height="202" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.4879154" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42553192" sideWeight="0.49244714" order="3" side_tool="false" content_ui="tabs" x="283" y="499" width="742" height="202" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26510575" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -689,32 +780,11 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/foorter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1001,7 +1071,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/groups/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
+        <state relative-caret-position="179">
           <caret line="64" column="42" lean-forward="false" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
           <folding />
         </state>
@@ -1085,6 +1155,188 @@
           <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/#SE_Project_VerX.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="uml://DjangoModelDependency/#SE_Project_VerX">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DjangoModelDependency</ID>
+          <OriginalElement>#SE_Project_VerX</OriginalElement>
+          <nodes>
+            <node x="264.0" y="400.0">project.models.TaskStages</node>
+            <node x="1191.7608695652175" y="320.0">meeting.models.MeetingType</node>
+            <node x="535.0615942028985" y="580.0">log.models.Log</node>
+            <node x="428.6358695652174" y="320.0">project.models.ProjectBacklog</node>
+            <node x="0.0" y="400.0">project.models.ProjectBacklogSettings</node>
+            <node x="271.6358695652174" y="240.0">django.contrib.auth.models.User</node>
+            <node x="247.63586956521738" y="80.0">django.contrib.auth.models.Permission</node>
+            <node x="971.5108695652174" y="320.0">groups.models.Group</node>
+            <node x="320.1358695652174" y="160.0">django.contrib.auth.models.Group</node>
+            <node x="214.63586956521738" y="0.0">django.contrib.contenttypes.models.ContentType</node>
+            <node x="465.0" y="400.0">sprint.models.Sprint</node>
+            <node x="503.6358695652174" y="240.0">project.models.Project</node>
+            <node x="784.5108695652174" y="500.0">todo.models.TodoLog</node>
+            <node x="949.5108695652174" y="400.0">groups.models.GroupMember</node>
+            <node x="506.06159420289856" y="500.0">task.models.TaskProperty</node>
+            <node x="1163.5108695652175" y="400.0">meeting.models.Meeting</node>
+            <node x="794.0108695652174" y="160.0">company.models.Company</node>
+            <node x="647.0" y="400.0">task.models.Task</node>
+            <node x="128.38586956521738" y="500.0">project.models.ProjeckBacklogStages</node>
+            <node x="729.2608695652174" y="320.0">covey.models.CoveyMatrix</node>
+            <node x="794.5108695652174" y="400.0">todo.models.Todo</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="groups.models.Group" target="company.models.Company">
+              <point x="0.0" y="-15.0" />
+              <point x="1046.5108695652175" y="215.0" />
+              <point x="928.2608695652174" y="215.0" />
+              <point x="44.75" y="15.0" />
+            </edge>
+            <edge source="log.models.Log" target="task.models.TaskProperty">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="sprint.models.Sprint" target="project.models.ProjectBacklog">
+              <point x="0.0" y="-15.0" />
+              <point x="536.0" y="380.0" />
+              <point x="528.1358695652174" y="380.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="task.models.TaskProperty" target="task.models.Task">
+              <point x="58.0" y="-15.0" />
+              <point x="651.0615942028985" y="480.0" />
+              <point x="742.25" y="480.0" />
+              <point x="31.75" y="15.0" />
+            </edge>
+            <edge source="django.contrib.auth.models.Permission" target="django.contrib.contenttypes.models.ContentType">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="task.models.TaskProperty" target="sprint.models.Sprint">
+              <point x="0.0" y="-15.0" />
+              <point x="593.0615942028985" y="470.0" />
+              <point x="536.0" y="470.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="task.models.Task" target="project.models.ProjectBacklog">
+              <point x="-42.33333333333337" y="-15.0" />
+              <point x="668.1666666666666" y="380.0" />
+              <point x="594.4692028985507" y="380.0" />
+              <point x="66.33333333333337" y="15.0" />
+            </edge>
+            <edge source="task.models.TaskProperty" target="project.models.TaskStages">
+              <point x="-58.0" y="-15.0" />
+              <point x="535.0615942028985" y="480.0" />
+              <point x="399.75" y="480.0" />
+              <point x="45.25" y="15.0" />
+            </edge>
+            <edge source="task.models.Task" target="covey.models.CoveyMatrix">
+              <point x="0.0" y="-15.0" />
+              <point x="710.5" y="370.0" />
+              <point x="773.5108695652174" y="370.0" />
+              <point x="-44.25" y="15.0" />
+            </edge>
+            <edge source="meeting.models.Meeting" target="groups.models.Group">
+              <point x="-42.25" y="-15.0" />
+              <point x="1205.7608695652175" y="380.0" />
+              <point x="1096.5108695652175" y="380.0" />
+              <point x="50.0" y="15.0" />
+            </edge>
+            <edge source="todo.models.TodoLog" target="todo.models.Todo">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="project.models.ProjeckBacklogStages" target="project.models.ProjectBacklogSettings">
+              <point x="-59.25" y="-15.0" />
+              <point x="187.63586956521738" y="480.0" />
+              <point x="122.0" y="480.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="task.models.Task" target="task.models.Task">
+              <point x="-31.75" y="15.0" />
+              <point x="678.75" y="450.0" />
+              <point x="627.0" y="450.0" />
+              <point x="627.0" y="415.0" />
+              <point x="-63.5" y="-0.0" />
+            </edge>
+            <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Permission">
+              <point x="-53.0" y="-15.0" />
+              <point x="324.6358695652174" y="215.0" />
+              <point x="309.6358695652174" y="215.0" />
+              <point x="-61.0" y="15.0" />
+            </edge>
+            <edge source="project.models.Project" target="company.models.Company">
+              <point x="0.0" y="-15.0" />
+              <point x="582.6358695652174" y="215.0" />
+              <point x="838.7608695652174" y="215.0" />
+              <point x="-44.75" y="15.0" />
+            </edge>
+            <edge source="meeting.models.Meeting" target="meeting.models.MeetingType">
+              <point x="42.25" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="project.models.ProjectBacklogSettings" target="project.models.ProjectBacklog">
+              <point x="0.0" y="-15.0" />
+              <point x="122.0" y="380.0" />
+              <point x="461.80253623188406" y="380.0" />
+              <point x="-66.33333333333331" y="15.0" />
+            </edge>
+            <edge source="project.models.ProjectBacklog" target="project.models.Project">
+              <point x="49.75" y="-15.0" />
+              <point x="577.8858695652174" y="295.0" />
+              <point x="582.6358695652174" y="295.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="project.models.ProjectBacklog" target="django.contrib.auth.models.User">
+              <point x="-49.75" y="-15.0" />
+              <point x="478.3858695652174" y="295.0" />
+              <point x="377.6358695652174" y="295.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Group">
+              <point x="53.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="groups.models.GroupMember" target="groups.models.Group">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="django.contrib.auth.models.Group" target="django.contrib.auth.models.Permission">
+              <point x="-5.6843418860808015E-14" y="-15.0" />
+              <point x="61.0" y="15.0" />
+            </edge>
+            <edge source="project.models.ProjeckBacklogStages" target="project.models.TaskStages">
+              <point x="59.25" y="-15.0" />
+              <point x="306.1358695652174" y="480.0" />
+              <point x="309.25" y="480.0" />
+              <point x="-45.25" y="15.0" />
+            </edge>
+            <edge source="task.models.Task" target="groups.models.Group">
+              <point x="42.33333333333337" y="-15.0" />
+              <point x="752.8333333333334" y="380.0" />
+              <point x="996.5108695652174" y="380.0" />
+              <point x="-50.0" y="15.0" />
+            </edge>
+            <edge source="todo.models.Todo" target="covey.models.CoveyMatrix">
+              <point x="0.0" y="-15.0" />
+              <point x="44.25" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8803858520900321" x="348.6077428780132" y="305.6077428780132" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class_diagram.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
