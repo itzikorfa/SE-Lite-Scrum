@@ -12,7 +12,7 @@
     {% else %}
         <h4>Not started</h4>
     {% endif %}
-{% include 'section_end.htmlp' %}
+{% include 'section_end.html' %}
 <a href="{% url 'groups:single' slug=task.team.slug %}">Team: {{ task.team }}</a><br/>
 {#				{{ task.description|safe }}#}
 <span class="badge">task type: {{ task.task_type }} priority: {{ task.priority }} </span>
