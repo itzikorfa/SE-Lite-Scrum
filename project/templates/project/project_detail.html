@@ -28,7 +28,8 @@
             {% if  project_details.projectBacklog.projectBacklogSetting%}
             <a class='btn btn-success' href="{% url 'project:updatesetting' pk=project_details.projectBacklog.projectBacklogSetting.pk %}">Update project setting</a>
             <a class='btn btn-success' href="{% url 'task:create' pk=project_details.projectBacklog.pk %}">Add Task</a>
-                {% else %}
+            <a class="btn btn-info" href="{% url 'sprint:prjlist' pk=project_details.projectBacklog.pk%}">Sprints</a>
+            {% else %}
             <a class='btn btn-success' href="{% url 'project:createsetting' pk=project_details.projectBacklog.pk %}">Project setting</a>
 
             {% endif %}

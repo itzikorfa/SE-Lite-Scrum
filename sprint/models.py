@@ -29,6 +29,11 @@ class Sprint(models.Model):
             return True
         return False
 
+    def sprint_avable(self):
+        if datetime.today().date() >= self.start_date:
+            return True
+        return False
+
 
 
 

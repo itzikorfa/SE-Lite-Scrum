@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap3','django_extensions',
+    'bootstrap3',
     'groups.apps.GroupsConfig',
     'accounts.apps.AccountsConfig',
     'company.apps.CompanyConfig',

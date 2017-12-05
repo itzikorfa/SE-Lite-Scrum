@@ -31,3 +31,12 @@ class SprintDeleteView(DeleteView):
     model = models.Sprint
     success_url = reverse_lazy("sprint:list")
 
+class SprintListForProject(ListView):
+    models = models.Sprint
+
+
+    def get_queryset(self):
+        from project.models import Project, ProjectBacklog
+        projectPK = self.kwargs['pk']
+        pb = ProjectBacklog.objects.get(pk = projectPK)
+        return models.Sprint.objects.filter(project_backlog=pb)
