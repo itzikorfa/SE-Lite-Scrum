@@ -1,7 +1,7 @@
 {% extends "company/company_base.html" %}
 {% block pre %}
     {% include 'section_start.html' %}
-    <h4 class = 'card-title'>Company: {{ company_details.name }}</h4>
+    <h4 class = 'card-title'>   Company: {{ company_details.name }}</h4>
 
     <a class='btn btn-primary' href="{% url 'company:update' pk=company_details.pk %}">Update</a>
     <a class='btn btn-primary' href="{% url 'groups:create' pk=company_details.pk %}">Create Group</a>
@@ -13,29 +13,47 @@
 {% endblock %}
 
 {% block cont %}
+    <a href="#" data-toggle="collapse" data-target="#groups"><h2>Group's:<span class="badge">Click to see</span></h2></a>
+    <div id="groups" class="collapse">
     {% include 'section_start.html' %}
+
+
     {% for group in company_details.groupcompany.all %}
         {% include 'groups/_group.html' %}
     {% endfor %}
 
 
-
+    {% include 'section_end.html' %}
+    </div>
     {% if company_details.projects.count %}
-    {% include 'section_start.html' %}
+     <a href="#" data-toggle="collapse" data-target="#projects"><h2>Project's:<span class="badge">Click to see</span></h2></a>
+     <div id="projects" class="collapse">
+
+        {% include 'section_start.html' %}
         <div class="list-group">
         {% for project in company_details.projects.all %}
                 {% include "project/_project.html" %}
             {% endfor %}
         </div>
+
     {% include 'section_end.html' %}
-    {% endif %}
+     </div>
+        {% endif %}
+
 {% endblock %}
 
 
 {% block post %}
-    <div class="list-group">
+{% if sprints %}
+<a href="#" data-toggle="collapse" data-target="#sprints"><h2>Sprint's:<span class="badge">Click to see</span></h2></a>
+    <div class="list-group collapse" id="sprints">
+
+        {% include 'section_start.html' %}
     {% for sprint in  sprints%}
         {% include "sprint/_sprint.html" %}
     {% endfor %}
+        {% include 'section_end.html' %}
+
     </div>
+    {% endif %}
 {% endblock %}

@@ -6,7 +6,10 @@ from django.contrib.auth.models import User
 from datetime import timedelta, datetime
 from django.core.validators import MinValueValidator,MaxValueValidator,MaxLengthValidator,MinLengthValidator
 from django.utils import timezone
-
+"""
+Project represents a project/product in the scrum
+it has 3 stages Project, Projectbacklog, ProjectSetting
+"""
 class Project(models.Model):
     company = models.ForeignKey(Company, related_name='projects')
     name = models.CharField(max_length=250)

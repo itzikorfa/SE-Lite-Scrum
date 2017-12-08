@@ -1,10 +1,11 @@
 from django.contrib import auth
-from django.db import models
-from django.utils import timezone
-
 
 class User(auth.models.User, auth.models.PermissionsMixin):
-    
+    """
+            class that represent the user in the system
+            extended the django user module
+
+    """
     def __str__(self):
         return "@{}".format(self.username)
 

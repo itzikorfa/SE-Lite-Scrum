@@ -6,7 +6,10 @@ from django.core.urlresolvers import reverse
 from covey.models import CoveyMatrix
 User = get_user_model()
 # Create your models here.
-
+"""
+The To-do model hold his own log system 
+it is different from Task because it doesn't belong to a project but only a user
+"""
 
 class Todo(models.Model):
 

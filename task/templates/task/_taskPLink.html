@@ -5,10 +5,10 @@
 <div class="card text-white bg-secondary   mb-3" style="max-width: 20rem;">
 
     {% endif %}
-  <div class="card-header">{{ task.task.name }}</div>
+  <div class="card-header">Project: {{ task.task.projectBacklog.project.name }}</div>
   <div class="card-body text-primary">
       <a class="list-group-item" href="{% url 'task:detail'  pk=task.task.pk %}">
-    <h4 class="card-title">{{ task.task.projectBacklog.project.name }}</h4>
+    <h4 class="card-title">{{ task.task.name }}</h4>
       </a>
   </div>
 

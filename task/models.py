@@ -8,7 +8,10 @@ from django.contrib.auth import get_user_model
 # Create your models here.
 from django.core.urlresolvers import reverse
 User = get_user_model()
-
+"""
+The task class represent a task that connect to a project
+the class have an extend of TaskProperty that hold the assign information
+"""
 
 class Task(models.Model):
     projectBacklog = models.ForeignKey(ProjectBacklog, related_name="tasksInBacklogs")

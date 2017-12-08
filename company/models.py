@@ -1,7 +1,8 @@
 from django.db import models
 from django.core.urlresolvers import reverse
-
-# Create your models here.
+"""
+class that represents Company that will contain all the information
+"""
 class Company(models.Model):
     name = models.CharField(max_length=40, unique=True)
 

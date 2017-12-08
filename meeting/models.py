@@ -15,7 +15,9 @@ class MeetingType(models.Model):
     class Meta:
         unique_together = ('name',)
 
-
+"""
+Meeting class that represents the log of different meetings type in scrum
+"""
 class Meeting(models.Model):
     team = models.ForeignKey(Group, related_name="teammeeting")
     type = models.ForeignKey(MeetingType, related_name="meetingtyperel")

@@ -31,15 +31,19 @@
                 <p>parent task: {{ task_details.link_task }}</p>
             {% endif %}
             {% if  task_details.team %}
-                <p>Assign to : {{ task_details.team }}</p>
+                <p><a href="{% url 'groups:single' slug=task_details.team.slug %}">
+
+                    Assign to : {{ task_details.team }}</a></p>
             {% else %}
                 Not assigned to any team yet
             {% endif %}
 
 
             {% if task_details.taskProperty %}
-                <p>sprint: {{ task_details.taskProperty.sprint }}</p>
-                <p>assign to : {{ task_details.taskProperty.assign_to }}</p>
+
+                <p>sprint:<a href="{% url 'sprint:detail' pk=task_details.taskProperty.sprint.pk%}"> {{ task_details.taskProperty.sprint }}</a></p>
+                <p>assign to : <a href="{% url 'accounts:tasks' username=task_details.taskProperty.assign_to.username%}">
+                    {{ task_details.taskProperty.assign_to }}</a></p>
                 <p>started at : {{ task_details.taskProperty.start_date }}</p>
                 {% if task_details.taskProperty.end_date %}
                     <p>ended at : {{ task_details.taskProperty.end_date }}</p>

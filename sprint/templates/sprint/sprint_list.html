@@ -1,4 +1,4 @@
-{% extends "groups/group_base.html" %}
+{% extends "sprint/sprint_base.html" %}
 
 {% block pre %}
 <div class="col-md-4">
@@ -9,7 +9,9 @@
 		</h2>
 
     {% endif %}
-			<h2>Sprints</h2>
+			<h2>Sprints for project
+            <a href="{% url 'project:detail' pk=project.pk%}">#{{ project.name }}</a>
+            </h2>
 
 			<p>Welcome to the Sprints Page!</p>
 	</div>
@@ -23,7 +25,11 @@
 <div class="col-md-8">
 	<div class="list-group">
 		{% for sprint in object_list %}
-		  <a class="list-group-item" href="{% url 'sprint:detail' pk=sprint.pk %}">
+            {% if sprint.is_current_sprint %}
+		  <a class="list-group-item list-group-item-success" href="{% url 'sprint:detail' pk=sprint.pk %}">
+          {% else %}
+                <a class="list-group-item" href="{% url 'sprint:detail' pk=sprint.pk %}">
+              {% endif %}
 			     <h3 class="title list-group-item-heading">{{ sprint.name }}</h3>
 			<div class="list-group-item-text container-fluid">
 				{{ group.description_html|safe }}

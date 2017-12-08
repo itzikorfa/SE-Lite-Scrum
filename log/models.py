@@ -3,7 +3,9 @@ from task.models import TaskProperty
 from django.core.urlresolvers import reverse
 from django.core.validators import MinValueValidator,MaxValueValidator
 # Create your models here.
-
+"""
+Log class that represents the log of the task and help monitor the task progress
+"""
 class Log(models.Model):
     task = models.ForeignKey(TaskProperty, related_name="log4tasks")
     log = models.TextField()

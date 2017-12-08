@@ -15,6 +15,22 @@ class TaskListView(ListView):
     model = models.Task
 
 
+
+class UnAssignListView(ListView):
+    model = models.Task
+    template_name = 'task/task_unassign_list.html'
+
+
+    def get_queryset(self):
+        pb = ProjectBacklog.objects.get(pk=self.kwargs['pk'])
+        return models.Task.objects.filter(projectBacklog=pb
+                                                      ,taskProperty=None)
+
+    def get_context_data(self, **kwargs):
+        context = super(UnAssignListView, self).get_context_data(**kwargs)
+        context['sprint'] = Sprint.objects.get(pk=self.kwargs['sprint'])
+        return context
+
 class TaskDetailView(DetailView):
     context_object_name = 'task_details'
     model = models.Task
@@ -82,6 +98,35 @@ class TaskPropertyCreateView(CreateView):
         task_pk = self.kwargs.pop('pk')
         form.instance.task = get_object_or_404(models.Task, pk=task_pk)
         return super(TaskPropertyCreateView, self).form_valid(form)
+
+
+
+class TaskAssignViewView(CreateView):
+    fields = ('assign_to','task_stage')
+    model = models.TaskProperty
+    template_name = 'task/task_form_prop.html'
+
+    def get_form(self, form_class=None):
+        form = super(TaskAssignViewView, self).get_form(form_class)
+        task_id = self.kwargs['pk']
+        task = get_object_or_404(models.Task, pk=task_id)
+        form.fields["assign_to"].queryset = task.team.members.all()
+        # form.fields["sprint"].queryset= Sprint.objects.filter(project_backlog = task.projectBacklog)
+        return form
+
+    def get_context_data(self, **kwargs):
+        contex = super(TaskAssignViewView,self).get_context_data()
+        tp = get_object_or_404(models.Task, pk=self.kwargs['pk'])
+        contex['task'] = tp.name
+        return contex
+
+    def form_valid(self, form):
+        task_pk = self.kwargs.pop('pk')
+        sprint =self.kwargs.pop('sprint')
+        form.instance.task = get_object_or_404(models.Task, pk=task_pk)
+        form.instance.sprint = get_object_or_404(models.Sprint, pk=sprint)
+
+        return super(TaskAssignViewView, self).form_valid(form)
 
 class TaskPropertyUpdateView(UpdateView):
     fields = ('sprint','assign_to','end_date','task_stage')

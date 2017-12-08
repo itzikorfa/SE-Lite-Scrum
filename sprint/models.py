@@ -6,7 +6,9 @@ from django.core.urlresolvers import reverse
 
 # Create your models here.
 PROJECT = "sprint_project"
-
+"""
+This is the print task that have a start date and end date.
+"""
 
 class Sprint(models.Model):
     name = models.CharField(max_length=150)
@@ -29,12 +31,20 @@ class Sprint(models.Model):
             return True
         return False
 
-    def sprint_avable(self):
-        if datetime.today().date() >= self.start_date:
+    def sprint_available(self):
+        if datetime.today().date() <= self.end_date:
             return True
         return False
 
+    def is_sprint_passed(self):
+        if datetime.today().date() > self.end_date:
+            return True
+        return False
 
+    def is_sprint_didnt_started(self):
+        if datetime.today().date() < self.start_date:
+            return True
+        return False
 
 
     class Meta:

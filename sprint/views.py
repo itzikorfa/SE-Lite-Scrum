@@ -17,6 +17,14 @@ class SprintDetailView(DetailView):
     model = models.Sprint
     template_name = 'sprint/sprint_detail.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(SprintDetailView, self).get_context_data(**kwargs)
+        sprint = models.Sprint.objects.get(pk=self.kwargs['pk'])
+        if sprint.sprint_available():
+            context['available'] = True
+        else:
+            context['available'] = False
+        return context
 
 class SprintCreateView(CreateView):
     fields = ("project_backlog","name","start_date","end_date")
@@ -40,3 +48,11 @@ class SprintListForProject(ListView):
         projectPK = self.kwargs['pk']
         pb = ProjectBacklog.objects.get(pk = projectPK)
         return models.Sprint.objects.filter(project_backlog=pb)
+
+    def get_context_data(self, **kwargs):
+        contex = super().get_context_data(**kwargs)
+        from project.models import Project, ProjectBacklog
+        projectPK = self.kwargs['pk']
+        pb = ProjectBacklog.objects.get(pk=projectPK)
+        contex['project'] = Project.objects.get(pk=pb.project.pk)
+        return contex

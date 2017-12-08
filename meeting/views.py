@@ -96,3 +96,41 @@ class MeetingDeleteView(DeleteView):
     model = models.Meeting
     success_url = reverse_lazy("meeting:list")
 
+
+
+
+class MeetingSpritPlanningView(CreateView):
+    model = models.Meeting
+    fields = ('date','log')
+    template_name = 'meeting/meeting_sprint_planing_form.html'
+
+    def form_valid(self, form):
+        from company.models import Company
+        from django.utils.text  import slugify
+        companyPK = self.kwargs.pop('pk')
+        print(companyPK)
+        company = get_object_or_404(Company, pk=companyPK)
+        groupSlug = slugify(company.name)
+        form.instance.team = get_object_or_404(Group, slug=groupSlug , company=company)
+        form.instance.type = get_object_or_404(models.MeetingType, name="Sprint Planning")
+        return super(MeetingSpritPlanningView, self).form_valid(form)
+
+
+
+class MeetingSpritReviewView(CreateView):
+    model = models.Meeting
+    fields = ('date','log')
+    template_name = 'meeting/meeting_sprint_review_form.html'
+
+
+    def form_valid(self, form):
+        from company.models import Company
+        from django.utils.text import slugify
+        companyPK = self.kwargs.pop('pk')
+        print(companyPK)
+        company = get_object_or_404(Company, pk=companyPK)
+        groupSlug = slugify(company.name)
+        form.instance.team = get_object_or_404(Group, slug=groupSlug, company=company)
+        form.instance.type = get_object_or_404(models.MeetingType, name="Sprint Review Meeting")
+        return super(MeetingSpritReviewView, self).form_valid(form)
+
