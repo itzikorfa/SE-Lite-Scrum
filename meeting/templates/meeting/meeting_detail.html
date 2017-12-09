@@ -1,0 +1,12 @@
+{% extends "meeting/meeting_base.html" %}
+{% block pre %}
+    <div class="jumbotron">
+    <h1>{{ meet.type }} at {{ meet.date }}</h1>
+{% endblock %}
+
+{% block cont %}
+ <p>{{ meet.log | linebreaksbr}}</p>
+    <p><a class="btn btn-primary btn-lg" href="{% url 'meeting:update' pk=meet.pk%}" role="button">Update meeting</a></p>
+</div>
+
+{% endblock %}

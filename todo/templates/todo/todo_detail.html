@@ -1,0 +1,37 @@
+{% extends "groups/group_base.html" %}
+
+{% block pre %}
+    <h1>{{ todo_details.name }}</h1>
+{% endblock %}
+
+
+{% block cont %}
+    <div class="col-md-8">
+        <div class="list-group">
+            <p>description: {{ todo_details.description }}</p>
+            <p>priority: {{ todo_details.priority }}</p>
+            <p>task type: {{ todo_details.task_type }}</p>
+            <p>%: {{ todo_details.presentage_complete }}</p>
+            {% if  todo_details.estimated_time %}
+                <p>estimated time: {{ todo_details.estimated_time }}</p>
+            {% endif %}
+            {% if  todo_details.ETA %}
+                <p>ETA: {{ todo_details.ETA }}</p>
+            {% endif %}
+            {% if todo_details.task_completed %}
+                <h3>DONE</h3>
+            {% endif %}
+        <a href="{% url 'todo:update' pk=todo_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
+                        class="glyphicon glyphicon-ok"></span> update</a>
+        <a href="{% url 'todo:logcreate' pk=todo_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
+                        class="glyphicon glyphicon-ok"></span> Add log</a>
+
+</div>
+    </div>
+{% endblock %}
+
+{% block post %}
+    {% for log in todo_details.todolog.all %}
+        {% include 'todo/_log.html' %}
+    {% endfor %}
+{% endblock %}

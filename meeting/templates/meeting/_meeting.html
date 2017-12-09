@@ -1,0 +1,19 @@
+
+
+<div class="card text-white bg-secondary   mb-3" style="max-width: 20rem;">
+  <div class="card-header">{{ meeting.date }}</div>
+  <div class="card-body text-primary">
+      <a class="list-group-item" href="{% url 'meeting:detail'  pk=meeting.pk %}">
+    <h3 class="card-title">{{ meeting.type }}</h3>
+      </a>
+  </div>
+
+<p class="card-text">
+<div class="list-group-item-text container-fluid">
+    <h4>Metting Tasks</h4>
+    <p>
+    {{ meeting.tasks_meta|  linebreaksbr }}
+    </p>
+			</div>
+</p>
+</div>

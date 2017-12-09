@@ -1,0 +1,12 @@
+{% extends 'task/task_base.html' %}
+{% block pre %}
+
+<h1>@{{ username }}</h1>
+    {% for task in tasks %}
+        {% include 'task/_task.html' %}
+
+    {% endfor %}
+{% endblock %}
+{#{% for Task in  objects.user %}#}
+{#    {{ task.name }}#}
+{#{% endfor %}#}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container">
+  <div class="row">
+  {% if user.is_authenticated %}
+    {% block pre %}{% endblock %}
+    {% block cont %}{% endblock %}
+    {% block post %}{% endblock %}
+  {% else %}
+  <h1>You need to login to see this information</h1>
+        <a href="{% url 'accounts:login' %}" class="btn btn-lg btn-fill btn-warning"><span
+                class="glyphicon glyphicon-ok-circle"></span> Login</a>
+        <a href="{% url 'accounts:signup' %}" class="btn btn-lg btn-fill btn-warning"><span
+                class="glyphicon glyphicon-ok-circle"></span> Sign Up</a>
+  {% endif %}
+  </div>
+</div>
+
+
+{% endblock %}
+
+

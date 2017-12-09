@@ -1,0 +1,26 @@
+ <div class="col-xs-6 col-sm-3">
+{% if todo.task_completed %}
+<div class="card text-white bg-success">
+    {% else %}
+<div class="card text-white bg-secondary">
+
+    {% endif %}
+
+  <div class="card-body text-primary">
+      <a class="list-group-item" href="{% url 'todo:detail'  pk=todo.pk %}">
+    <h4 class="card-title">{{ todo.name }}</h4>
+      </a>
+  </div>
+
+<p class="card-text">
+<div class="list-group-item-text container-fluid">
+				{{ task.description|safe }}
+				<div class="row">
+					<div class="col-md-4">
+						<span class="badge">task type: {{ todo.task_type }} priority: {{ todo.priority }} </span>
+					</div>
+				</div>
+			</div>
+</p>
+</div>
+    </div>

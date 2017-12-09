@@ -1,0 +1,99 @@
+{% extends "task/task_base.html" %}
+
+{% block pre %}
+    {% include 'section_start.html' %}
+    <div class="card">
+        <h2 class="card-header">{{ task_details.name }}</h2>
+        {% if task_details.presentage_complete > 0 %}
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                     style="width: {{ task_details.presentage_complete }}%;">
+                    {{ task_details.presentage_complete }}
+                </div>
+            </div>
+        {% else %}
+            <h4>Not started</h4>
+        {% endif %}
+        <div class="card-body">
+            <a href="{% url 'project:detail' pk=task_details.projectBacklog.project.pk %}">project {{ task_details.projectBacklog.project.name }} </a>
+            <p>description: {{ task_details.description }}</p>
+            {% if task_details.acutal_time %}
+                <p>{{ task_details.acutal_time }}/{{ task_details.estimated_time }} hours</p>
+            {% else %}
+                <p>0/{{ task_details.estimated_time }} hours</p>
+            {% endif %}
+            <p>priority: {{ task_details.priority }}</p>
+            <p>task type: {{ task_details.task_type }}</p>
+            {% if  task_details.parent_fields %}s
+                <p>parent task: {{ task_details.parent_fields }}</p>
+            {% endif %}
+            {% if  task_details.link_task %}
+                <p>parent task: {{ task_details.link_task }}</p>
+            {% endif %}
+            {% if  task_details.team %}
+                <p><a href="{% url 'groups:single' slug=task_details.team.slug %}">
+
+                    Assign to : {{ task_details.team }}</a></p>
+            {% else %}
+                Not assigned to any team yet
+            {% endif %}
+
+
+            {% if task_details.taskProperty %}
+
+                <p>sprint:<a href="{% url 'sprint:detail' pk=task_details.taskProperty.sprint.pk%}"> {{ task_details.taskProperty.sprint }}</a></p>
+                <p>assign to : <a href="{% url 'accounts:tasks' username=task_details.taskProperty.assign_to.username%}">
+                    {{ task_details.taskProperty.assign_to }}</a></p>
+                <p>started at : {{ task_details.taskProperty.start_date }}</p>
+                {% if task_details.taskProperty.end_date %}
+                    <p>ended at : {{ task_details.taskProperty.end_date }}</p>
+                {% else %}
+                    <p>in progress</p>
+                {% endif %}
+                <p> Task stage: {{ task_details.taskProperty.task_stage }}
+                <a href="{% url 'task:stage_change' pk=task_details.taskProperty.pk %}">change stage</a>
+                </p>
+                {% if task_details.task_completed is false %}
+                    <a href="{% url 'task:finished' pk=task_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
+                            class="glyphicon glyphicon-ok"></span> Mark as finished</a>
+                {% endif %}
+
+                <a href="{% url 'log:create' pk=task_details.pk %}"
+                   class="btn btn-md btn-fill btn-warning"><span
+                        class="glyphicon glyphicon-plus-sign"></span> Add log</a>
+
+
+            {% else %}
+                <a href="{% url 'task:procreate' pk=task_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
+                        class="glyphicon glyphicon-plus-sign"></span> Assign task</a>
+            {% endif %}
+
+            <a href="{% url 'task:update' pk=task_details.pk %}" class="btn btn-md btn-fill btn-warning"><span
+                    class="glyphicon glyphicon-plus-sign"></span> Edit task</a>
+
+
+
+        </div>
+    </div>
+    {% include 'section_end.html' %}
+{% endblock %}
+
+
+{% block post %}
+
+    {% if task_details.taskProperty %}
+        {% if task_details.taskProperty.log4tasks.count %}
+            <div class="row">
+                <div class="list-group">
+                    {% for log in  task_details.taskProperty.log4tasks.all %}
+
+
+                        {% include "log/_log.html" %}
+
+
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endblock %}

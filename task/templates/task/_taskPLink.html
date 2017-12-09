@@ -1,0 +1,25 @@
+
+{% if task.task.task_completed %}
+<div class="card text-white bg-success  mb-3" style="max-width: 20rem;">
+    {% else %}
+<div class="card text-white bg-secondary   mb-3" style="max-width: 20rem;">
+
+    {% endif %}
+  <div class="card-header">Project: {{ task.task.projectBacklog.project.name }}</div>
+  <div class="card-body text-primary">
+      <a class="list-group-item" href="{% url 'task:detail'  pk=task.task.pk %}">
+    <h4 class="card-title">{{ task.task.name }}</h4>
+      </a>
+  </div>
+
+<p class="card-text">
+<div class="list-group-item-text container-fluid">
+				{{ task.task.description|safe }}
+				<div class="row">
+					<div class="col-md-4">
+						<span class="badge">task type: {{ task.task.task_type }} priority: {{ task.task.priority }} </span>
+					</div>
+				</div>
+			</div>
+</p>
+</div>

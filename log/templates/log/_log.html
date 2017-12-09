@@ -1,0 +1,15 @@
+
+<div class="col-xs-6 col-sm-3">
+  <div class="card-header">
+    At {{ log.timestamp }}
+  </div>
+    <div class="card-block">
+<p class="card-text">
+          {{ log.log }}
+</p>
+          Worked time: {{ log.time_spent }}
+          <a href="{% url 'log:update'  pk=log.pk %}" class="btn btn-primary"> Update </a>
+
+      </div>
+
+</div>

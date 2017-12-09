@@ -1,0 +1,51 @@
+{% extends "project/project_base.html" %}
+{% block cont %}
+    <h1>Project {{ project_details.name }} at
+        <a href="{% url 'company:detail' pk=project_details.company.pk %}"> {{ project_details.company }}</a></h1>
+    <h2>Project Details:</h2>
+
+    <p>Description: {{ project_details.description }}</p>
+    {#    <p>ETA: {{project_details.projectBacklog.ETA}}</p>#}
+    <p>updated: {{ project_details.timestamp }}</p>
+    <p>created at: {{ project_details.update }}
+
+    <h4>Project Backlog</h4>
+
+    {% if project_details.projectBacklog.ETA %}
+        <p>ETA: {{ project_details.projectBacklog.ETA }}</p>
+        <p>Start date: {{ project_details.projectBacklog.start_date }}</p>
+        <p>owner: {{ project_details.projectBacklog.project_owner }}</p>
+        <p>scrum master: {{ project_details.projectBacklog.scrum_master }}</p>
+
+    {% endif %}
+
+
+    <div class="container">
+        <a class='btn btn-warning' href="{% url 'project:update' pk=project_details.pk %}">Update Project</a>
+        {% if project_details.projectBacklog %}
+            <a class='btn btn-success' href="{% url 'project:blupdate' pk=project_details.projectBacklog.pk %}">Update
+                backlog</a>
+            {% if  project_details.projectBacklog.projectBacklogSetting%}
+            <a class='btn btn-success' href="{% url 'project:updatesetting' pk=project_details.projectBacklog.projectBacklogSetting.pk %}">Update project setting</a>
+            <a class='btn btn-success' href="{% url 'task:create' pk=project_details.projectBacklog.pk %}">Add Task</a>
+            <a class="btn btn-info" href="{% url 'sprint:prjlist' pk=project_details.projectBacklog.pk%}">Sprints</a>
+            {% else %}
+            <a class='btn btn-success' href="{% url 'project:createsetting' pk=project_details.projectBacklog.pk %}">Project setting</a>
+
+            {% endif %}
+        {% else %}
+            <a class='btn btn-success' href="{% url 'project:blcreate' pk=project_details.pk %}">Assign backlog</a>
+        {% endif %}
+    </div>
+
+{% endblock %}
+{% block post %}
+    {% if project_details.projectBacklog %}
+        {% if project_details.projectBacklog.tasksInBacklogs.all %}
+            {% for task in  project_details.projectBacklog.tasksInBacklogs.all %}
+                {% include 'task/_task.html' %}
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+
+{% endblock %}

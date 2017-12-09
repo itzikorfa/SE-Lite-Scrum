@@ -1,0 +1,28 @@
+{% include 'section_start.html' %}
+    {% if task.task_completed %}
+        <div class="card text-white bg-success">
+    {% else %}
+        <div class="card text-white bg-secondary">
+
+    {% endif %}
+    <div class="card-header">{{ task.projectBacklog.project.name }}</div>
+    <div class="card-body text-primary">
+        <a class="list-group-item" href="{% url 'task:detail'  pk=task.pk %}">
+            <h3 class="card-title">{{ task.name }}</h3>
+        </a>
+        {% if task.presentage_complete > 0 %}
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                     style="width:
+                             {{ task.presentage_complete }}%;">
+                    {{ task.presentage_complete }}
+                </div>
+            </div>
+        {% else %}
+            <h4>Not started</h4>
+        {% endif %}
+        <hr>
+    </div>
+    </div>
+
+{% include 'section_end.html' %}

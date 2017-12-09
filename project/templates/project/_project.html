@@ -1,0 +1,7 @@
+
+<a class="list-group-item" href="{% url 'project:detail'  pk=project.pk %}">
+    <h3 class="title list-group-item-heading">
+        {{project.name}}</h3>
+<div class="list-group-item-text container-fluid">
+{{ project.description }}{{ project.projectbacklog.ETA }}
+</div></a>

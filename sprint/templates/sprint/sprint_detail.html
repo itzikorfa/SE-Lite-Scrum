@@ -1,0 +1,48 @@
+{% extends "sprint/sprint_base.html" %}
+
+{% block pre %}
+<h1>Sprint: {{sprint_details.name}}</h1>
+<a href="{% url 'project:detail' pk=sprint_details.project_backlog.project.pk %}"><h2>Project: #{{ sprint_details.project_backlog.project.name }}</h2></a>
+{% endblock %}
+
+
+{% block cont %}
+
+<div class="col-md-8">
+<div class="col-md-8">
+        <div class="list-group">
+            <p>from:{{ sprint_details.start_date }} to:{{ sprint_details.end_date }}</p>
+        </div>
+</div>
+</div>
+    {% include 'section_start.html' %}
+    {% if available %}
+
+        <a class="btn btn-primary" href="{% url 'meeting:createsprintplanning' pk=sprint_details.project_backlog.project.company.pk %}">Sprint Planning Meeting</a>
+        <a class="btn btn-primary" href="{% url 'task:create' pk=sprint_details.project_backlog.pk %}">Create Task</a>
+        <a class="btn btn-primary" href="{% url 'task:unassignedlist' sprint=sprint_details.pk pk=sprint_details.project_backlog.pk%}">Assign Task</a>
+
+        {% elif sprint_details.is_sprint_passed %}
+        <a class="btn btn-primary" href="{% url 'meeting:createsprintreview' pk=sprint_details.project_backlog.project.company.pk %}">Sprint Review Meeting</a>
+
+
+
+
+    {% endif %}
+    {% include 'section_end.html' %}
+
+{% endblock %}
+
+{% block post %}
+{% if sprint_details.taskSprint.count %}
+<a href="#" data-toggle="collapse" data-target="#tasks"><h2>Sprint's:<span class="badge">Click to see</span></h2></a>
+    <div class="list-group collapse" id="tasks">
+
+        {% include 'section_start.html' %}
+
+    {% for task in sprint_details.taskSprint.all %}
+        {% include 'task/_taskPLink.html' %}
+    {% endfor %}
+    </div>
+{% endif %}
+{% endblock %}

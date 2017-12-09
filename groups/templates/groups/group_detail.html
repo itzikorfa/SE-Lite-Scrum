@@ -1,0 +1,79 @@
+{% extends "groups/group_base.html" %}
+
+{% block pre %}
+    <h1>Group: {{ group.name }} at company <a
+            href="{% url 'company:detail' pk=group.company.pk %}">{{ group.company.name }}</a></h1>
+    <h2> Member Count: {{ group.members.count }}</h2>
+    {% if user in group.members.all %}
+        <a href="{% url 'groups:leave' slug=group.slug %}" class="btn btn-fill btn-warning"><span
+                class="glyphicon glyphicon-remove-circle"></span> Leave</a>
+        <a href="{% url 'groups:add' slug=group.slug %}" class="btn btn-fill btn-warning"><span
+                class="glyphicon glyphicon-ok-circle"></span> Add User</a>
+        <a href="{% url 'meeting:createDaily' slug=group.slug %}" class="btn btn-fill btn-warning">Add daily</a>
+        <a href="{% url 'meeting:story' slug=group.slug %}" class="btn btn-fill btn-warning">Meeting Story</a>
+        <a href="{% url 'meeting:create' slug=group.slug %}" class="btn btn-fill btn-warning">Create Meeting</a>
+    {% else %}
+        <a href="{% url 'groups:join' slug=group.slug %}" class="btn btn-fill btn-warning"><span
+                class="glyphicon glyphicon-ok-circle"></span> Join</a>
+
+    {% endif %}
+    <a href="#" data-toggle="collapse" data-target="#users"><h2>Group Users:<span class="badge">Click to see</span>
+    </h2></a>
+    <div id="users" class="collapse">
+        {% include 'section_start.html' %}
+        {% for account in group.members.all %}
+            <a href="{% url 'accounts:tasks' username=account.username %}"><span class="glyphicon glyphicon-user">
+        </span>
+                @{{ account.username }} </a>
+        {% endfor %}
+        {% include 'section_end.html' %}
+    </div>
+{% endblock %}
+{% block cont %}
+    <div class="container">
+    {% if user in group.members.all %}{% if group.teammeeting.count %}
+        <a href="#" data-toggle="collapse" data-target="#meetings"><h2>Group meetings:<span
+                class="badge">Click to see</span></h2></a>
+        <div id="meetings" class="collapse">
+
+        {% include 'section_start.html' %}
+        {% for meeting in group.teammeeting.all %}
+            {% include 'meeting/_meeting.html' %}
+        {% endfor %}
+        {% include 'section_end.html' %}
+    {% endif %}
+    {% endif %}
+
+    </div>
+
+    <div class="content">
+
+
+    </div>
+
+    {% if group.group.count %}
+        <a href="#" data-toggle="collapse" data-target="#tasks"><h2>Group Tasks:<span class="badge">Click to see</span>
+    </h2></a>
+    <div id="tasks" class="collapse">
+        {% include 'section_start.html' %}
+        {% for task in group.group.all %}
+            {% include 'task/_taskP.html' %}
+        {% endfor %}
+        {% include 'section_end.html' %}
+    </div>
+    {% endif %}
+
+
+{% endblock %}
+
+{% block post %}
+    {% if covey_graph %}
+        {% include 'section_start.html' %}
+        <img src="{{ MEDIA_URL }}{{ covey_graph }}" alt="covey task graph" class="img-responsive">
+        <div class="alert alert-success">{{ covey_analyse | linebreaksbr }}</div>
+        {% include 'section_end.html' %}
+    {% endif %}
+{% endblock %}
+{% block sidebar %}
+
+{% endblock %}

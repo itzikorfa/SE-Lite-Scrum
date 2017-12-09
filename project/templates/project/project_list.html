@@ -1,0 +1,15 @@
+{% extends "project/project_base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+
+    <h1>project for {{ company }}</h1>
+      <ol>
+        {% for project in project_list %}
+          <h2><li><a href="{% url 'project:detail' pk=project.id %}">{{project.name}} </a></li></h2>
+        {% endfor %}
+      </ol>
+
+  </div>
+
+
+{% endblock %}

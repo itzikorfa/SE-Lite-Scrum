@@ -1,0 +1,33 @@
+{% extends 'accounts/accounts_base.html' %}
+{% load staticfiles %}
+{% block pre %}
+
+<h1>@{{ username }}</h1>
+
+{% endblock %}
+
+{% block cont %}
+<a href="#" data-toggle="collapse" data-target="#demo"><h2>Tasks<span class="badge">Click to see</span</h2></a>
+
+    <div class="container"><div class="row">
+    <div id="demo" class="collapse">
+    {% for task in tasks %}
+        {% include 'task/_taskP.html' %}
+    {% endfor %}
+    </div></div></div>
+    <a href="#" data-toggle="collapse" data-target="#todo"><h2>Todo:<span class="badge">Click to see</span></h2></a>
+    <div class="container"><div class="row">
+    <div id="todo" class="collapse">
+        {% for todo in todos %}
+        {% include 'todo/_todo.html' %}
+
+        {% endfor %}
+
+    </div></div></div></div>
+    {% if covey_graph %}
+    {% include "section_start.html" %}
+    <img src="{{ MEDIA_URL }}{{ covey_graph }}" alt="covey task graph" class="img-responsive"">
+    <div class="alert alert-success">{{ covey_analyse | linebreaksbr}}</div>
+    {% include "section_end.html" %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "project/project_base.html" %}
+{% block cont %}
+    <h1>Project {{ project_details.name }} at {{ project_details.company }}</h1>
+    <h2>Project Details:</h2>
+    <p>Id_num: {{project_details.id}}</p>
+    <p>Description: {{project_details.description}}</p>
+{#    <p>ETA: {{project_details.projectBacklog.ETA}}</p>#}
+    <p>updated: {{project_details.timestamp}}</p>
+    <p>created at: {{ project_details.update }}
+
+
+
+    {% if project_details.projectBacklog.ETA %}
+        <p>ETA: {{ project_details.projectBacklog.ETA }}</p>
+        <p>owner: {{ project_details.projectBacklog.project_owner }}</p>
+        <p>scrum master: {{ project_details.projectBacklog.scrum_master }}</p>
+
+        {% endif %}
+  <div class="container">
+    <p><a class='btn btn-warning' href="{% url 'project:update' pk=project_details.pk %}">Update</a></p>
+
+  </div>
+
+{% endblock %}
