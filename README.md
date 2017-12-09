@@ -62,3 +62,30 @@ in a new system we need:
 at the end of the stageages we can create task via the create task or via sprint view.
 
 
+## create a Task
+### mange Task workflow  
+
+1. there are 2 ways to add Task:  
+1.1 from project view  
+1.2 from sprint view   
+
+2. the task definition includes 2 stages:  
+2.1 define task user story and team  
+2.2 assign task to use and sprint  
+
+### Monitor Task
+we can add a log to log ower work, the log help to monitor how much work time has been spent and 
+when the task is finished.
+
+from the task view, we can change the stage the task is in, this operation creates a log automatically.
+
+## Create TO-DO
+To-do is a spiecel task that it is not belong to a project but belong to a user.
+the todo also has a log to monitor the progress.
+
+# All the Tasks can be view from diffrent location: 
+```
+User task can be viweded from the user information page
+Group Tasks can be viewed  from the group information page
+Sprint Tasks Can be viweed from the sprint information page
+```
