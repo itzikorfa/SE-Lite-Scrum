@@ -5,7 +5,7 @@ The Project is project management system that implements most of Scrum methodolo
 ## Getting Started
 These instructions will get you a copy of the project up and run on your local machine for development and testing purposes.   
 
-## Installing instruction
+## Deployment
 * Clone the repository from GitHub
 * Install python 3.5 or higher
 * it is recommended to create a virtual environment for the current project:
