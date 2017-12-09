@@ -93,4 +93,4 @@ Sprint Tasks Can be viweed from the sprint information page
 ### I ask and encourage you to use the product, and ask for comments and recommendations for improvement.
 
 #### Thanks in advance
-# Yitzhak Orpanian
+# Yizhak Orfanian
