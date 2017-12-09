@@ -56,6 +56,8 @@ in a new system we need:
 3. click on assign backlog and fill the fields in the form.
 4. click on backlog setting set the length of a sprint and a template name.
 > the system automaticlly create the sprins backlog in the backround
+
+
 ![image](https://user-images.githubusercontent.com/12948709/33794971-e5114cd6-dcde-11e7-9017-d1bf97e2faf8.png)
 at the end of the stageages we can create task via the create task or via sprint view.
 
