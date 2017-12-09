@@ -88,4 +88,9 @@ User task can be viweded from the user information page
 Group Tasks can be viewed  from the group information page
 Sprint Tasks Can be viweed from the sprint information page
 ```
-In the next 
+
+## This project The product will continue to evolve.
+### I ask and encourage you to use the product, and ask for comments and recommendations for improvement.
+
+#### Thanks in advance
+# Yitzhak Orpanian
