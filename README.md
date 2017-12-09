@@ -1,9 +1,9 @@
 # SE-Lite-Scrum
 This is the final project in `Software Engineering` Course in the 
 [Open University of Israel](https://www.openu.ac.il/en/pages/default.aspx)[CS 22916]  
-The Project is project management system that implement most of Scrum methodology
+The Project is project management system that implements most of Scrum methodology
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.   
+These instructions will get you a copy of the project up and run on your local machine for development and testing purposes.   
 
 ## Installing instruction
 * Clone the repository from GitHub
@@ -27,7 +27,7 @@ the cloned project includes code, database and sample data. The superuser userna
 To get a clean system you need to follow these steps:
 1.	Delete the db.sqlite file.
 2.	Run the run.bat 
-3.	you need to fiil the superuser information at the end of the batch.
+3.	you need to fill the superuser information at the end of the batch.
 
 > This batch run in 3 steps:
 > *	`python manage.py makemigrations <app-name by folder>` for every app folder
@@ -42,28 +42,27 @@ we can login using our superuser account
 or we can register a new user.
 ## main workflow
 in a new system we need:
-1. add new user to the system
+1. add a new user to the system
 >we create a users pool for all companies and projects.
 2. create a company
-3. create a groups to the comapny  
-3.1 add users to the gorup
+3. create groups to the company  
+3.1 add users to the group
 > automatically the system creates a group (named as the company), this is for to group all company users together
 
 ## create a project
-### create project workflow
+### create a project workflow
 1. in the company information click on create project
 2. add the name of the project and description and submit
 3. click on assign backlog and fill the fields in the form.
 4. click on backlog setting set the length of a sprint and a template name.
-> the system automaticlly create the sprins backlog in the backround
-
+> the system automatically creates the sprints backlog in the background  
 
 ![image](https://user-images.githubusercontent.com/12948709/33794971-e5114cd6-dcde-11e7-9017-d1bf97e2faf8.png)
-at the end of the stageages we can create task via the create task or via sprint view.
+at the end of the stages we can create a task via the create task or via sprint view.
 
 
 ## create a Task
-### mange Task workflow  
+### manage Task workflow  
 
 1. there are 2 ways to add Task:  
 1.1 from project view  
@@ -74,7 +73,7 @@ at the end of the stageages we can create task via the create task or via sprint
 2.2 assign task to use and sprint  
 
 ### Monitor Task
-we can add a log to log ower work, the log help to monitor how much work time has been spent and 
+we can add a log to log ower work, the log helps to monitor how much work time has been spent and 
 when the task is finished.
 
 from the task view, we can change the stage the task is in, this operation creates a log automatically.
@@ -89,3 +88,4 @@ User task can be viweded from the user information page
 Group Tasks can be viewed  from the group information page
 Sprint Tasks Can be viweed from the sprint information page
 ```
+In the next 
