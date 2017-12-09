@@ -17,8 +17,8 @@ Activate the virtual environment
 	activate <env name>  
 ```
 * Install requires module using the requirement file:
-We need to import needed modules that are the building blocks of the project, for that, I have created a requirements file named: requirements.txt to install all modules you need to run the following command line in the project directory: 
-	pip install -r requirements.txt
+We need to import needed modules that are the building blocks of the project, for that, I have created a requirements file named: requirements.txt to install all modules you need to run the following command line in the project directory:   
+	`pip install -r requirements.txt`
 * run the server by entering to the address that will appear, usually, it will be `http://127.0.0.1:8000`  
 
 ### Sample data and how to start a fresh clean system
