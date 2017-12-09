@@ -23,7 +23,7 @@ To get a clean system you need to follow these steps:
 2.	Run the run.bat 
 3.	you need to fiil the superuser information at the end of the batch.
 
->>> This batch run in 3 steps:
->>> *	`python manage.py makemigrations <app-name by folder>` for every app folder
->>> *	`python manage.py migrate` 
->>> *	`python manage.py createsuperuser`
+> This batch run in 3 steps:
+> *	`python manage.py makemigrations <app-name by folder>` for every app folder
+> *	`python manage.py migrate` 
+> *	`python manage.py createsuperuser`
