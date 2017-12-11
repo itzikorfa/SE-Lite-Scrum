@@ -1,9 +1,12 @@
 # SE-Lite-Scrum
 This is the final project in `Software Engineering` Course in the 
 [Open University of Israel](https://www.openu.ac.il/en/pages/default.aspx)[CS 22916]  
-The Project is project management system that implements most of Scrum methodology
+The project is Project Management System that implements most of Scrum methodology and concept.
 ## Getting Started
-These instructions will get you a copy of the project up and run on your local machine for development and testing purposes.   
+The following instruction will:  
+* Guide you during the deployment stages and
+* Will help you have a quick introduction for the PMS  
+Note: The PMS can be use on you local computer or virtual environment for development and testing purposes.
 
 ## Deployment
 * Clone the repository from GitHub
@@ -22,7 +25,7 @@ We need to import needed modules that are the building blocks of the project, fo
 * run the server by entering to the address that will appear, usually, it will be `http://127.0.0.1:8000`  
 
 ### Sample data and how to start a fresh clean system
-the cloned project includes code, database and sample data. The superuser username is `user` and password is `test1234`
+the clone of the project includes code, database and sample data. The superuser username is `user` and password is `test1234`
 #### Clear sample data
 To get a clean system you need to follow these steps:
 1.	Delete the db.sqlite file.
@@ -36,10 +39,11 @@ To get a clean system you need to follow these steps:
 
 
 # GETTING STARTED  
-the first page we see is:
+The following section describes the screen that installation will go through.  
+The following page illustrate the welcome page is:
 ![image](https://user-images.githubusercontent.com/12948709/33794506-19e84aee-dcd6-11e7-96e1-acda7d6dbf4c.png)  
-we can login using our superuser account  
-or we can register a new user.
+The superuser account can be use for login purpose  and managment  
+we can register a new user.
 ## main workflow
 in a new system we need:
 1. add a new user to the system
